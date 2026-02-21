@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Literature Events at MJPRU Tech Fest 2026. Join us for Story Writing, Poetry, Spell Bee, and creative literary competitions.">
+    <title>Literature Events | Tech Fest 2026</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://images.unsplash.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"></noscript>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="gradient-bg">
+        <div class="uni-overlay"></div>
+    </div>
+
+    <a href="#" target="_blank" class="mobile-join-fab">Join Now 🚀</a>
+
+    <nav>
+        <div class="logo">MJPRU <span class="highlight">LIT</span></div>
+        
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <ul class="nav-links" id="mobileMenu">
+            <li><a href="../index.html">Back to Home</a></li>
+            <li><a href="../technical/index.html">Technical Events</a></li>
+            <li><a href="../cultural/index.html">Cultural Events</a></li>
+            <li><a href="../sports/index.html">Sports Events</a></li>
+            <li><a href="#" target="_blank" class="btn-nav">Join Now</a></li>
+        </ul>
+    </nav>
+
+    <header style="min-height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; flex-direction: column;">
+        <div class="hero-content">
+            <h1 data-aos="zoom-in" style="font-size: 4rem; margin-bottom: 10px;">LITERARY <span class="year">SAGA</span></h1>
+            
+            <p class="tagline" style="font-size: 1.2rem; color: #fff; margin-top: 10px; margin-bottom: 40px;" data-aos="fade-up">
+                "Where Silence Speaks and Words Roar"
+            </p>
+
+            <div class="stats-gap-filler" data-aos="fade-up" data-aos-delay="200" 
+                 style="display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; background: rgba(255,255,255,0.1); padding: 30px 50px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                
+                <div style="text-align: center;">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: #ffeb3b; font-family: 'Playfair Display', serif;">
+                        <span class="counter" data-target="5">0</span>
+                    </div>
+                    <div style="color: white; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-top: 5px;">Events</div>
+                </div>
+
+                <div style="width: 1px; background: rgba(255,255,255,0.3); height: 60px;" class="desktop-only-divider"></div>
+
+                <div style="text-align: center;">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: #ffeb3b; font-family: 'Playfair Display', serif;">
+                        ₹<span class="counter" data-target="10">0</span>k
+                    </div>
+                    <div style="color: white; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-top: 5px;">Prize Pool</div>
+                </div>
+
+                <div style="width: 1px; background: rgba(255,255,255,0.3); height: 60px;" class="desktop-only-divider"></div>
+
+                <div style="text-align: center;">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: #ffeb3b; font-family: 'Playfair Display', serif;">
+                        <span class="counter" data-target="200">0</span>+
+                    </div>
+                    <div style="color: white; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-top: 5px;">Wordsmiths</div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <section class="events-section" style="padding-top: 0;">
+        <div class="cards-container">
+            
+            <div class="card event-card-wide" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
+                <div class="card-img-holder">
+                    <img src="https://images.unsplash.com/photo-1579783902614-a3fb392796a5?w=500&auto=format&fit=crop&q=60" alt="Poster Without Words" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3>Poster Without Words</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 11:00 AM</div>
+                    
+                    <div class="coordinator-box">
+                        <span><i class="fas fa-user-check"></i> Coord: Ms. Lalita Gangwar</span>
+                    </div>
+
+                    <p>Let art speak where words fail.</p>
+                    
+                    <div class="rules-box" id="rules-poster">
+                        <strong><i class="fas fa-info-circle"></i> Briefing:</strong>
+                        <p>Convey a strong message through painting/sketching without using text.</p>
+                        <div style="margin-top: 10px;">
+                            <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
+                            <ul>
+                                <li>Time Limit: 2 Hours.</li>
+                                <li>Chart paper provided.</li>
+                                <li>Bring your own colors/paints.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-poster')">Know More</button>
+                </div>
+            </div>
+
+            <div class="card event-card-wide" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
+                <div class="card-img-holder">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=500&auto=format&fit=crop&q=60" alt="One Word One World" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3>One Word One World</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 2 | 26th Oct | 10:30 AM</div>
+                    
+                    <div class="coordinator-box">
+                        <span><i class="fas fa-user-check"></i> Coord: Dr. Anita Tyagi</span>
+                    </div>
+
+                    <p>Expand a single word into a universe.</p>
+
+                    <div class="rules-box" id="rules-oneword">
+                        <strong><i class="fas fa-info-circle"></i> Briefing:</strong>
+                        <p>Pick a word and describe an entire perspective or world around it.</p>
+                        <div style="margin-top: 10px;">
+                            <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
+                            <ul>
+                                <li>Speaking Time: 2-3 Minutes.</li>
+                                <li>Language: English.</li>
+                                <li>Judged on creativity and depth.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-oneword')">Know More</button>
+                </div>
+            </div>
+
+            <div class="card event-card-wide" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
+                <div class="card-img-holder">
+                    <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=500&auto=format&fit=crop&q=60" alt="Six Word Story" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3>Six Word Story</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 01:00 PM</div>
+                    
+                    <div class="coordinator-box">
+                        <span><i class="fas fa-user-check"></i> Coord: Dr. Anita Tyagi</span>
+                    </div>
+
+                    <p>Brevity is the soul of wit.</p>
+
+                    <div class="rules-box" id="rules-sixword">
+                        <strong><i class="fas fa-info-circle"></i> Briefing:</strong>
+                        <p>Write a complete, impactful story using exactly six words.</p>
+                        <div style="margin-top: 10px;">
+                            <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
+                            <ul>
+                                <li>Time Limit: 30 Minutes.</li>
+                                <li>Example: "For sale: baby shoes, never worn."</li>
+                                <li>Originality is mandatory.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-sixword')">Know More</button>
+                </div>
+            </div>
+
+            <div class="card event-card-wide" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
+                <div class="card-img-holder">
+                    <img src="https://images.unsplash.com/photo-1501139083538-0139583c61df?w=500&auto=format&fit=crop&q=60" alt="Story in Reverse" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3>Story in Reverse</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 2 | 26th Oct | 12:00 PM</div>
+                    
+                    <div class="coordinator-box">
+                        <span><i class="fas fa-user-check"></i> Coord: Dr. Anita Tyagi</span>
+                    </div>
+
+                    <p>The end is just the beginning.</p>
+
+                    <div class="rules-box" id="rules-reverse">
+                        <strong><i class="fas fa-info-circle"></i> Briefing:</strong>
+                        <p>Narrate or write a story starting from the climax back to the start.</p>
+                        <div style="margin-top: 10px;">
+                            <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
+                            <ul>
+                                <li>Time Limit: 5 Minutes.</li>
+                                <li>Logical flow must be maintained.</li>
+                                <li>Genre: Open.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-reverse')">Know More</button>
+                </div>
+            </div>
+
+            <div class="card event-card-wide" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
+                <div class="card-img-holder">
+                    <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=500&auto=format&fit=crop&q=60" alt="Spell Bee" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3>Spell Bee</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 03:00 PM</div>
+                    
+                    <div class="coordinator-box">
+                        <span><i class="fas fa-user-check"></i> Coord: Dr. Anita Tyagi</span>
+                    </div>
+
+                    <p>Master the letters, rule the word.</p>
+
+                    <div class="rules-box" id="rules-spell">
+                        <strong><i class="fas fa-info-circle"></i> Briefing:</strong>
+                        <p>A competition to test your spelling and vocabulary skills.</p>
+                        <div style="margin-top: 10px;">
+                            <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
+                            <ul>
+                                <li>Rounds: Written Prelims -> Stage Round.</li>
+                                <li>Source: Standard English Dictionary.</li>
+                                <li>Individual Participation.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-spell')">Know More</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+          <div class="copyright-strip" style="background: #e0e0e0; padding: 15px 0; color: #000; font-weight: 500;">
+            Made by IT CLINIC | MJPRU Tech Fest 2026
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" defer></script>
+    
+    <script src="script.js" defer></script>
+</body>
+</html>

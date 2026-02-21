@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Technical Events at MJPRU Tech Fest 2026. Join us for Hackathons, Robotics, Coding Challenges, and more.">
+    <title>Technical Events | MJPRU Tech Fest 2026</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="gradient-bg"><div class="uni-overlay"></div></div>
+
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe626eTLTJla3O_4sQe0diJSiLH9iNBzmuDwljhHNjKKs10xA/viewform" target="_blank" class="mobile-join-fab">Join Now 🚀</a>
+
+    <nav>
+        <div class="logo">MJPRU <span class="highlight">TECH</span></div>
+        <button class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+        <ul class="nav-links" id="mobileMenu">
+            <li><a href="../index.html">Back to Home</a></li>
+            <li><a href="../cultural/index.html">Cultural Events</a></li>
+            <li><a href="../sports/index.html">Sports Events</a></li>
+            <li><a href="../literacy/index.html">Literacy Events</a></li>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSe626eTLTJla3O_4sQe0diJSiLH9iNBzmuDwljhHNjKKs10xA/viewform" target="_blank" class="btn-nav">Join Now</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="hero-content">
+            <h1 data-aos="zoom-in">TECHNICAL <span class="year">ARENA</span></h1>
+            <p class="tagline" data-aos="fade-up">"Get Ready Youth of India, Celebrate the Innovation of MJPRU"</p>
+
+            <div data-aos="fade-up" data-aos-delay="200" style="display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; background: rgba(255,255,255,0.1); padding: 30px 50px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(5px);">
+                <div style="text-align: center;">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: #ffeb3b;"><span class="counter" data-target="26">0</span>+</div>
+                    <div style="color: white; font-size: 0.9rem; text-transform: uppercase;">Events</div>
+                </div>
+                <div style="width: 1px; background: rgba(255,255,255,0.3); height: 60px;" class="desktop-divider"></div>
+                <div style="text-align: center;">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: #ffeb3b;">₹<span class="counter" data-target="100">0</span>k</div>
+                    <div style="color: white; font-size: 0.9rem; text-transform: uppercase;">Prize Pool</div>
+                </div>
+                <div style="width: 1px; background: rgba(255,255,255,0.3); height: 60px;" class="desktop-divider"></div>
+                <div style="text-align: center;">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: #ffeb3b;"><span class="counter" data-target="1500">0</span>+</div>
+                    <div style="color: white; font-size: 0.9rem; text-transform: uppercase;">Innovators</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="events-section" style="padding-top: 0;">
+        <div class="cards-container">
+            
+            <div class="event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500&q=60" alt="E-Sports" loading="lazy"></div>
+                <div class="card-content">
+                    <h3>E-Sports BGMI</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 10:00 AM</div>
+                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Anil Kumar Bisht</span></div>
+                    <p>Battleground for the ultimate gamers.</p>
+                    <div class="rules-box" id="rules-bgmi">
+                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
+                        <ul><li>Squad Mode Only.</li><li>No Emulators allowed.</li><li>Bring your own headphones.</li></ul>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-bgmi')">Know More</button>
+                </div>
+            </div>
+
+            <div class="event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1504384308090-c54be3852f33?w=500&q=60" alt="Hackathon" loading="lazy"></div>
+                <div class="card-content">
+                    <h3>Hackathon</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 10:00 AM</div>
+                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Inderpreet Kaur</span></div>
+                    <p>Code your way to the future. 24-hour coding marathon.</p>
+                    <div class="rules-box" id="rules-hack">
+                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
+                        <ul><li>Team Size: 2-4 Members.</li><li>Bring laptops & chargers.</li><li>Open Innovation.</li></ul>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-hack')">Know More</button>
+                </div>
+            </div>
+
+            <div class="event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=500&q=60" alt="Poster" loading="lazy"></div>
+                <div class="card-content">
+                    <h3>Poster Presentation</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 11:00 AM</div>
+                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. M. S. Karuna</span></div>
+                    <p>Present your research ideas visually.</p>
+                    <div class="rules-box" id="rules-poster">
+                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
+                        <ul><li>Size: Standard Chart Paper.</li><li>5 mins explanation.</li><li>Topics: AI, IoT, Energy.</li></ul>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-poster')">Know More</button>
+                </div>
+            </div>
+
+            <div class="event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=500&q=60" alt="Robo Race" loading="lazy"></div>
+                <div class="card-content">
+                    <h3>Robo Race</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 12:00 PM</div>
+                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Atul Sarojwal</span></div>
+                    <p>Navigate the track with your mechanical beast.</p>
+                    <div class="rules-box" id="rules-race">
+                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
+                        <ul><li>Bot Size: 25x25x25 cm.</li><li>Wired/Wireless allowed.</li><li>Time penalties apply.</li></ul>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-race')">Know More</button>
+                </div>
+            </div>
+
+            <div class="event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1611368925892-d62100863073?w=500&q=60" alt="Robo War" loading="lazy"></div>
+                <div class="card-content">
+                    <h3>Robo War</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 2 | 26th Oct | 10:00 AM</div>
+                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Mr. Ramji Prasad</span></div>
+                    <p>The ultimate battle of bots.</p>
+                    <div class="rules-box" id="rules-war">
+                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
+                        <ul><li>Weight: Under 15kg/30kg.</li><li>Safety switch mandatory.</li><li>No corrosive weapons.</li></ul>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-war')">Know More</button>
+                </div>
+            </div>
+
+            <div class="event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=500&q=60" alt="Drone" loading="lazy"></div>
+                <div class="card-content">
+                    <h3>Drone Activity</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 2 | 26th Oct | 02:00 PM</div>
+                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Yatendra Kumar</span></div>
+                    <p>Sky is the limit. Showcase your flying skills.</p>
+                    <div class="rules-box" id="rules-drone">
+                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
+                        <ul><li>Obstacle course.</li><li>Stability test.</li><li>Custom drones preferred.</li></ul>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-drone')">Know More</button>
+                </div>
+            </div>
+
+            <div class="event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&q=60" alt="Hardware" loading="lazy"></div>
+                <div class="card-content">
+                    <h3>Hardware Competition</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 02:00 PM</div>
+                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Anil Kumar Singh</span></div>
+                    <p>Showcase innovative hardware projects.</p>
+                    <div class="rules-box" id="rules-hard">
+                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
+                        <ul><li>Working prototype mandatory.</li><li>IoT/Embedded Systems.</li><li>Bring extension cords.</li></ul>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-hard')">Know More</button>
+                </div>
+            </div>
+
+            <div class="event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=500&q=60" alt="Circuits" loading="lazy"></div>
+                <div class="card-content">
+                    <h3>Cirkitect</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 11:30 AM</div>
+                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Janak Kapoor</span></div>
+                    <p>Design complex circuits and logic gates.</p>
+                    <div class="rules-box" id="rules-cirk">
+                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
+                        <ul><li>Components provided.</li><li>Circuit diagram needed.</li><li>Clean layout required.</li></ul>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-cirk')">Know More</button>
+                </div>
+            </div>
+
+            <div class="event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&q=60" alt="Debugging" loading="lazy"></div>
+                <div class="card-content">
+                    <h3>Debugging</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 01:00 PM</div>
+                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Anil Bisht</span></div>
+                    <p>Find the bugs, fix the code.</p>
+                    <div class="rules-box" id="rules-bug">
+                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
+                        <ul><li>Lang: C/C++/Java/Python.</li><li>Time: 30 Mins.</li><li>No Internet.</li></ul>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-bug')">Know More</button>
+                </div>
+            </div>
+
+            <div class="event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1531297461136-82lw9z0u7e?w=500&q=60" alt="Tech Mix" loading="lazy"></div>
+                <div class="card-content">
+                    <h3>Agglomeration</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 2 | 26th Oct | 11:00 AM</div>
+                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Nisha Singh</span></div>
+                    <p>A mix of technical challenges.</p>
+                    <div class="rules-box" id="rules-agglo">
+                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
+                        <ul><li>Team: 3 Members.</li><li>Quiz + Tasks.</li><li>Tests coordination.</li></ul>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-agglo')">Know More</button>
+                </div>
+            </div>
+
+            <div class="event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=500&q=60" alt="Expo" loading="lazy"></div>
+                <div class="card-content">
+                    <h3>Tech Expo</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 & 2 | All Day</div>
+                    <div class="coordinator-box" style="flex-direction: column; align-items: flex-start;">
+                        <span><i class="fas fa-users"></i> <strong>Coordinators:</strong></span>
+                        <span style="font-size: 0.8rem;">Dr. Deepak Gangwar, Dr. Anil Bisht,</span>
+                        <span style="font-size: 0.8rem;">Dr. Sumit Srivastava, Dr. Rohit Verma,</span>
+                        <span style="font-size: 0.8rem;">Dr. Pranjal Saxena</span>
+                    </div>
+                    <p>The grand exhibition of technological marvels.</p>
+                    <div class="rules-box" id="rules-expo">
+                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
+                        <ul><li>Open for all.</li><li>Working/Static Models.</li><li>Synopsis required.</li></ul>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-expo')">Know More</button>
+                </div>
+            </div>
+
+            <div class="event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&q=60" alt="Idea" loading="lazy"></div>
+                <div class="card-content">
+                    <h3>Ideathon</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 10:30 AM</div>
+                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. D. D. Sharma</span></div>
+                    <p>Pitch your revolutionary ideas.</p>
+                    <div class="rules-box" id="rules-idea">
+                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
+                        <ul><li>PPT (Max 5 slides).</li><li>Problem & Solution.</li><li>Feasibility Check.</li></ul>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-idea')">Know More</button>
+                </div>
+            </div>
+
+            <div class="event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=500&q=60" alt="Bridge" loading="lazy"></div>
+                <div class="card-content">
+                    <h3>Bridge Building</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 2 | 26th Oct | 12:00 PM</div>
+                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Ms. Farkunda Rehman</span></div>
+                    <p>Construct the strongest bridge.</p>
+                    <div class="rules-box" id="rules-bridge">
+                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
+                        <ul><li>Popsicle sticks & Glue.</li><li>Load testing done.</li><li>Aesthetics + Strength.</li></ul>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-bridge')">Know More</button>
+                </div>
+            </div>
+
+            <div class="event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=500&q=60" alt="Electro" loading="lazy"></div>
+                <div class="card-content">
+                    <h3>Electro Doctor</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 03:00 PM</div>
+                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Janak Kapoor</span></div>
+                    <p>Diagnose and repair circuits.</p>
+                    <div class="rules-box" id="rules-doctor">
+                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
+                        <ul><li>Faulty circuits given.</li><li>Use Multimeter.</li><li>Fastest wins.</li></ul>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-doctor')">Know More</button>
+                </div>
+            </div>
+
+            <div class="event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?w=500&q=60" alt="Quiz" loading="lazy"></div>
+                <div class="card-content">
+                    <h3>Technical Quiz</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 11:00 AM</div>
+                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Harish Kumar</span></div>
+                    <p>Test your tech knowledge.</p>
+                    <div class="rules-box" id="rules-quiz">
+                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
+                        <ul><li>Topics: Science, Engg, IT.</li><li>Team of 2.</li><li>Negative marking.</li></ul>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-quiz')">Know More</button>
+                </div>
+            </div>
+
+            <div class="event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&q=60" alt="Reverse Eng" loading="lazy"></div>
+                <div class="card-content">
+                    <h3>Reverse Engineering</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 2 | 26th Oct | 10:30 AM</div>
+                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Varun Pratap</span></div>
+                    <p>Deconstruct products to understand logic.</p>
+                    <div class="rules-box" id="rules-rev">
+                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
+                        <ul><li>Identify mechanism.</li><li>Explain workflow.</li><li>Written + Practical.</li></ul>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-rev')">Know More</button>
+                </div>
+            </div>
+
+            <div class="event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1553481187-be93c21490a9?w=500&q=60" alt="Battle" loading="lazy"></div>
+                <div class="card-content">
+                    <h3>Tech Quiz Battle</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 01:30 PM</div>
+                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Anil Bisht</span></div>
+                    <p>Head-to-head trivia warfare.</p>
+                    <div class="rules-box" id="rules-battle">
+                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
+                        <ul><li>1 vs 1 Format.</li><li>Buzzer Round.</li><li>Sudden death.</li></ul>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-battle')">Know More</button>
+                </div>
+            </div>
+
+            <div class="event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=500&q=60" alt="Blind Build" loading="lazy"></div>
+                <div class="card-content">
+                    <h3>Blind Build</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 2 | 26th Oct | 01:00 PM</div>
+                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Sourabh Pathak</span></div>
+                    <p>Code or build without seeing.</p>
+                    <div class="rules-box" id="rules-blind">
+                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
+                        <ul><li>One guides, one builds.</li><li>Time: 15 Mins.</li><li>Coordination is key.</li></ul>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-blind')">Know More</button>
+                </div>
+            </div>
+
+            <div class="event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=500&q=60" alt="Pictionary" loading="lazy"></div>
+                <div class="card-content">
+                    <h3>Tech Pictionary</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 04:00 PM</div>
+                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Anil Bisht</span></div>
+                    <p>Draw tech terms, let team guess.</p>
+                    <div class="rules-box" id="rules-pic">
+                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
+                        <ul><li>Draw on board.</li><li>No speaking.</li><li>60 secs/turn.</li></ul>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-pic')">Know More</button>
+                </div>
+            </div>
+
+            <div class="event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=500&q=60" alt="Jugaad" loading="lazy"></div>
+                <div class="card-content">
+                    <h3>Kabaad Se Jugaad</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 2 | 26th Oct | 11:30 AM</div>
+                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Janak Kapoor</span></div>
+                    <p>Create something from waste.</p>
+                    <div class="rules-box" id="rules-jugaad">
+                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
+                        <ul><li>Raw materials: E-Waste.</li><li>Time: 2 Hours.</li><li>Utility judged.</li></ul>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-jugaad')">Know More</button>
+                </div>
+            </div>
+
+            <div class="event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1626785774573-4b799314346d?w=500&q=60" alt="Logo" loading="lazy"></div>
+                <div class="card-content">
+                    <h3>Logo Designing</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 12:30 PM</div>
+                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Ashutosh S.</span></div>
+                    <p>Design a creative logo.</p>
+                    <div class="rules-box" id="rules-logo">
+                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
+                        <ul><li>Photoshop/Canva.</li><li>Theme given on spot.</li><li>Originality key.</li></ul>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-logo')">Know More</button>
+                </div>
+            </div>
+
+            <div class="event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=500&q=60" alt="Model" loading="lazy"></div>
+                <div class="card-content">
+                    <h3>Technical Model</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 2 | 26th Oct | 10:00 AM</div>
+                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Mukul Gupta</span></div>
+                    <p>Present working models.</p>
+                    <div class="rules-box" id="rules-techmod">
+                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
+                        <ul><li>Working model preferred.</li><li>5 mins explanation.</li><li>Innovation.</li></ul>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-techmod')">Know More</button>
+                </div>
+            </div>
+
+            <div class="event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1634152962476-4b8a00e1915c?w=500&q=60" alt="Sudoku" loading="lazy"></div>
+                <div class="card-content">
+                    <h3>Sudoku Puzzle</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 03:30 PM</div>
+                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Ashish S.</span></div>
+                    <p>Solve the grid.</p>
+                    <div class="rules-box" id="rules-sudoku">
+                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
+                        <ul><li>Time: 30 Mins.</li><li>Accuracy > Speed.</li><li>No erasing.</li></ul>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-sudoku')">Know More</button>
+                </div>
+            </div>
+
+            <div class="event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1516110833967-0b5716ca1387?w=500&q=60" alt="Memory" loading="lazy"></div>
+                <div class="card-content">
+                    <h3>Memory Noise</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 2 | 26th Oct | 02:30 PM</div>
+                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Janak Kapoor</span></div>
+                    <p>Test memory amidst distraction.</p>
+                    <div class="rules-box" id="rules-mem">
+                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
+                        <ul><li>Memorize items.</li><li>Distractions played.</li><li>Recall max items.</li></ul>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-mem')">Know More</button>
+                </div>
+            </div>
+
+            <div class="event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1535378437327-10e8df998751?w=500&q=60" alt="Meme" loading="lazy"></div>
+                <div class="card-content">
+                    <h3>Meme the Machine</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 05:00 PM</div>
+                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Mukesh Sone</span></div>
+                    <p>Create hilarious tech memes.</p>
+                    <div class="rules-box" id="rules-meme">
+                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
+                        <ul><li>Topic: Engg Life.</li><li>No offensive content.</li><li>Creativity wins.</li></ul>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-meme')">Know More</button>
+                </div>
+            </div>
+
+            <div class="event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=500&q=60" alt="Reel" loading="lazy"></div>
+                <div class="card-content">
+                    <h3>Reel in 60 Seconds</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 2 | 26th Oct | 03:00 PM</div>
+                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Ms. Neha Sabeel</span></div>
+                    <p>Create a viral tech reel.</p>
+                    <div class="rules-box" id="rules-reel">
+                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
+                        <ul><li>Theme: Innovation.</li><li>Max 60 Secs.</li><li>Tag official handle.</li></ul>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-reel')">Know More</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer-strip">
+        Made by IT CLINIC | MJPRU Tech Fest 2026
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
