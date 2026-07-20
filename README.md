@@ -1,4 +1,3 @@
-# MJPRU-tech-fest-website
 <div align="center">
   <img src="image/logo.jfif" alt="MJPRU Logo" width="120" height="120" style="border-radius: 50%;">
   
@@ -14,7 +13,9 @@
 
 <br/>
 
- ![AURA 2K26 Campus](image/mjpru%20front.webp)
+<div align="center">
+  <img src="image/mjpru%20front.webp" alt="AURA 2K26 Campus">
+</div>
 
 ## 📖 About The Project
 
@@ -59,7 +60,7 @@ You only need a modern web browser. A code editor like [VS Code](https://code.vi
 
 1. **Clone the repository** (if hosted on Git):
    ```bash
-   git clone https://github.com/mayankkalramyk/MJPRU-tech-fest-website.git
+  git clone https://github.com/mayankkalramyk/MJPRU-tech-fest-website.git
    ```
 
 2. **Navigate to the project directory:**
@@ -114,10 +115,14 @@ Crafted with ❤️ by **IT CLINIC, MJPRU**.
 - Dr. Anil Kumar Bisht
 
 **Student Coordinators (Web Developers):**
-- [Mayank Kalra](https://www.linkedin.com/in/mayank-kalra-b70241324)
-- [Ishu Singh](https://www.linkedin.com/in/ishu-singh-796707325)
-- [Deepak Gangwar](https://www.linkedin.com/in/deepak-gangwar-66b4233b3/)
-- [Aatif Ahmed Khan](https://www.linkedin.com/in/aatif-khan-2b1805304)
+<table align="center">
+  <tr>
+    <td align="center"><a href="https://www.linkedin.com/in/mayank-kalra-b70241324"><img src="image/me.png" width="150" alt="Mayank Kalra"/><br /><b>Mayank Kalra <div>E-mail - mayankkalramyk@gmail.com</div></b></a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/ishu-singh-796707325"><img src="image/ishu.jpeg" width="150" alt="Ishu Singh"/><br /><b>Ishu Singh</b></a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/deepak-gangwar-66b4233b3/"><img src="image/depak.jpg" width="150" alt="Deepak Gangwar"/><br /><b>Deepak Gangwar</b></a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/aatif-khan-2b1805304"><img src="image/aatif.jpeg" width="150" alt="Aatif Ahmed Khan"/><br /><b>Aatif Ahmed Khan</b></a></td>
+  </tr>
+</table>
 
 ---
 
