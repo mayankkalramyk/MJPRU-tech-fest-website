@@ -100,7 +100,7 @@ Here are some glimpses of what the portal looks like:
 
 | Event Cards & Navigation | Sponsorship & Partnerships |
 | :---: | :---: |
-| <img src="image/spo.jpg" width="400" alt="Sponsors"> | <img src="image/Natraj Logo High copy 2.png" width="400" alt="Auditorium"> |
+| <img src="image/brochure_cover.png" width="400" alt="Sponsors"> | <img src="image/Natraj Logo High copy 2.png" width="400" alt="Auditorium"> |
 
 *(Note: Explore the `image/` directory to see more stunning shots of the 206.7 acres grand campus including the Atal Auditorium, Botanical Garden, and Stadium.)*
 
