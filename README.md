@@ -60,7 +60,7 @@ You only need a modern web browser. A code editor like [VS Code](https://code.vi
 
 1. **Clone the repository** (if hosted on Git):
    ```bash
-  git clone https://github.com/mayankkalramyk/MJPRU-tech-fest-website.git
+   git clone https://github.com/mayankkalramyk/MJPRU-tech-fest-website.git
    ```
 
 2. **Navigate to the project directory:**
