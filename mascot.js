@@ -1,4 +1,4 @@
-/* =========================================
+git remote set-url origin https://github.com/mayankkalramyk/MJPRU-tech-fest-website.git/* =========================================
    3D ROBOT / MASCOT MODULE (MOBILE OPTIMIZED)
    ========================================= */
 import * as THREE from 'https://cdn.skypack.dev/three@0.136.0';
