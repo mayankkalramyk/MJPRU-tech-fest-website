@@ -4,23 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Cultural Events at MJPRU Tech Fest 2026. Participate in Fusion Dance, Fashion Show, Nukkad Natak, Rangoli, and more.">
-    <title>Cultural Events | Tech Fest 2026</title>
+    <title>Cultural Events | Tech Fest AURA 2K26</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://unpkg.com">
-    <link rel="preconnect" href="https://images.unsplash.com">
-
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"></noscript>
-    
     <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" type="image/png" href="./1/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./1/favicon.svg" />
+    <link rel="shortcut icon" href="./1/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./1/apple-touch-icon.png" />
+    <link rel="manifest" href="./1/site.webmanifest" />
+
+    <style>
+        /* NAVBAR FIX FOR LONG TEXT ("Rhythm Decoration") AND BUTTON 
+        */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 3%; /* Reduced padding to give links more room */
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            /* Prevent wrapping */
+            flex-wrap: nowrap; 
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px; /* Reduced gap between items to fit all */
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            white-space: nowrap; /* CRITICAL: Prevents text from breaking into 2 lines */
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: 0.3s;
+            font-size: 0.95rem; /* Slightly smaller text for better fit */
+        }
+        
+        /* The Join Now Button */
+        .btn-nav { 
+            padding: 8px 20px; /* Slimmer padding */
+            background: linear-gradient(45deg, #FFD700, #FDB931); 
+            color: #333 !important; 
+            border-radius: 20px; 
+            font-weight: 800 !important; 
+            transition: 0.3s; 
+            border: 2px solid #FDB931;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+            display: inline-block;
+            line-height: normal; /* Fixes any vertical alignment issues */
+            white-space: nowrap; /* Ensures 'Join Now' stays on one line */
+        }
+        
+        /* Updated Footer Styling for Glassmorphism/Transparent look */
+        .glass-footer {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 20px 0;
+            color: #ffffff;
+            font-weight: 500;
+            text-align: center;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            margin-top: 40px;
+        }
+        
+        .presents-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            font-weight: 600;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+
+        /* Mobile specific hiding of long text if screen is too small */
+        @media (max-width: 1150px) {
+            .nav-links a { font-size: 0.85rem; }
+            .nav-links { gap: 15px; }
+        }
+    </style>
 </head>
 <body>
 
@@ -28,278 +112,343 @@
         <div class="uni-overlay"></div>
     </div>
 
-    <a href="#" target="_blank" class="mobile-join-fab">Join Now 🚀</a>
+    <a href="https://forms.eduqfix.com/festregof/add" target="_blank" class="mobile-join-fab">Join Now 🚀</a>
 
     <nav>
-        <div class="logo">MJPRU <span class="highlight">CULT</span></div>
-        
-        <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation">
+        <div class="logo">MJPRU <span class="highlight">CULTURAL</span></div> <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
         </button>
-
         <ul class="nav-links" id="mobileMenu">
-            <li><a href="../index.html">Back to Home</a></li>
+            <li><a href="../index.html">Home</a></li>
             <li><a href="../technical/index.html">Technical Events</a></li>
             <li><a href="../sports/index.html">Sports Events</a></li>
-             <li><a href="../literacy/index.html">Literature Events</a></li>
-            <li><a href="#" target="_blank" class="btn-nav">Join Now</a></li>
+            <li><a href="../literacy/index.html">Literature Events</a></li>
+            <li><a href="../Rhythm/index.html">Rhythm Decoration & Open Mic</a></li>
+            <li><a href="../workshop/index.html">Workshop Events</a></li>
+            <li><a href="https://forms.eduqfix.com/festregof/add" target="_blank" class="btn-nav">Join Now</a></li>
         </ul>
     </nav>
 
     <header style="min-height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; flex-direction: column;">
+       <canvas id="hero-canvas"></canvas>
         <div class="hero-content">
-            <h1 data-aos="zoom-in" style="font-size: 4rem; margin-bottom: 10px;">CULTURAL <span class="year">FIESTA</span></h1>
-            
+            <div class="presents-text" data-aos="fade-down">AURA 2K26 MJPRU Tech Fest Presents</div>
+            <h1 data-aos="zoom-in" style="font-size: 4rem; margin-bottom: 10px;">CULTURAL <span class="year">EVENTS</span></h1>
             <p class="tagline" style="font-size: 1.2rem; color: #fff; margin-top: 10px; margin-bottom: 40px;" data-aos="fade-up">
                 "Where Beats Drop and Stars Rise – The Soul of MJPRU"
             </p>
-
-            <div class="stats-gap-filler" data-aos="fade-up" data-aos-delay="200" 
-                 style="display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; background: rgba(255,255,255,0.1); padding: 30px 50px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                
-                <div style="text-align: center;">
-                    <div style="font-size: 2.5rem; font-weight: 700; color: #ffeb3b; font-family: 'Playfair Display', serif;">
-                        <span class="counter" data-target="15">0</span>+
-                    </div>
-                    <div style="color: white; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-top: 5px;">Events</div>
-                </div>
-
-                <div style="width: 1px; background: rgba(255,255,255,0.3); height: 60px;" class="desktop-only-divider"></div>
-
-                <div style="text-align: center;">
-                    <div style="font-size: 2.5rem; font-weight: 700; color: #ffeb3b; font-family: 'Playfair Display', serif;">
-                        ₹<span class="counter" data-target="50">0</span>k
-                    </div>
-                    <div style="color: white; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-top: 5px;">Prize Pool</div>
-                </div>
-
-                <div style="width: 1px; background: rgba(255,255,255,0.3); height: 60px;" class="desktop-only-divider"></div>
-
-                <div style="text-align: center;">
-                    <div style="font-size: 2.5rem; font-weight: 700; color: #ffeb3b; font-family: 'Playfair Display', serif;">
-                        <span class="counter" data-target="500">0</span>+
-                    </div>
-                    <div style="color: white; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-top: 5px;">Participants</div>
-                </div>
-
-            </div>
         </div>
     </header>
 
     <section class="events-section" style="padding-top: 0;">
         <div class="cards-container">
             
-            <div class="card event-card-wide" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
+            <div class="card event-card-wide" data-tilt>
                 <div class="card-img-holder">
-                    <img src="https://images.unsplash.com/photo-1545959570-a941cc572304?w=500&auto=format&fit=crop&q=60" alt="Fusion Dance" loading="lazy">
+                    <img src="image/Rangoli.jpeg" alt="Rangoli" loading="lazy" decoding="async">
                 </div>
                 <div class="card-content">
-                    <h3>Fusion Dance Challenge</h3>
-                    
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 2 | 26th Oct | 11:00 AM</div>
-
-                    <div class="coordinator-box">
-                        <span><i class="fas fa-user-check"></i> Coord: Dr. Reena Pant</span>
+                    <h3>1. Rangoli</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 14 March | 10:00 AM–1:00 PM 
+                    <div><strong><i class="fas fa-user-tie"></i> Event Coordinator: Dr. Snehlata (+91 98085 39897), Dr. Munish Kumar (+91 80774 27983), Prashant Kumar Pal (+91 90842 32279)</strong> <br></div>  
+                   <div class="schedule-info"> Venue: Place of Inaugural Ceremony  <div>Fees: 100/- per team</div> </div>
                     </div>
-                    <p>Experience the rhythm of fusion where classical meets western.</p>
-                    <div class="rules-box" id="rules-fusion">
-                        <strong><i class="fas fa-info-circle"></i> Event Briefing:</strong>
-                        <p>Solo or group dance performance blending two or more dance styles.</p>
-                        <div style="margin-top: 10px;">
-                            <strong><i class="fas fa-gavel"></i> Key Guidelines:</strong>
-                            <ul>
-                                <li>Time Limit: 3-5 Minutes.</li>
-                                <li>Track submission: 1 hour before event.</li>
-                                <li>Props: Allowed (Inform beforehand).</li>
-                            </ul>
-                        </div>
+                    <p>Create artistic patterns using colored powders and flowers.</p>
+                    <div class="rules-box" id="rules-41">
+                      <strong>Rules & Regulations:</strong>
+                      <ul style="margin-top: 8px;">
+                          <li><strong>Team Size:</strong> Each team will have 4 members.</li>
+                          <li><strong>Time Limit:</strong> 40 minutes for preparation.</li>
+                          <li><strong>Materials:</strong> Each team must bring all required materials (colors, flowers, etc.).</li>
+                          <li><strong>Registration:</strong> Team names must be submitted per the brochure timeline.</li>
+                      </ul>
+                      <strong>Event Description:</strong>
+                      <p style="margin-top: 8px; font-size: 0.95em;">
+                          Rangoli symbolizes joy and positivity. This event provides a platform to showcase artistic skills through vibrant patterns and meaningful themes. <br><br>
+                          <strong>Theme:</strong> Viksit Bharat.
+                      </p>
+                      <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                          * For more detail regarding the event, please see the booklet.
+                      </p>
                     </div>
-                    <button class="btn-join" onclick="toggleRules('rules-fusion')">Know More</button>
+                    <button class="btn-join" onclick="toggleRules('rules-41', this)">Know More</button>
                 </div>
             </div>
 
-            <div class="card event-card-wide" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
+            <div class="card event-card-wide" data-tilt>
                 <div class="card-img-holder">
-                    <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=500&auto=format&fit=crop&q=60" alt="Fashion Show" loading="lazy">
+                    <img src="image/Face painting.jpg" alt="Face Painting" loading="lazy" decoding="async">
                 </div>
                 <div class="card-content">
-                    <h3>Fashion Show (Vogue)</h3>
-                    
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 2 | 26th Oct | 06:00 PM</div>
-
-                    <div class="coordinator-box">
-                        <span><i class="fas fa-user-check"></i> Coord: Dr. Preeti Yadav</span>
+                    <h3>2. Face Painting</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 14 March | 10:00 AM – 1:00 PM 
+                    <div><strong><i class="fas fa-user-tie"></i> Event Coordinator: Ms. Afreen Nishat (9412870275) </strong> <br></div>  
+                    <div class="schedule-info"> Venue: Place of Inaugural Ceremony <div>Fees: 100/- per team</div> </div>
                     </div>
-                    <p>Walk the ramp with elegance and attitude.</p>
-                    <div class="rules-box" id="rules-fashion">
-                        <strong><i class="fas fa-info-circle"></i> Event Briefing:</strong>
-                        <p>Theme-based ramp walk showcasing creativity and style.</p>
-                        <div style="margin-top: 10px;">
-                            <strong><i class="fas fa-gavel"></i> Key Guidelines:</strong>
-                            <ul>
-                                <li>Theme: Indo-Western Fusion.</li>
-                                <li>Team Size: 8-12 Members.</li>
-                                <li>Decency of attire is mandatory.</li>
-                            </ul>
-                        </div>
+                    <p>Transform the face into a stunning canvas of imagination.</p>
+                    <div class="rules-box" id="rules-44">
+                        <strong>Rules & Regulations:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Theme:</strong> Theme will be given on the spot.</li>
+                            <li><strong>Team Size:</strong> Each team will have two members.</li>
+                            <li><strong>Process:</strong> Pick a brush and paint the face of your teammate.</li>
+                            <li><strong>Safety:</strong> Participants must use skin-friendly colors.</li>
+                            <li><strong>Materials:</strong> Participants must use their own colors and brushes.</li>
+                            <li><strong>Time Duration:</strong> The time duration will be 1 hour.</li>
+                            <li><strong>Judging:</strong> A brief explanation of the work must be provided to the judges.</li>
+                        </ul>
+                        <strong>Event Description:</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            Face Painting is a vibrant and creative competition that encourages participants to showcase their artistic skills through imaginative and expressive designs. The event aims to provide a fun and artistic platform that promotes self-expression and visual creativity in a lively atmosphere.
+                        </p>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding the event, please see the booklet.
+                        </p>
                     </div>
-                    <button class="btn-join" onclick="toggleRules('rules-fashion')">Know More</button>
+                    <button class="btn-join" onclick="toggleRules('rules-44', this)">Know More</button>
                 </div>
             </div>
 
-            <div class="card event-card-wide" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
+            <div class="card event-card-wide" data-tilt>
                 <div class="card-img-holder">
-                    <img src="https://images.unsplash.com/photo-1536640712-4d4c36ff0e4e?w=500&auto=format&fit=crop&q=60" alt="Street Play" loading="lazy">
+                    <img src="image/sursangam.jpg" alt="Singing" loading="lazy" decoding="async">
                 </div>
                 <div class="card-content">
-                    <h3>Street Play (Nukkad Natak)</h3>
-                    
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 02:00 PM</div>
-
-                    <div class="coordinator-box">
-                        <span><i class="fas fa-users"></i> Coords: Dr. Ajay Yadav, Dr. Atul Katiyar</span>
+                    <h3>3. Sur Sangam (Singing)</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 14 March | 2:00 PM–4:00 PM 
+                    <div><strong><i class="fas fa-user-tie"></i> Event Coordinator: Ms. Shashi Lata (9012323352) </strong> <br></div>  
+                    <div class="schedule-info"> Venue: Panchal Auditorium  <div>Fees: 100</div> </div>
                     </div>
-                    <p>The stage is the street, the voice is yours.</p>
-                    <div class="rules-box" id="rules-nukkad">
-                        <strong><i class="fas fa-info-circle"></i> Event Briefing:</strong>
-                        <p>A dramatic performance with a social message.</p>
-                        <div style="margin-top: 10px;">
-                            <strong><i class="fas fa-gavel"></i> Key Guidelines:</strong>
-                            <ul>
-                                <li>Time Limit: 10-12 Minutes.</li>
-                                <li>Language: Hindi/English.</li>
-                                <li>No electronic amplification allowed.</li>
-                            </ul>
-                        </div>
+                    <p>Let your voice touch the hearts in this solo and duet competition.</p>
+                    <div class="rules-box" id="rules-37">
+                        <strong>Competition Rounds:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Round 1 (Voice of Choice):</strong> Perform a song of your choice (Max 4 mins).</li>
+                            <li><strong>Round 2 (Track & Identify):</strong> Identify a song from its instrumental track and sing a verse.</li>
+                            <li><strong>Round 3 (Genre Switch):</strong> Sing a song containing a random word provided on stage.</li>
+                        </ul>
+                        <strong>Important Rules:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Audio:</strong> Only instrumental/karaoke tracks in MP3 format are allowed (No lead vocals).</li>
+                            <li><strong>Performance:</strong> Live singing is mandatory; lip-syncing or using auto-tune leads to disqualification.</li>
+                            <li><strong>Equipment:</strong> Only handheld wired microphones provided by organizers will be used.</li>
+                            <li><strong>Conduct:</strong> Lyrics containing obscene or offensive content are strictly prohibited.</li>
+                        </ul>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding track submission deadlines and technical sound check slots, please see the booklet.
+                        </p>
                     </div>
-                    <button class="btn-join" onclick="toggleRules('rules-nukkad')">Know More</button>
+                    <button class="btn-join" onclick="toggleRules('rules-37', this)">Know More</button>
                 </div>
             </div>
 
-            <div class="card event-card-wide" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
+            <div class="card event-card-wide" data-tilt style="border-left: 5px solid #e73c7e;">
                 <div class="card-img-holder">
-                    <img src="https://images.unsplash.com/photo-1665400618076-2f3b925b5a26?w=500&auto=format&fit=crop&q=60" alt="Rangoli" loading="lazy">
+                    <img src="image/battlee.jpg" alt="Live Band" loading="lazy" decoding="async">
                 </div>
                 <div class="card-content">
-                    <h3>Rangoli Competition</h3>
-                    
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 10:00 AM</div>
-
-                    <div class="coordinator-box">
-                        <span><i class="fas fa-user-check"></i> Coord: Dr. Sushmita Gupta</span>
+                    <h3>4. ROCK SABHA (Battle of Bands)</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 14 March | 4:00 PM–6:00 PM 
+                    <div><strong><i class="fas fa-user-tie"></i> Event Coordinator: Dr. Preeti Yadav (7017932082)</strong> <br></div>  
+                    <div class="schedule-info"> Venue: Atal Sabhagar  <div> Fee: Rs. 500/- per team</div><div style="background: linear-gradient(45deg, #ff00cc, #3333ff); color: white; display: inline-block; padding: 4px 12px; font-weight: bold; border-radius: 20px; font-size: 0.8rem; margin-top: 8px; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 0 10px rgba(255, 0, 204, 0.5);">
+    Cash Prize
+</div></div>
                     </div>
-                    <p>Colors of culture on the canvas of the floor.</p>
-                    <div class="rules-box" id="rules-rangoli">
-                        <strong><i class="fas fa-info-circle"></i> Event Briefing:</strong>
-                        <p>Create artistic patterns using colored powders/flowers.</p>
-                        <div style="margin-top: 10px;">
-                            <strong><i class="fas fa-gavel"></i> Key Guidelines:</strong>
-                            <ul>
-                                <li>Time Limit: 2 Hours.</li>
-                                <li>Space Provided: 3x3 ft.</li>
-                                <li>Bring your own materials.</li>
-                            </ul>
-                        </div>
+                    <p>Feel the adrenaline with electrifying beats and soulful melodies.</p>
+                    <div class="rules-box" id="rules-39">
+                        <strong>Rules & Regulations:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Eligibility:</strong> The event is open to student bands participating as a group.</li>
+                            <li><strong>Genres:</strong> Bands may perform in genres such as rock, indie, fusion, metal, or alternative.</li>
+                            <li><strong>Content:</strong> Both original compositions and covers are allowed.</li>
+                            <li><strong>Time Limit:</strong> Each band must perform within the allotted time limit decided by the organizers.</li>
+                            <li><strong>Prohibitions:</strong> Use of offensive, vulgar, or inappropriate content is strictly prohibited.</li>
+                            <li><strong>Judging:</strong> Based on originality, musical coordination, stage presence, and overall performance.</li>
+                        </ul>
+                        <strong>Event Description:</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            Rock Sabha is a flagship musical event of Aura 2026, bringing together talented bands to compete on a high-energy stage. It offers student musicians a powerful platform to showcase technical skills and originality.
+                        </p>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding technical sound check slots and stage equipment, please see the booklet.
+                        </p>
                     </div>
-                    <button class="btn-join" onclick="toggleRules('rules-rangoli')">Know More</button>
+                    <button class="btn-join" onclick="toggleRules('rules-39', this)">Know More</button>
                 </div>
             </div>
 
-            <div class="card event-card-wide" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
+            <div class="card event-card-wide" data-tilt>
                 <div class="card-img-holder">
-                    <img src="https://images.unsplash.com/photo-1514525253440-b393452e8d03?w=500&auto=format&fit=crop&q=60" alt="Live Band" loading="lazy">
+                    <img src="image/Fusion dance.png" alt="Dance" loading="lazy" decoding="async">
                 </div>
                 <div class="card-content">
-                    <h3>Live Band Performance</h3>
-                    
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 2 | 26th Oct | 04:00 PM</div>
-
-                    <div class="coordinator-box">
-                        <span><i class="fas fa-user-check"></i> Coord: Dr. Preeti Yadav</span>
+                    <h3>5. Fusion Dance Challenge</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 15 March | 10:00 AM–1:00 PM 
+                    <div><strong><i class="fas fa-user-tie"></i> Event Coordinator: Dr. Reena Pant (9411088903) </strong> <br></div>  
+                    <div class="schedule-info"> Venue: Panchal Auditorium  <div>Fees: 100</div> </div>
                     </div>
-                    <p>Electrifying beats and soulful melodies.</p>
-                    <div class="rules-box" id="rules-band">
-                        <strong><i class="fas fa-info-circle"></i> Event Briefing:</strong>
-                        <p>Battle of the bands - showcase your musical synergy.</p>
-                        <div style="margin-top: 10px;">
-                            <strong><i class="fas fa-gavel"></i> Key Guidelines:</strong>
-                            <ul>
-                                <li>Time Limit: 15 Minutes (setup included).</li>
-                                <li>Drum kit provided standard.</li>
-                                <li>Bring your own guitars/keyboards.</li>
-                            </ul>
-                        </div>
+                    <p>Experience the rhythm where classical meets western dance forms.</p>
+                    <div class="rules-box" id="rules-38">
+                        <strong>Competition Rounds:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Round 1 (Dual Style Fusion):</strong> Perform a single song showcasing at least two distinct styles (e.g., Classical + Hip-Hop).</li>
+                            <li><strong>Round 2 (Music Switch Challenge):</strong> Teams must instantly adapt their choreography when the music suddenly switches genre mid-performance.</li>
+                            <li><strong>Round 3 (Prop Fusion Round):</strong> Teams must creatively integrate a prop (dupatta, hat, chair, etc.) into their fusion act.</li>
+                        </ul>
+                        <strong>Rules & Regulations:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Audio:</strong> Final tracks must be submitted in MP3 format before the deadline; no changes allowed on event day.</li>
+                            <li><strong>Props & Costume:</strong> Teams must arrange their own props; costumes must be decent and appropriate.</li>
+                            <li><strong>Reporting:</strong> Teams must report at least 30 minutes before the event starts.</li>
+                            <li><strong>Disqualifications:</strong> Vulgarity, inappropriate gestures, or use of fire/dangerous materials will lead to immediate disqualification.</li>
+                        </ul>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding stage dimensions and specific track submission deadlines, please see the booklet.
+                        </p>
                     </div>
-                    <button class="btn-join" onclick="toggleRules('rules-band')">Know More</button>
+                    <button class="btn-join" onclick="toggleRules('rules-38', this)">Know More</button>
                 </div>
             </div>
 
-            <div class="card event-card-wide" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
+            <div class="card event-card-wide" data-tilt>
                 <div class="card-img-holder">
-                    <img src="https://images.unsplash.com/photo-1516280440614-6697288d5d38?w=500&auto=format&fit=crop&q=60" alt="Sur Sangam" loading="lazy">
+                    <img src="image/tshirt.jpeg" alt="Tshirt Painting" loading="lazy" decoding="async">
                 </div>
                 <div class="card-content">
-                    <h3>Sur Sangam (Singing)</h3>
-                    
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 12:00 PM</div>
-
-                    <div class="coordinator-box">
-                        <span><i class="fas fa-user-check"></i> Coord: Ms. Shashi Lata</span>
+                    <h3>6. T-shirt Painting</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 15 March | 2:00 PM – 5:00 PM 
+                    <div><strong><i class="fas fa-user-tie"></i> Event Coordinator: Ms. Afreen Nishat (9412870275) </strong> <br></div>  
+                    <div class="schedule-info"> Venue: Chemical Engineering Department  <div>Fees: 100</div> </div>
                     </div>
-                    <p>Let your voice touch the hearts.</p>
-                    <div class="rules-box" id="rules-singing">
-                        <strong><i class="fas fa-info-circle"></i> Event Briefing:</strong>
-                        <p>Solo and Duet singing competition.</p>
-                        <div style="margin-top: 10px;">
-                            <strong><i class="fas fa-gavel"></i> Key Guidelines:</strong>
-                            <ul>
-                                <li>Genre: Bollywood/Classical/Folk.</li>
-                                <li>Time Limit: 3 Minutes.</li>
-                                <li>Karaoke must be submitted in MP3 format.</li>
-                            </ul>
-                        </div>
+                    <p>Turn fabric into art. Design a unique piece of wearable creativity.</p>
+                    <div class="rules-box" id="rules-43">
+                        <strong>Rules & Regulations:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Theme:</strong> The theme will be revealed live at the event.</li>
+                            <li><strong>Time Limit:</strong> Each participant will be given one hour.</li>
+                            <li><strong>Provided:</strong> T-shirts will be provided at the venue.</li>
+                            <li><strong>Materials:</strong> Each participant must bring and use their own colors and brushes.</li>
+                            <li><strong>Presentation:</strong> Participants must explain what the painting symbolizes to the judges panel.</li>
+                        </ul>
+                        <strong>Event Description:</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            The T-Shirt Painting event is a fun and creative competition that encourages originality and self-expression by transforming plain T-shirts into colorful and meaningful designs using imagination and artistic skills.
+                        </p>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding the event, please see the booklet.
+                        </p>
                     </div>
-                    <button class="btn-join" onclick="toggleRules('rules-singing')">Know More</button>
+                    <button class="btn-join" onclick="toggleRules('rules-43', this)">Know More</button>
                 </div>
             </div>
 
-            <div class="card event-card-wide" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
+            <div class="card event-card-wide" data-tilt>
                 <div class="card-img-holder">
-                    <img src="https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?w=500&auto=format&fit=crop&q=60" alt="Quiz" loading="lazy">
+                    <img src="image/Street play.jpeg" alt="Nukkad Natak" loading="lazy" decoding="async">
                 </div>
                 <div class="card-content">
-                    <h3>Cultural Quiz</h3>
-                    
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 2 | 26th Oct | 01:00 PM</div>
+                    <h3>7. Street Play (Freeze Rule)</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 15 March | 4:00 PM–6:00 PM 
+                    <div><strong><i class="fas fa-user-tie"></i> Event Coordinator: Dr. Ajay K. Yadav (9258006671), Dr. Atul Katiyar (9760078070) </strong> <br></div>  
+                    <div class="schedule-info"> Venue: Open Area, Atal Auditorium  <div>Fee: Rs. 100/- per team</div> </div>
+                    </div>
+                    <p>The stage is the street, the voice is yours to bring social change.</p>
+                    <div class="rules-box" id="rules-40">
+                        <strong>Rules & Regulations:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Eligibility:</strong> Open to engineering students with only one team permitted per institute.</li>
+                            <li><strong>Team Size:</strong> Each team must consist of 8 to 12 participants, including performers and supporting members.</li>
+                            <li><strong>Time Limit:</strong> Teams are allotted 10 to 15 minutes, including entry and exit.</li>
+                            <li><strong>Content:</strong> Plays must be original and focus on socially relevant themes.</li>
+                            <li><strong>Language:</strong> Performances can be in Hindi, English, or bilingual format.</li>
+                            <li><strong>Audio & Props:</strong> Only minimal handheld props are allowed; recorded music is prohibited.</li>
+                            <li><strong>Sound Effects:</strong> Only live effects such as clapping or traditional instruments are permitted.</li>
+                        </ul>
+                        <strong>Event Description:</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            The Street Play serves as a powerful medium for students to address critical social, national, and ethical concerns. Performed in an open-air area, it encourages storytelling to advocate for positive change.
+                        </p>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding synopsis submission and reporting times, please see the booklet.
+                        </p>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-40', this)">Know More</button>
+                </div>
+            </div>
 
-                    <div class="coordinator-box" style="flex-direction: column; align-items: flex-start; gap: 5px;">
-                        <span><i class="fas fa-users"></i> <strong>Coordinators:</strong></span>
-                        <span style="font-size: 0.8rem;">Dr. Hari K. Singh, Ms. Neha Sabeel,</span>
-                        <span style="font-size: 0.8rem;">Dr. Sinshupa, Dr. Nisha Singh</span>
+            <div class="card event-card-wide" data-tilt>
+                <div class="card-img-holder">
+                    <img src="image/fashion.jpg" alt="Fashion Show" loading="lazy" decoding="async">
+                </div>
+                <div class="card-content">
+                    <h3>8. AESTHETICA (Fashion Show)</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 15 March | 5:00 PM – 8:00 PM 
+                    <div><strong><i class="fas fa-user-tie"></i> Event Coordinator: Dr. Preeti Yadav (7017932082) </strong> <br></div>  
+                    <div class="schedule-info"> Venue: Atal Auditorium <div>Fees: 2000/- per team</div> <div style="background: linear-gradient(45deg, #ff00cc, #3333ff); color: white; display: inline-block; padding: 4px 12px; font-weight: bold; border-radius: 20px; font-size: 0.8rem; margin-top: 8px; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 0 10px rgba(255, 0, 204, 0.5);">
+    Cash Prize
+</div></div>
                     </div>
-                    <p>Test your knowledge of art, history, and culture.</p>
-                    <div class="rules-box" id="rules-quiz">
-                        <strong><i class="fas fa-info-circle"></i> Event Briefing:</strong>
-                        <p>A trivia battle to test your cultural IQ.</p>
-                        <div style="margin-top: 10px;">
-                            <strong><i class="fas fa-gavel"></i> Key Guidelines:</strong>
-                            <ul>
-                                <li>Team Size: 2 Members.</li>
-                                <li>Rounds: Prelims -> Visual -> Rapid Fire.</li>
-                                <li>Use of mobile phones is prohibited.</li>
-                            </ul>
-                        </div>
+                    <p>Walk the ramp with elegance and professional style.</p>
+                    <div class="rules-box" id="rules-46">
+                        <strong>Rules & Regulations:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Selection:</strong> Prior registration and submission of a ramp walk video is mandatory.</li>
+                            <li><strong>Team Composition:</strong> 12 to 15 members from the same institution, including one Showstopper.</li>
+                            <li><strong>Performance:</strong> Each team gets 8–10 minutes of stage time.</li>
+                            <li><strong>Requirements:</strong> Teams must provide their own costumes, make-up, props, and background music.</li>
+                            <li><strong>Conduct:</strong> Costumes must be decent and non-revealing; vulgarity leads to disqualification.</li>
+                            <li><strong>Safety:</strong> Use of fire, sharp objects, or hazardous materials is strictly prohibited.</li>
+                        </ul>
+                        <strong>Event Description:</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            AESTHETICA 2026 is a signature fashion showcase celebrating style evolution. It transforms the runway into a platform for storytelling and confidence.
+                        </p>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding the event, please see the booklet.
+                        </p>
                     </div>
-                    <button class="btn-join" onclick="toggleRules('rules-quiz')">Know More</button>
+                    <button class="btn-join" onclick="toggleRules('rules-46', this)">Know More</button>
+                </div>
+            </div>
+
+            <div class="card event-card-wide" data-tilt>
+                <div class="card-img-holder">
+                    <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=500&q=60" alt="Culinary" loading="lazy" decoding="async">
+                </div>
+                <div class="card-content">
+                    <h3>9. Culinary Competition</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 16 March | 10:00 AM–1:00 PM
+                    <div><strong><i class="fas fa-user-tie"></i> Event Coordinator: Er. Afreen Nishat (9412870275), Er. Neha Sabeel (8077763035) </strong> <br></div>  
+                    <div class="schedule-info"> Venue: Chemical Engineering Dept.  <div>Fees: 100/- per team</div> </div>
+                    </div>
+                    <p>Showcase your masterchef skills and delicious food creations.</p>
+                    <div class="rules-box" id="rules-45">
+                        <strong>Rules & Regulations:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Team Size:</strong> Each team will have two members.</li>
+                            <li><strong>Time Limit:</strong> Each team will be given one hour.</li>
+                            <li><strong>Fireless Cooking:</strong> Prepare one dish and one drink without fire or electrical appliances.</li>
+                            <li><strong>Materials:</strong> Participants must bring their own ingredients and equipment.</li>
+                            <li><strong>Presentation:</strong> The dish must be presented in an appealing manner.</li>
+                        </ul>
+                        <strong>Event Description:</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            The culinary competition promotes teamwork, smart cooking techniques, and hygiene using raw or ready-to-eat ingredients.
+                        </p>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding the event, please see the booklet.
+                        </p>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-45', this)">Know More</button>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <footer>
-            <div class="copyright-strip" style="background: #e0e0e0; padding: 15px 0; color: #000; font-weight: 500;">
-            Made by IT CLINIC | MJPRU Tech Fest 2026
+    <footer class="glass-footer">
+        <div>
+            Made with ❤️ by IT CLINIC, MJPRU | TECHFEST AURA 2K26
         </div>
     </footer>
 
@@ -307,5 +456,6 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" defer></script>
     <script src="script.js" defer></script>
+    
 </body>
 </html>

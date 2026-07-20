@@ -4,463 +4,1092 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Technical Events at MJPRU Tech Fest 2026. Join us for Hackathons, Robotics, Coding Challenges, and more.">
-    <title>Technical Events | MJPRU Tech Fest 2026</title>
+    <title>Technical Events | Tech Fest AURA 2K26</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" type="image/png" href="./1/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./1/favicon.svg" />
+    <link rel="shortcut icon" href="./1/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./1/apple-touch-icon.png" />
+    <link rel="manifest" href="./1/site.webmanifest" />
 </head>
 <body>
 
     <div class="gradient-bg"><div class="uni-overlay"></div></div>
 
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe626eTLTJla3O_4sQe0diJSiLH9iNBzmuDwljhHNjKKs10xA/viewform" target="_blank" class="mobile-join-fab">Join Now 🚀</a>
+    <a href="https://forms.eduqfix.com/festregof/add" target="_blank" class="mobile-join-fab">Join Now 🚀</a>
 
     <nav>
-        <div class="logo">MJPRU <span class="highlight">TECH</span></div>
-        <button class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+        <div class="logo">MJPRU <span class="highlight">TECHNICAL</span></div>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle Navigation"><i class="fas fa-bars"></i></button>
         <ul class="nav-links" id="mobileMenu">
-            <li><a href="../index.html">Back to Home</a></li>
+            <li><a href="../index.html">Home</a></li>
             <li><a href="../cultural/index.html">Cultural Events</a></li>
             <li><a href="../sports/index.html">Sports Events</a></li>
             <li><a href="../literacy/index.html">Literacy Events</a></li>
-            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSe626eTLTJla3O_4sQe0diJSiLH9iNBzmuDwljhHNjKKs10xA/viewform" target="_blank" class="btn-nav">Join Now</a></li>
+            <li><a href="../Rhythm/index.html">Rhythm & Musical</a></li>
+            <li><a href="../workshop/index.html">Workshop Events</a></li>
+            <li><a href="https://forms.eduqfix.com/festregof/add" target="_blank" class="btn-nav">Join Now</a></li>
         </ul>
     </nav>
 
-    <header>
+    <header style="min-height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; flex-direction: column;">
+        <canvas id="hero-canvas"></canvas> 
         <div class="hero-content">
-            <h1 data-aos="zoom-in">TECHNICAL <span class="year">ARENA</span></h1>
-            <p class="tagline" data-aos="fade-up">"Get Ready Youth of India, Celebrate the Innovation of MJPRU"</p>
-
-            <div data-aos="fade-up" data-aos-delay="200" style="display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; background: rgba(255,255,255,0.1); padding: 30px 50px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(5px);">
-                <div style="text-align: center;">
-                    <div style="font-size: 2.5rem; font-weight: 700; color: #ffeb3b;"><span class="counter" data-target="26">0</span>+</div>
-                    <div style="color: white; font-size: 0.9rem; text-transform: uppercase;">Events</div>
-                </div>
-                <div style="width: 1px; background: rgba(255,255,255,0.3); height: 60px;" class="desktop-divider"></div>
-                <div style="text-align: center;">
-                    <div style="font-size: 2.5rem; font-weight: 700; color: #ffeb3b;">₹<span class="counter" data-target="100">0</span>k</div>
-                    <div style="color: white; font-size: 0.9rem; text-transform: uppercase;">Prize Pool</div>
-                </div>
-                <div style="width: 1px; background: rgba(255,255,255,0.3); height: 60px;" class="desktop-divider"></div>
-                <div style="text-align: center;">
-                    <div style="font-size: 2.5rem; font-weight: 700; color: #ffeb3b;"><span class="counter" data-target="1500">0</span>+</div>
-                    <div style="color: white; font-size: 0.9rem; text-transform: uppercase;">Innovators</div>
-                </div>
-            </div>
+            <div class="presents-text" data-aos="fade-down">AURA 2K26 MJPRU Tech Fest Presents</div>
+            <h1 data-aos="zoom-in" style="font-size: 4rem; margin-bottom: 10px;">TECHNICAL <span class="year">ARENA</span></h1>
+            <p class="tagline" data-aos="fade-up">"Get Ready Youth of India..."</p>
         </div>
     </header>
-
+        
     <section class="events-section" style="padding-top: 0;">
         <div class="cards-container">
-            
-            <div class="event-card-wide" data-tilt>
-                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500&q=60" alt="E-Sports" loading="lazy"></div>
-                <div class="card-content">
-                    <h3>E-Sports BGMI</h3>
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 10:00 AM</div>
-                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Anil Kumar Bisht</span></div>
-                    <p>Battleground for the ultimate gamers.</p>
-                    <div class="rules-box" id="rules-bgmi">
-                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
-                        <ul><li>Squad Mode Only.</li><li>No Emulators allowed.</li><li>Bring your own headphones.</li></ul>
-                    </div>
-                    <button class="btn-join" onclick="toggleRules('rules-bgmi')">Know More</button>
-                </div>
-            </div>
 
-            <div class="event-card-wide" data-tilt>
-                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1504384308090-c54be3852f33?w=500&q=60" alt="Hackathon" loading="lazy"></div>
+            <div class="card event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="newimage/expo.cms" alt="Expo" loading="lazy" decoding="async"></div>
                 <div class="card-content">
-                    <h3>Hackathon</h3>
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 10:00 AM</div>
-                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Inderpreet Kaur</span></div>
-                    <p>Code your way to the future. 24-hour coding marathon.</p>
-                    <div class="rules-box" id="rules-hack">
-                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
-                        <ul><li>Team Size: 2-4 Members.</li><li>Bring laptops & chargers.</li><li>Open Innovation.</li></ul>
+                    <h3>1. Tech Expo</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 14 March | 10:00 AM–1:00 PM
+                        <div class="schedule-info"> Venue: Place of Inaugural Ceremony <div>Fees : 500/- per team</div> <div style="background: linear-gradient(45deg, #ff00cc, #3333ff); color: white; display: inline-block; padding: 4px 12px; font-weight: bold; border-radius: 20px; font-size: 0.8rem; margin-top: 8px; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 0 10px rgba(255, 0, 204, 0.5);">
+    Cash Prize
+</div></div>
                     </div>
-                    <button class="btn-join" onclick="toggleRules('rules-hack')">Know More</button>
-                </div>
-            </div>
-
-            <div class="event-card-wide" data-tilt>
-                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=500&q=60" alt="Poster" loading="lazy"></div>
-                <div class="card-content">
-                    <h3>Poster Presentation</h3>
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 11:00 AM</div>
-                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. M. S. Karuna</span></div>
-                    <p>Present your research ideas visually.</p>
-                    <div class="rules-box" id="rules-poster">
-                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
-                        <ul><li>Size: Standard Chart Paper.</li><li>5 mins explanation.</li><li>Topics: AI, IoT, Energy.</li></ul>
-                    </div>
-                    <button class="btn-join" onclick="toggleRules('rules-poster')">Know More</button>
-                </div>
-            </div>
-
-            <div class="event-card-wide" data-tilt>
-                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=500&q=60" alt="Robo Race" loading="lazy"></div>
-                <div class="card-content">
-                    <h3>Robo Race</h3>
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 12:00 PM</div>
-                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Atul Sarojwal</span></div>
-                    <p>Navigate the track with your mechanical beast.</p>
-                    <div class="rules-box" id="rules-race">
-                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
-                        <ul><li>Bot Size: 25x25x25 cm.</li><li>Wired/Wireless allowed.</li><li>Time penalties apply.</li></ul>
-                    </div>
-                    <button class="btn-join" onclick="toggleRules('rules-race')">Know More</button>
-                </div>
-            </div>
-
-            <div class="event-card-wide" data-tilt>
-                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1611368925892-d62100863073?w=500&q=60" alt="Robo War" loading="lazy"></div>
-                <div class="card-content">
-                    <h3>Robo War</h3>
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 2 | 26th Oct | 10:00 AM</div>
-                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Mr. Ramji Prasad</span></div>
-                    <p>The ultimate battle of bots.</p>
-                    <div class="rules-box" id="rules-war">
-                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
-                        <ul><li>Weight: Under 15kg/30kg.</li><li>Safety switch mandatory.</li><li>No corrosive weapons.</li></ul>
-                    </div>
-                    <button class="btn-join" onclick="toggleRules('rules-war')">Know More</button>
-                </div>
-            </div>
-
-            <div class="event-card-wide" data-tilt>
-                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=500&q=60" alt="Drone" loading="lazy"></div>
-                <div class="card-content">
-                    <h3>Drone Activity</h3>
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 2 | 26th Oct | 02:00 PM</div>
-                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Yatendra Kumar</span></div>
-                    <p>Sky is the limit. Showcase your flying skills.</p>
-                    <div class="rules-box" id="rules-drone">
-                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
-                        <ul><li>Obstacle course.</li><li>Stability test.</li><li>Custom drones preferred.</li></ul>
-                    </div>
-                    <button class="btn-join" onclick="toggleRules('rules-drone')">Know More</button>
-                </div>
-            </div>
-
-            <div class="event-card-wide" data-tilt>
-                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&q=60" alt="Hardware" loading="lazy"></div>
-                <div class="card-content">
-                    <h3>Hardware Competition</h3>
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 02:00 PM</div>
-                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Anil Kumar Singh</span></div>
-                    <p>Showcase innovative hardware projects.</p>
-                    <div class="rules-box" id="rules-hard">
-                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
-                        <ul><li>Working prototype mandatory.</li><li>IoT/Embedded Systems.</li><li>Bring extension cords.</li></ul>
-                    </div>
-                    <button class="btn-join" onclick="toggleRules('rules-hard')">Know More</button>
-                </div>
-            </div>
-
-            <div class="event-card-wide" data-tilt>
-                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=500&q=60" alt="Circuits" loading="lazy"></div>
-                <div class="card-content">
-                    <h3>Cirkitect</h3>
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 11:30 AM</div>
-                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Janak Kapoor</span></div>
-                    <p>Design complex circuits and logic gates.</p>
-                    <div class="rules-box" id="rules-cirk">
-                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
-                        <ul><li>Components provided.</li><li>Circuit diagram needed.</li><li>Clean layout required.</li></ul>
-                    </div>
-                    <button class="btn-join" onclick="toggleRules('rules-cirk')">Know More</button>
-                </div>
-            </div>
-
-            <div class="event-card-wide" data-tilt>
-                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&q=60" alt="Debugging" loading="lazy"></div>
-                <div class="card-content">
-                    <h3>Debugging</h3>
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 01:00 PM</div>
-                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Anil Bisht</span></div>
-                    <p>Find the bugs, fix the code.</p>
-                    <div class="rules-box" id="rules-bug">
-                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
-                        <ul><li>Lang: C/C++/Java/Python.</li><li>Time: 30 Mins.</li><li>No Internet.</li></ul>
-                    </div>
-                    <button class="btn-join" onclick="toggleRules('rules-bug')">Know More</button>
-                </div>
-            </div>
-
-            <div class="event-card-wide" data-tilt>
-                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1531297461136-82lw9z0u7e?w=500&q=60" alt="Tech Mix" loading="lazy"></div>
-                <div class="card-content">
-                    <h3>Agglomeration</h3>
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 2 | 26th Oct | 11:00 AM</div>
-                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Nisha Singh</span></div>
-                    <p>A mix of technical challenges.</p>
-                    <div class="rules-box" id="rules-agglo">
-                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
-                        <ul><li>Team: 3 Members.</li><li>Quiz + Tasks.</li><li>Tests coordination.</li></ul>
-                    </div>
-                    <button class="btn-join" onclick="toggleRules('rules-agglo')">Know More</button>
-                </div>
-            </div>
-
-            <div class="event-card-wide" data-tilt>
-                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=500&q=60" alt="Expo" loading="lazy"></div>
-                <div class="card-content">
-                    <h3>Tech Expo</h3>
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 & 2 | All Day</div>
                     <div class="coordinator-box" style="flex-direction: column; align-items: flex-start;">
-                        <span><i class="fas fa-users"></i> <strong>Coordinators:</strong></span>
-                        <span style="font-size: 0.8rem;">Dr. Deepak Gangwar, Dr. Anil Bisht,</span>
-                        <span style="font-size: 0.8rem;">Dr. Sumit Srivastava, Dr. Rohit Verma,</span>
-                        <span style="font-size: 0.8rem;">Dr. Pranjal Saxena</span>
+                        <span><i class="fas fa-users"></i> <strong>Event Coordinators:</strong></span>
+                        <span style="font-size: 0.8rem; margin-top: 5px;">Dr. Anil Kumar Singh, Dr. Mukul Kumar Gupta <br>
+                        Dr. D.D. Sharma (EE): 9411471784 <br>
+                        Dr. Deepak Gangwar (EI): 9718508870 <br>
+                        Dr. M.S. Karuna (CH): 9359501112 <br>
+                        Dr. Vishal Saxena (ME): 9412738873 <br>
+                        Dr. Preeti Yadav (CS): 9319306448 <br>
+                        Dr. Sumit Srivastava (EC): 9411917873 <br>
+                        Dr. Anil Kumar Bisht, Dr. Rohit Verma, Dr. Pranjal Saxena</span>
                     </div>
                     <p>The grand exhibition of technological marvels.</p>
                     <div class="rules-box" id="rules-expo">
-                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
-                        <ul><li>Open for all.</li><li>Working/Static Models.</li><li>Synopsis required.</li></ul>
+                        <strong>Rules & Regulations:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Eligibility:</strong> Open to Diploma, undergraduate, postgraduate students, and research scholars.</li>
+                            <li><strong>Team Size:</strong> Individual or teams of 2–4 members with one nominated leader.</li>
+                            <li><strong>Originality:</strong> Projects must be original and developed by the participating team.</li>
+                            <li><strong>Project Type:</strong> Can be hardware-based, software-based, or hybrid in nature.</li>
+                            <li><strong>Requirements:</strong> Participants must bring their own laptops, hardware components, and accessories.</li>
+                            <li><strong>Reporting:</strong> Teams must report at least one hour before the scheduled evaluation time.</li>
+                            <li><strong>Conduct:</strong> Any form of plagiarism, misrepresentation, or misconduct will lead to disqualification.</li>
+                            <li><strong>Evaluation:</strong> Based on innovation, technical depth, feasibility, and presentation.</li>
+                        </ul>
+                        <strong>Event Description:</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            <strong>Theme:</strong> 'Engineering Innovations for Society, Sustainability, and Smart Technologies'.
+                            <br><br>
+                            Tech Expo is a flagship academic activity aimed at promoting interdisciplinary collaboration and innovation. It provides a platform for students to showcase expertise through working models, prototypes, and software solutions across various sub-themes like AI, IoT, Robotics, and Cybersecurity.
+                        </p>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding the event, please see the booklet.
+                        </p>
                     </div>
-                    <button class="btn-join" onclick="toggleRules('rules-expo')">Know More</button>
+                    <button class="btn-join" onclick="toggleRules('rules-expo', this)">Know More</button>
                 </div>
             </div>
 
-            <div class="event-card-wide" data-tilt>
-                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&q=60" alt="Idea" loading="lazy"></div>
+            <div class="card event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="newimage/phamamodel.jpg" alt="Pharma" loading="lazy" decoding="async"></div>
                 <div class="card-content">
-                    <h3>Ideathon</h3>
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 10:30 AM</div>
-                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. D. D. Sharma</span></div>
-                    <p>Pitch your revolutionary ideas.</p>
-                    <div class="rules-box" id="rules-idea">
-                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
-                        <ul><li>PPT (Max 5 slides).</li><li>Problem & Solution.</li><li>Feasibility Check.</li></ul>
+                    <h3>2. Pharma Model Competition</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 14 March | 10:00 AM–1:00 PM 
+                        <div class="schedule-info"> Venue: Place of Inaugural Ceremony <div>Fees : 500/- per team</div><div style="background: linear-gradient(45deg, #ff00cc, #3333ff); color: white; display: inline-block; padding: 4px 12px; font-weight: bold; border-radius: 20px; font-size: 0.8rem; margin-top: 8px; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 0 10px rgba(255, 0, 204, 0.5);">
+    Cash Prize
+</div> </div>
+                    </div> 
+                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Event Coordinator: Dr. Amit Kumar Verma (7017763889) </span></div>
+                    <p>Showcase innovative models in the field of Pharmaceutical sciences.</p>
+                    <div class="rules-box" id="rules-pharma">
+                        <strong>Rules & Regulations:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Eligibility:</strong> Open to Diploma, Undergraduate, Postgraduate, and Research students of Pharmacy.</li>
+                            <li><strong>Team Size:</strong> Individual or teams of 2–4 members.</li>
+                            <li><strong>Categories:</strong> Working Models (functional mechanisms) or Non-Working Models (static/conceptual).</li>
+                            <li><strong>Presentation:</strong> Each team gets 5–7 minutes for presentation and 2–3 minutes for questions.</li>
+                            <li><strong>Safety:</strong> Use of high-voltage, hazardous chemicals, live animals, or human samples is strictly prohibited.</li>
+                            <li><strong>Support:</strong> Posters, charts, or LCD presentations may be used as supporting material.</li>
+                        </ul>
+                        <strong>Event Description:</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            This competition aims to encourage innovation and practical application of pharmaceutical concepts. Models should relate to Pharmaceutical Sciences, including Pharmaceutics, Pharmacology, and Public Health & Patient Safety.
+                            <br><br>
+                            <strong>Requirement:</strong> Participants must clearly explain the title, concept, application in healthcare, and advantages/limitations of their model.
+                        </p>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding the event, please see the booklet.
+                        </p>
                     </div>
-                    <button class="btn-join" onclick="toggleRules('rules-idea')">Know More</button>
+                    <button class="btn-join" onclick="toggleRules('rules-pharma', this)">Know More</button>
                 </div>
             </div>
 
-            <div class="event-card-wide" data-tilt>
-                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=500&q=60" alt="Bridge" loading="lazy"></div>
+           <div class="card event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="image/alo.jpg" alt="Tech Mix" loading="lazy" decoding="async"></div>
                 <div class="card-content">
-                    <h3>Bridge Building</h3>
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 2 | 26th Oct | 12:00 PM</div>
-                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Ms. Farkunda Rehman</span></div>
-                    <p>Construct the strongest bridge.</p>
-                    <div class="rules-box" id="rules-bridge">
-                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
-                        <ul><li>Popsicle sticks & Glue.</li><li>Load testing done.</li><li>Aesthetics + Strength.</li></ul>
+                    <h3>3. Agglomeration</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 14 March | 10:00 AM–1:00 PM
+                        <div class="schedule-info"> Venue: Computer Lab, CSIT Main Building <div>Fees : 200/- per team</div> </div>
+                    </div> 
+                     <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Event Coordinator:  Ms. Nisha Singh (7830399084)</span></div>
+                    <p>A mix of technical challenges and team coordination.</p>
+                    <div class="rules-box" id="rules-agglo">
+                        <strong>Rules and Regulations:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>No Internet Policy:</strong> Internet access will NOT be provided during the competition. Since the focus areas are declared in advance, participants are expected to prepare thoroughly from those topics. All questions will strictly belong to the predefined focus areas, and no external topics will be included. Teams must solve and demonstrate their solutions entirely without internet assistance.</li>
+                            <li><strong>Unique Feature – Chit-Based Random Task Selection:</strong> All coding tasks will be prepared strictly based on predefined focus areas. Each task will be written on individual chits and placed in a bowl. Every team will randomly pick one chit and must solve the task mentioned on it. Chits cannot be exchanged once selected. This ensures fairness, transparency, and real-time adaptability.</li>
+                        </ul>
+
+                        <strong style="display: block; margin-top: 16px;">Team Structure:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li>Exactly 2 members per team (mandatory).</li>
+                            <li>Cross-year teams allowed.</li>
+                            <li>Participants from any academic background may collaborate.</li>
+                            <li>One system will be allotted per team.</li>
+                            <li>Discussion is allowed only within the team.</li>
+                            <li>Any form of plagiarism or copying will result in disqualification.</li>
+                            <li>Judges' decision will be final and binding.</li>
+                        </ul>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding the event, please see the booklet.
+                        </p>
                     </div>
-                    <button class="btn-join" onclick="toggleRules('rules-bridge')">Know More</button>
+                    <button class="btn-join" onclick="toggleRules('rules-agglo', this)">Know More</button>
                 </div>
             </div>
 
-            <div class="event-card-wide" data-tilt>
-                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=500&q=60" alt="Electro" loading="lazy"></div>
+            <div class="card event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="newimage/blindbuiild.jpg" alt="Blind Build" loading="lazy" decoding="async"></div>
                 <div class="card-content">
-                    <h3>Electro Doctor</h3>
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 03:00 PM</div>
-                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Janak Kapoor</span></div>
-                    <p>Diagnose and repair circuits.</p>
-                    <div class="rules-box" id="rules-doctor">
-                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
-                        <ul><li>Faulty circuits given.</li><li>Use Multimeter.</li><li>Fastest wins.</li></ul>
+                    <h3>4.Blind Build Challenge</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 14 March | 2:00 PM–4:00 PM
+                        <div class="schedule-info"> Venue: Dept. of Electronics & Communication <div>Fees : 100/- per team</div> </div>
+                    </div> 
+                     <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Event Coordinator: Dr. Sourabh Pathak (9286250109)</span></div>
+                    <p>Code or build without seeing. Coordination is key.</p>
+                    <div class="rules-box" id="rules-blind">
+                      <strong>Rules & Regulations:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Team Composition:</strong> Each team will consist of two participants.</li>
+                            <li><strong>Roles:</strong> One member acts as the Blind Builder (blindfolded), and the other acts as the Guide.</li>
+                            <li><strong>Communication:</strong> Only verbal communication is allowed; gestures, signals, or written instructions are prohibited.</li>
+                            <li><strong>Restrictions:</strong> Guides are not allowed to touch the Builder or the materials. Electronic devices like mobile phones and smartwatches are strictly prohibited.</li>
+                            <li><strong>Materials:</strong> All building materials will be provided by the organizers; external materials are not allowed.</li>
+                            <li><strong>Disqualification:</strong> Any attempt to remove the blindfold, rule violations, or damage to property will lead to immediate disqualification.</li>
+                        </ul>
+                        <strong>Event Description:</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            The Blind Build Challenge is a team-based technical and fun activity where one participant builds a structure while blindfolded, relying entirely on verbal guidance from teammates. The event emphasizes communication, teamwork, creativity, and problem-solving skills under time constraints.
+                        </p>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding the event, please see the booklet.
+                        </p>
                     </div>
-                    <button class="btn-join" onclick="toggleRules('rules-doctor')">Know More</button>
+                    <button class="btn-join" onclick="toggleRules('rules-blind', this)">Know More</button>
                 </div>
             </div>
 
-            <div class="event-card-wide" data-tilt>
-                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?w=500&q=60" alt="Quiz" loading="lazy"></div>
+            <div class="card event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="image/hack.jpg" alt="Hackathon" loading="lazy" decoding="async"></div>
                 <div class="card-content">
-                    <h3>Technical Quiz</h3>
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 11:00 AM</div>
-                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Harish Kumar</span></div>
-                    <p>Test your tech knowledge.</p>
+                    <h3>5. Hackathon</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i>15 March | 07:00 AM onwards
+                        <div class="schedule-info"> Venue:Seminar Hall, T&P Building <div>Fees : 500</div><div style="background: linear-gradient(45deg, #ff00cc, #3333ff); color: white; display: inline-block; padding: 4px 12px; font-weight: bold; border-radius: 20px; font-size: 0.8rem; margin-top: 8px; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 0 10px rgba(255, 0, 204, 0.5);">
+    Cash Prize
+</div> </div>
+                    </div> 
+                      <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Event Coordinator: Dr. Inderpreet Kaur (9897662554)</span></div>
+                    <p>Code your way to the future.  12-hour coding marathon.</p>
+                    <div class="rules-box" id="rules-hack">
+                        <strong>National Web & AI Hackathon 2026</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            <strong>Organized by:</strong> Codevirus Security<br>
+                            <strong>In Collaboration with:</strong> Mahatma Jyotiba Phule Rohilkhand University
+                        </p>
+
+                        <strong style="display: block; margin-top: 16px;">About the Event:</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            Hack Secure 2.0 is a national-level, 12-hour innovation hackathon focused exclusively on Web Development and Artificial Intelligence. Participants will develop real-world projects within a structured 12-hour window and present their solutions to an expert technical evaluation panel.
+                            <br><br>
+                            The event is designed to test creativity, technical proficiency, teamwork, and real-time problem-solving under pressure.
+                        </p>
+
+                        <strong style="display: block; margin-top: 16px;">Event Structure (Day 1 – 14 March 2026):</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Reporting & Opening Brief:</strong> Introduction and rules.</li>
+                            <li><strong>Problem Statement Announcement:</strong> Revealing the technical challenges.</li>
+                            <li><strong>Project Development (Web / AI):</strong> 12 hours of intensive coding.</li>
+                            <li><strong>Scheduled Breaks:</strong> Periodic intervals for rest and refreshments.</li>
+                        </ul>
+
+                        <strong style="display: block; margin-top: 16px;">Prize & Career Opportunities:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>💰 Starting Prize Pool:</strong> ₹30,000+ (Note: The total prize pool is dynamic and may increase based on the total number of participants!)</li>
+                            <li><strong>🥇 First Prize:</strong> Cash Reward + Achievement Certificate</li>
+                            <li><strong>🥈 Second Prize:</strong> Cash Reward + Achievement Certificate</li>
+                            <li><strong>🥉 Third Prize:</strong> Cash Reward + Achievement Certificate</li>
+                            <li><strong>🚀 Career Growth:</strong> Internship Preference: Top-performing participants will be given priority preference for internships at Codevirus Security.</li>
+                        </ul>
+
+                        <strong style="display: block; margin-top: 16px;">Participant Benefits:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Certification:</strong> National-level participation certificate for all attendees.</li>
+                            <li><strong>Hands-on Experience:</strong> Practical exposure to Web & AI project development.</li>
+                            <li><strong>Expert Feedback:</strong> Evaluation by an experienced technical panel.</li>
+                            <li><strong>Networking:</strong> Connect with fellow tech innovators and industry mentors.</li>
+                        </ul>
+
+                        <strong style="display: block; margin-top: 16px;">Registration Guidelines:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li>All team members must register separately to ensure certificate accuracy.</li>
+                            <li><strong>Registration Fee:</strong> ₹500 per participant (One-time, Non-Refundable).</li>
+                            <li><strong>Payment Requirement:</strong> Participants must complete the registration payment before submitting this form.</li>
+                        </ul>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding the event, please see the booklet.
+                        </p>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-hack', this)">Know More</button>
+                </div>
+            </div>
+
+            <div class="card event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="image/roborace.jpg" alt="Robo Race" loading="lazy" decoding="async"></div>
+                <div class="card-content">
+                    <h3>6. Robo Race</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 15 March | 10:00 AM–1:00 PM
+                        <div class="schedule-info"> Venue: Electrical Engineering Dept. <div>Fees : 500/- per team</div> <div style="background: linear-gradient(45deg, #ff00cc, #3333ff); color: white; display: inline-block; padding: 4px 12px; font-weight: bold; border-radius: 20px; font-size: 0.8rem; margin-top: 8px; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 0 10px rgba(255, 0, 204, 0.5);">
+    Cash Prize
+</div></div>
+                    </div> 
+                     <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Event Coordinator:  Dr. Atul Sarojwal (9411698867)</span></div>
+                    <p>Navigate the track with your mechanical beast.</p>
+                    <div class="rules-box" id="rules-race">
+                        <strong>Robot Specifications:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Dimensions:</strong> Must fit within 25 cm x 20 cm x 15 cm or 30 cm x 30 cm x 30 cm.</li>
+                            <li><strong>Weight:</strong> Maximum weight must not exceed 5 kg.</li>
+                            <li><strong>Power Source:</strong> Electrically powered only (Battery/DC); IC engines are strictly prohibited.</li>
+                            <li><strong>Construction:</strong> Robots must be custom-built; ready-made kits or Lego parts are generally not allowed.</li>
+                            <li><strong>Control:</strong> Wired or wireless; wired bots must have a long, slack cable.</li>
+                        </ul>
+                        <strong>Game Rules:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Winner:</strong> Decided by the least time taken to complete the track (Time Trial System).</li>
+                            <li><strong>Obstacles:</strong> Track includes bridges, speed breakers, marble pits, slippery paths, and seesaws.</li>
+                            <li><strong>Hand Touches:</strong> Limited manual touches (e.g., 3) are allowed but result in penalties.</li>
+                            <li><strong>Disqualification:</strong> Occurs for destroying the arena, using illegal parts, or wire pulling to assist movement.</li>
+                        </ul>
+                        <strong>Event Description:</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            Robo Race is a technical robotics competition where manually controlled robots compete on an obstacle-filled track. The objective is to design a fast, stable, and robust robot capable of completing the course in the least possible time.
+                        </p>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding the event, please see the booklet.
+                        </p>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-race', this)">Know More</button>
+                </div>
+            </div>
+
+            <div class="card event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="newimage/techquiz.png" alt="Quiz" loading="lazy" decoding="async"></div>
+                <div class="card-content">
+                    <h3>7. Technical Quiz</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 15 March | 10:00 AM–1:00 PM
+                        <div class="schedule-info"> Venue:Chemical Engineering Dept. <div>Fees : 100/- per team</div> </div>
+                    </div> 
+                     <div class="coordinator-box"><span><i class="fas fa-user-check"></i>Event Coordinator: Dr. Harish Kumar (8699817936)</span></div>
+                    <p>Test your tech knowledge in this comprehensive quiz.</p>
                     <div class="rules-box" id="rules-quiz">
-                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
-                        <ul><li>Topics: Science, Engg, IT.</li><li>Team of 2.</li><li>Negative marking.</li></ul>
+                        <strong>Quiz Structure (3 Rounds):</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Round 1: Preliminary Screening</strong> – MCQ round covering basic and applied technical concepts.</li>
+                            <li><strong>Round 2: Analytical & Problem-Solving</strong> – Numerical problems and case studies focusing on application-based thinking.</li>
+                            <li><strong>Round 3: Rapid Fire / Buzzer Round</strong> – Fast-response questions testing depth of knowledge and presence of mind.</li>
+                        </ul>
+                        <strong>Technical Specifications:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Team Size:</strong> 4 members per team.</li>
+                            <li><strong>Scoring:</strong> Correct answers receive positive marks; incorrect answers receive negative marks.</li>
+                            <li><strong>Medium:</strong> The quiz will be conducted in an offline model.</li>
+                        </ul>
+                        <strong>Rules & Regulations:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Reporting:</strong> Participants must report at least 15 minutes before the quiz begins.</li>
+                            <li><strong>Prohibitions:</strong> Use of mobile phones, smart devices, books, or notes is strictly prohibited.</li>
+                            <li><strong>Finality:</strong> The quizmaster's decision is final and binding.</li>
+                            <li><strong>Tie-Breaker:</strong> Tie-breaker questions will be used if scores are equal.</li>
+                        </ul>
+                        <strong>Event Description:</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            The Technical Quiz is an academic competition designed to enhance technical knowledge, analytical thinking, and problem-solving abilities among engineering students. It covers core engineering subjects, current technologies, and general technical awareness.
+                        </p>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding the event, please see the booklet.
+                        </p>
                     </div>
-                    <button class="btn-join" onclick="toggleRules('rules-quiz')">Know More</button>
+                    <button class="btn-join" onclick="toggleRules('rules-quiz', this)">Know More</button>
                 </div>
             </div>
 
-            <div class="event-card-wide" data-tilt>
-                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&q=60" alt="Reverse Eng" loading="lazy"></div>
+            <div class="card event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="newimage/Technical quiz.jpg" alt="Battle" loading="lazy" decoding="async"></div>
                 <div class="card-content">
-                    <h3>Reverse Engineering</h3>
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 2 | 26th Oct | 10:30 AM</div>
-                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Varun Pratap</span></div>
-                    <p>Deconstruct products to understand logic.</p>
-                    <div class="rules-box" id="rules-rev">
-                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
-                        <ul><li>Identify mechanism.</li><li>Explain workflow.</li><li>Written + Practical.</li></ul>
-                    </div>
-                    <button class="btn-join" onclick="toggleRules('rules-rev')">Know More</button>
-                </div>
-            </div>
-
-            <div class="event-card-wide" data-tilt>
-                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1553481187-be93c21490a9?w=500&q=60" alt="Battle" loading="lazy"></div>
-                <div class="card-content">
-                    <h3>Tech Quiz Battle</h3>
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 01:30 PM</div>
-                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Anil Bisht</span></div>
+                    <h3>8. Tech Quiz Battle</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 15 March | 10:00 AM–1:00 PM
+                        <div class="schedule-info"> Venue:Atal Auditorium <div>Fees : 100/- per team</div> </div>
+                    </div> 
+                     <div class="coordinator-box"><span><i class="fas fa-user-check"></i>Event Coordinator:Dr. Anil Kumar Bisht (9412928340)</span></div>
                     <p>Head-to-head trivia warfare.</p>
                     <div class="rules-box" id="rules-battle">
-                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
-                        <ul><li>1 vs 1 Format.</li><li>Buzzer Round.</li><li>Sudden death.</li></ul>
+                        <strong>Competition Format (Four Rounds):</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Round 1: MCQ Qualifier Round</strong> – Teams answer multiple-choice technical questions displayed via projector. Top 8 teams qualify.</li>
+                            <li><strong>Round 2: Output Prediction Round</strong> – Teams predict final outputs for short code snippets or logical problems. Top 5 teams advance.</li>
+                            <li><strong>Round 3: Technical Application Round</strong> – Teams solve objective, scenario-based technical questions. Top 3 teams qualify for the Final.</li>
+                            <li><strong>Final Round: Buzzer Round</strong> – A fast-paced round where the first team to press the buzzer gets to answer.</li>
+                        </ul>
+                        <strong>Answering Rules:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Team Size:</strong> Each team must consist of 4 members.</li>
+                            <li><strong>Response Time:</strong> The answering team is given 2 minutes to respond.</li>
+                            <li><strong>Passing:</strong> Incorrect answers are passed to the next team; a question can be passed a maximum of two times.</li>
+                        </ul>
+                        <strong>Event Description:</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            The Tech Quiz Battle is a knowledge-based team competition designed to test technical awareness, logical thinking, and problem-solving skills. The event culminates in an exciting, high-energy buzzer-based finale.
+                        </p>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding the event, please see the booklet.
+                        </p>
                     </div>
-                    <button class="btn-join" onclick="toggleRules('rules-battle')">Know More</button>
+                    <button class="btn-join" onclick="toggleRules('rules-battle', this)">Know More</button>
                 </div>
             </div>
 
-            <div class="event-card-wide" data-tilt>
-                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=500&q=60" alt="Blind Build" loading="lazy"></div>
+              <div class="card event-card-wide" data-tilt>
+                <div class="card-img-holder">
+                    <img src="image/Book worm.png" alt="Bookworm" loading="lazy">
+                </div>
                 <div class="card-content">
-                    <h3>Blind Build</h3>
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 2 | 26th Oct | 01:00 PM</div>
-                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Sourabh Pathak</span></div>
-                    <p>Code or build without seeing.</p>
-                    <div class="rules-box" id="rules-blind">
-                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
-                        <ul><li>One guides, one builds.</li><li>Time: 15 Mins.</li><li>Coordination is key.</li></ul>
+                    <h3>9. Bookworm</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 15 March | 10:00 AM-1:00 PM
+                    <div><strong><i class="fas fa-user-tie"></i> Event Coordinator: Dr. Janak Kapoor (+91-9456469793) </strong> <br></div>  
+                    <div class="schedule-info"> Venue: ECE Department <div>Fees : 100</div></div>
                     </div>
-                    <button class="btn-join" onclick="toggleRules('rules-blind')">Know More</button>
+                    <p>A specialized contest for bibliophiles. Test your knowledge of classic and modern literature.</p>
+                    <div class="rules-box" id="rules-bookworm">
+                        <strong>Rules & Regulations:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Eligibility:</strong> Open to UG, PG, and Research Scholars of the Faculty of Engineering & Technology.</li>
+                            <li><strong>Participation:</strong> This is an individual event; each participant must take part individually.</li>
+                            <li><strong>Format:</strong> Objective type quiz testing core branch knowledge (mainly B.Tech Electronics Engineering).</li>
+                            <li><strong>Interdisciplinary:</strong> While focused on Electronics, interdisciplinary teams may participate with a nominated leader.</li>
+                            <li><strong>Requirements:</strong> Participants must bring their own blue or black pen for the quiz.</li>
+                            <li><strong>Judging:</strong> The decision of the judging panel shall be final and binding.</li>
+                        </ul>
+                        <strong>Event Description:</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            BOOKWORM is a technical objective quiz designed to test the core engineering knowledge of participants. The individual with the maximum number of correct answers will be declared the winner.
+                        </p>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding specific syllabus or prize categories, please see the booklet.
+                        </p>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                          * For more detail regarding the event, please see the booklet.
+                      </p>
+                      <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                          * For more detail regarding the event, please see the booklet.
+                      </p>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-bookworm')">Know More</button>
                 </div>
             </div>
 
-            <div class="event-card-wide" data-tilt>
-                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=500&q=60" alt="Pictionary" loading="lazy"></div>
+            <div class="card event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="newimage/Mind Spark.jpg" alt="Mind Spark" loading="lazy" decoding="async"></div>
                 <div class="card-content">
-                    <h3>Tech Pictionary</h3>
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 04:00 PM</div>
-                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Anil Bisht</span></div>
-                    <p>Draw tech terms, let team guess.</p>
-                    <div class="rules-box" id="rules-pic">
-                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
-                        <ul><li>Draw on board.</li><li>No speaking.</li><li>60 secs/turn.</li></ul>
+                    <h3>10. Mind Spark</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 15 March| 10:00 AM–1:00 PM
+                        <div class="schedule-info"> Venue: T&P Cell <div>Fees : 100/- per team</div> </div>
+                    </div> 
+                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i>Event Coordinator: Dr. Hari K. Singh (9410860110), Er. Neha Sabeel (8077763035), <br>
+                    Dr. Shinsupa (9045831959), Dr. Nisha Singh (7830399084)</span></div>
+                    <p>Ignite your brain with high-speed logical and technical puzzles.</p>
+                    <div class="rules-box" id="rules-mind">
+                        <strong>Competition Format (5 Rounds):</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Round 1:</strong> Multiple Choice Round (Shortlisting Top Teams).</li>
+                            <li><strong>Round 2:</strong> Rapid Fire Round.</li>
+                            <li><strong>Round 3:</strong> Buzzer Round.</li>
+                            <li><strong>Round 4:</strong> Visual Round.</li>
+                            <li><strong>Round 5:</strong> Audio Round.</li>
+                            <li><strong>Bonus Round:</strong> Optional round used specifically for a Tie Breaker.</li>
+                        </ul>
+                        <strong>Rules & Regulations:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Team Size:</strong> Each team must consist of two students from the same institution.</li>
+                            <li><strong>Institutional Limit:</strong> Each participating college can register up to two teams only.</li>
+                            <li><strong>Prohibitions:</strong> Use of mobile phones, smart devices, or the internet during the quiz is strictly prohibited.</li>
+                            <li><strong>Conduct:</strong> Any form of malpractice or indiscipline will lead to immediate disqualification.</li>
+                        </ul>
+                        <strong>Event Description:</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            Mind Spark 2026 is a prestigious national-level quiz designed to bring together the brightest minds to demonstrate knowledge, analytical skills, and quick-thinking abilities. The quiz covers topics including current affairs, global national events, history, culture, science, technology, geography, and environment.
+                        </p>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding the event, please see the booklet.
+                        </p>
                     </div>
-                    <button class="btn-join" onclick="toggleRules('rules-pic')">Know More</button>
+                    <button class="btn-join" onclick="toggleRules('rules-mind', this)">Know More</button>
                 </div>
             </div>
 
-            <div class="event-card-wide" data-tilt>
-                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=500&q=60" alt="Jugaad" loading="lazy"></div>
+            <div class="card event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="image/phamaquiz.jpg" alt="Pharma Quiz" loading="lazy" decoding="async"></div>
                 <div class="card-content">
-                    <h3>Kabaad Se Jugaad</h3>
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 2 | 26th Oct | 11:30 AM</div>
-                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Janak Kapoor</span></div>
-                    <p>Create something from waste.</p>
-                    <div class="rules-box" id="rules-jugaad">
-                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
-                        <ul><li>Raw materials: E-Waste.</li><li>Time: 2 Hours.</li><li>Utility judged.</li></ul>
+                    <h3>11. Pharma Quiz / <div>THE PHARMA MANIA</div></h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i>15 March | 10:00 AM–1:00 PM
+                        <div class="schedule-info"> Venue: Pharmacy Dept. <div>Fees : 100/- per team</div> </div>
+                    </div> 
+                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Event Coordinator:Dr. Hemendra Kumar (8868843889)</span></div>
+                    <p>Testing knowledge in the domain of pharmaceutical sciences and medical innovation.</p>
+                    <div class="rules-box" id="rules-pharmaq">
+                        <strong>Competition Rounds:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Round 1: Preliminary Round (Written Quiz)</strong>
+                                <ul>
+                                    <li>Objective-type questions based on Pharmaceutical sciences concepts.</li>
+                                    <li>Top teams qualify for the next round.</li>
+                                </ul>
+                            </li>
+                            <li style="margin-top: 5px;"><strong>Round 2: Technical Round</strong>
+                                <ul>
+                                    <li>Questions based on technical terms, diagrams, inventions, and applications.</li>
+                                    <li>Includes rapid-fire or buzzer-based questions.</li>
+                                </ul>
+                            </li>
+                            <li style="margin-top: 5px;"><strong>Round 3: Final Round</strong>
+                                <ul>
+                                    <li>In-depth technical and analytical questions.</li>
+                                    <li>Case-based or application-oriented problems.</li>
+                                    <li>Includes rapid-fire or buzzer-based questions.</li>
+                                    <li>Winners decided based on cumulative scores.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <strong>Event Description:</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            The Pharma Mania is a key academic activity designed to foster intellectual curiosity and enhance subject knowledge among pharmacy students. It provides a dynamic learning environment where students can assess their understanding of pharmaceutical sciences while engaging in healthy competition.
+                        </p>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding the event, please see the booklet.
+                        </p>
                     </div>
-                    <button class="btn-join" onclick="toggleRules('rules-jugaad')">Know More</button>
+                    <button class="btn-join" onclick="toggleRules('rules-pharmaq', this)">Know More</button>
                 </div>
             </div>
 
-            <div class="event-card-wide" data-tilt>
-                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1626785774573-4b799314346d?w=500&q=60" alt="Logo" loading="lazy"></div>
+            <div class="card event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="newimage/Soduko puzzle.png" alt="Sudoku" loading="lazy" decoding="async"></div>
                 <div class="card-content">
-                    <h3>Logo Designing</h3>
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 12:30 PM</div>
-                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Ashutosh S.</span></div>
-                    <p>Design a creative logo.</p>
-                    <div class="rules-box" id="rules-logo">
-                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
-                        <ul><li>Photoshop/Canva.</li><li>Theme given on spot.</li><li>Originality key.</li></ul>
-                    </div>
-                    <button class="btn-join" onclick="toggleRules('rules-logo')">Know More</button>
-                </div>
-            </div>
-
-            <div class="event-card-wide" data-tilt>
-                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=500&q=60" alt="Model" loading="lazy"></div>
-                <div class="card-content">
-                    <h3>Technical Model</h3>
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 2 | 26th Oct | 10:00 AM</div>
-                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Mukul Gupta</span></div>
-                    <p>Present working models.</p>
-                    <div class="rules-box" id="rules-techmod">
-                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
-                        <ul><li>Working model preferred.</li><li>5 mins explanation.</li><li>Innovation.</li></ul>
-                    </div>
-                    <button class="btn-join" onclick="toggleRules('rules-techmod')">Know More</button>
-                </div>
-            </div>
-
-            <div class="event-card-wide" data-tilt>
-                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1634152962476-4b8a00e1915c?w=500&q=60" alt="Sudoku" loading="lazy"></div>
-                <div class="card-content">
-                    <h3>Sudoku Puzzle</h3>
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 03:30 PM</div>
-                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Ashish S.</span></div>
-                    <p>Solve the grid.</p>
+                    <h3>12. Sudoku Puzzle</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 15 March | 10:00 AM–1:00 PM
+                        <div class="schedule-info"> Venue: EE Dept. <div>Fees : 100</div> </div>
+                    </div> 
+                     <div class="coordinator-box"><span><i class="fas fa-user-check"></i>Event Coordinator:Dr. Ashish Sankhwar (9457474044), Dr. Rohit Verma (8266802191), Er. Akhilesh Kumar (9873081856)       </span></div>
+                    <p>Solve the grid. Test your numerical logic.</p>
                     <div class="rules-box" id="rules-sudoku">
-                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
-                        <ul><li>Time: 30 Mins.</li><li>Accuracy > Speed.</li><li>No erasing.</li></ul>
+                      <strong>Competition Rounds:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Round 1: Preliminary Round (Written Elimination)</strong> – Individual 9x9 Sudoku (Easy to Moderate) within 15–20 minutes.</li>
+                            <li><strong>Round 2: Rapid Fire Sudoku</strong> – Individual 6x6 or 4x4 quick puzzles within 5–7 minutes.</li>
+                            <li><strong>Round 3: On-Stage Live Quiz Round (Final Round)</strong> – Includes Puzzle Projection, Spot the Error, and Fill the Missing Block rounds.</li>
+                        </ul>
+                        <strong>Rules & Regulations:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Format:</strong> Individual participation.</li>
+                            <li><strong>Prohibitions:</strong> Use of calculators, mobile phones, or electronic gadgets is strictly prohibited.</li>
+                            <li><strong>Accuracy:</strong> Standard Sudoku rules apply (no repetition in rows, columns, or 3x3 grids).</li>
+                            <li><strong>Recommendations:</strong> Use of pencils is recommended; overwriting must be avoided.</li>
+                        </ul>
+                        <strong>Event Description:</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            Mind Matrix – The Sudoku Challenge is an exciting logical reasoning competition designed to test analytical thinking, concentration, and problem-solving abilities. The event promotes logical intelligence and mental agility in a competitive yet fun environment.
+                        </p>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding the event, please see the booklet.
+                        </p>
                     </div>
-                    <button class="btn-join" onclick="toggleRules('rules-sudoku')">Know More</button>
+                    <button class="btn-join" onclick="toggleRules('rules-sudoku', this)">Know More</button>
                 </div>
             </div>
 
-            <div class="event-card-wide" data-tilt>
-                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1516110833967-0b5716ca1387?w=500&q=60" alt="Memory" loading="lazy"></div>
+            <div class="card event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="newimage/Bridge building.jpg" alt="Bridge" loading="lazy" decoding="async"></div>
                 <div class="card-content">
-                    <h3>Memory Noise</h3>
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 2 | 26th Oct | 02:30 PM</div>
-                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Janak Kapoor</span></div>
-                    <p>Test memory amidst distraction.</p>
-                    <div class="rules-box" id="rules-mem">
-                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
-                        <ul><li>Memorize items.</li><li>Distractions played.</li><li>Recall max items.</li></ul>
+                    <h3>13. Bridge Building</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i>15 March | 10:00 AM–1:00 PM
+                        <div class="schedule-info"> Venue: Mechanical Dept. <div>Fees : 200/- per team</div> </div>
+                    </div> 
+                     <div class="coordinator-box"><span><i class="fas fa-user-check"></i>Event Coordinator:  Er. Farkhunda Rehman (+91-9760352805,)   , Er. Ranjeet Singh (+91-6395178311)</span></div>
+                    <p>Construct the strongest bridge using basic materials.</p>
+                    <div class="rules-box" id="rules-bridge">
+                        <strong>Rules & Regulations:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Materials:</strong> Teams can use only the provided materials (e.g., ice cream sticks and glue). No pre-built parts or external assistance is allowed.</li>
+                            <li><strong>Specifications:</strong> Bridges must fit within given dimensions and span a clear gap of 300mm. No intermediate supports are allowed.</li>
+                            <li><strong>Construction:</strong> The bridge must be built entirely on-site within the 3-hour build time. Construction begins only after the start signal.</li>
+                            <li><strong>Testing:</strong> Bridges will be tested by gradually adding weight until they break. The bridge must safely sustain a vertical load at mid-span.</li>
+                            <li><strong>Victory:</strong> The team whose bridge holds the most weight wins.</li>
+                            <li><strong>Finality:</strong> Once submitted, no modifications are permitted. All designs must be original.</li>
+                        </ul>
+                        <strong>Event Description:</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            The Bridge Building Competition is a creative engineering challenge where participants design and build small model bridges using materials like sticks and glue. The goal is to construct a bridge that is strong, stable, and capable of holding significant weight without breaking.
+                        </p>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding the event, please see the booklet.
+                        </p>
                     </div>
-                    <button class="btn-join" onclick="toggleRules('rules-mem')">Know More</button>
+                    <button class="btn-join" onclick="toggleRules('rules-bridge', this)">Know More</button>
                 </div>
             </div>
 
-            <div class="event-card-wide" data-tilt>
-                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1535378437327-10e8df998751?w=500&q=60" alt="Meme" loading="lazy"></div>
+            <div class="card event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="newimage/logo.jpeg" alt="Logo" loading="lazy" decoding="async"></div>
                 <div class="card-content">
-                    <h3>Meme the Machine</h3>
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 05:00 PM</div>
-                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Dr. Mukesh Sone</span></div>
-                    <p>Create hilarious tech memes.</p>
-                    <div class="rules-box" id="rules-meme">
-                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
-                        <ul><li>Topic: Engg Life.</li><li>No offensive content.</li><li>Creativity wins.</li></ul>
+                 <h3>14. Logo Designing</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 15 March | 10:00 AM–1:00 PM
+                        <div class="schedule-info"> Venue: CSIT Lab 2 <div>Fees : 100/- per team</div> </div>
+                    </div> 
+                     <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Event Coordinator: Dr. Ashutosh Shankhwar (+91-6398029407)</span></div>
+                    <p>Design a creative logo for a technical brand.</p>
+                    <div class="rules-box" id="rules-logo">
+                        <strong>Rules & Regulations:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Theme:</strong> The logo should effectively communicate the idea or theme announced on the spot.</li>
+                            <li><strong>Platforms:</strong> Participants must work on Photoshop CS3 or Corel Draw.</li>
+                            <li><strong>Content:</strong> The logo must contain relevant text and should not include any copyrighted material like photographs or icons.</li>
+                            <li><strong>Dimensions:</strong> Square logos must be 1 inch x 1 inch; rectangular logos must be 2 inches wide x 1 inch high.</li>
+                            <li><strong>Time Limit:</strong> The duration for the competition is 40 minutes.</li>
+                            <li><strong>Tie-Breaker:</strong> In case of a tie, preference is given to the participant who completes the design in the minimum time.</li>
+                        </ul>
+                        <strong>Event Description:</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            The Logo Designing Competition invites creative minds to transform ideas into powerful visual identities. Participants design an original logo based on a live theme, with evaluations focusing on creativity, originality, relevance, and visual impact.
+                        </p>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding the event, please see the booklet.
+                        </p>
                     </div>
-                    <button class="btn-join" onclick="toggleRules('rules-meme')">Know More</button>
+                    <button class="btn-join" onclick="toggleRules('rules-logo', this)">Know More</button>
                 </div>
             </div>
 
-            <div class="event-card-wide" data-tilt>
-                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=500&q=60" alt="Reel" loading="lazy"></div>
+            <div class="card event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=500&q=60" alt="Poster" loading="lazy" decoding="async"></div>
                 <div class="card-content">
-                    <h3>Reel in 60 Seconds</h3>
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 2 | 26th Oct | 03:00 PM</div>
-                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord: Ms. Neha Sabeel</span></div>
-                    <p>Create a viral tech reel.</p>
+                    <h3>15. Poster Presentation</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 15 March | 10:00 AM–5:00 PM
+                        <div class="schedule-info"> Venue:Chemical Engineering Dept. <div>Fees : 200/- per team</div> </div>
+                    </div> 
+                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i>Event Coordinator: Dr. MS Karuna (9359501112)</span></div>
+                    <p>Present your research ideas visually.</p>
+                    <div class="rules-box" id="rules-poster">
+                        <strong>Rules & Regulations:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Eligibility:</strong> Open to all UG/PG students of Engineering disciplines.</li>
+                            <li><strong>Team Size:</strong> Individual or a maximum of 2 members per team.</li>
+                            <li><strong>Poster Specifications:</strong> Size A1 (594 x 841 mm) in Portrait orientation. Text must be readable from 1 meter distance.</li>
+                            <li><strong>Required Content:</strong> Must include Title, Authors, Abstract, Methodology, Results/Analysis, Conclusion, and References.</li>
+                            <li><strong>Presentation:</strong> 5–7 minutes for presentation followed by 2–3 minutes of Q&A by judges.</li>
+                            <li><strong>Integrity:</strong> Plagiarism is strictly prohibited. Participants must be present near their poster during evaluation.</li>
+                        </ul>
+                        <strong>Themes/Domains:</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            Posters must belong to core or interdisciplinary areas such as Electronics & Communication, Electrical, Mechanical, Civil, Computer Science & IT, or Emerging Technologies (AI, IoT, Robotics, etc.).
+                        </p>
+                        <strong>Event Description:</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            Technical Poster Presentation is a platform for budding engineers to showcase their innovative ideas, research findings, and technical solutions through creative visual representation. The event encourages research aptitude, technical clarity, and presentation skills.
+                        </p>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding the event, please see the booklet.
+                        </p>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-poster', this)">Know More</button>
+                </div>
+            </div>
+
+            <div class="card event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="newimage/Reel in 60 second.jpeg" alt="Reel" loading="lazy" decoding="async"></div>
+                <div class="card-content">
+                    <h3>16. Reel in 60 Seconds</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 15 March | 10:00 AM–1:00 PM
+                        <div class="schedule-info"> Venue: Electrical Engineering Dept. <div>Fees : 100</div> </div>
+                    </div> 
+                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Event Coordinator: Er. Neha Sabeel (8077763035), Er. Nisha Singh (7830399084), Er. Afreen Nishat (9412870275)    </span></div>
+                    <p>Create a viral tech reel about innovation.</p>
                     <div class="rules-box" id="rules-reel">
-                        <strong><i class="fas fa-gavel"></i> Guidelines:</strong>
-                        <ul><li>Theme: Innovation.</li><li>Max 60 Secs.</li><li>Tag official handle.</li></ul>
+                        <strong>Rules & Regulations:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Time Limit:</strong> One hour will be given for Reel making. The final duration must be between 30 and 60 seconds.</li>
+                            <li><strong>Theme:</strong> The reel must strictly follow the theme provided by the organizers.</li>
+                            <li><strong>Originality:</strong> Content must be original and created by the participant. Copyrighted music/content must be properly credited or avoided.</li>
+                            <li><strong>Format:</strong> Video must be in vertical format (9:16).</li>
+                            <li><strong>Editing:</strong> Basic editing is allowed; however, excessive VFX is discouraged.</li>
+                            <li><strong>Restrictions:</strong> Any offensive, political, religious, or explicit content will lead to immediate disqualification.</li>
+                            <li><strong>Submission:</strong> Reels must be submitted before the given deadline.</li>
+                        </ul>
+                        <strong>Event Description:</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            "Reel in 60 Seconds" is a dynamic creative video-making competition where participants showcase their content creation and editing skills. The event emphasizes effective visual communication and artistic flair within a strictly limited timeframe.
+                        </p>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding the event, please see the booklet.
+                        </p>
                     </div>
-                    <button class="btn-join" onclick="toggleRules('rules-reel')">Know More</button>
+                    <button class="btn-join" onclick="toggleRules('rules-reel', this)">Know More</button>
+                </div>
+            </div>
+
+            <div class="card event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="newimage/Robo war.jpeg" alt="Robo War" loading="lazy" decoding="async"></div>
+                <div class="card-content">
+                    <h3>17. Robo War</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 15 March | 2:00 PM–5:00 PM
+                        <div class="schedule-info"> Venue: Electrical Engineering Dept. <div>Fees : 500/- per team</div><div style="background: linear-gradient(45deg, #ff00cc, #3333ff); color: white; display: inline-block; padding: 4px 12px; font-weight: bold; border-radius: 20px; font-size: 0.8rem; margin-top: 8px; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 0 10px rgba(255, 0, 204, 0.5);">
+    Cash Prize
+</div> </div>
+                    </div> 
+                     <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Event Coordinator: Ramji Prasad (8756108799)</span></div>
+                    <p>The ultimate battle of bots.</p>
+                    <div class="rules-box" id="rules-war">
+                        <strong>Robot Specifications:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Dimensions & Weight:</strong> Must fit within 45 cm x 45 cm x 45 cm; Max weight 10 kg.</li>
+                            <li><strong>Control:</strong> Must be controlled wirelessly via a 4-frequency system.</li>
+                            <li><strong>Safety:</strong> Mandatory emergency stop (E-stop) or kill switch and visible safety locks for active weapons.</li>
+                            <li><strong>Power:</strong> Only electrical power allowed; IC engines are strictly forbidden.</li>
+                        </ul>
+                        <strong>Match Rules:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Victory:</strong> Decided by immobilization (10-20 seconds), knockout (thrown out of arena), or judge's decision after 3 minutes.</li>
+                            <li><strong>Weapons:</strong> Spinning weapons, flippers, lifters, and clamps are allowed; liquids, explosives, and nets are prohibited.</li>
+                            <li><strong>Team Size:</strong> Maximum of 4 members per group.</li>
+                            <li><strong>Safety:</strong> All robots must pass a technical inspection before competing.</li>
+                        </ul>
+                        <strong>Event Description:</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            Robo War is a robotic combat competition where custom-built robots battle inside a secured arena. Teams design robust wireless combat robots to compete in head-to-head matches, demonstrating strength, control, and strategic skills.
+                        </p>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding the event, please see the booklet.
+                        </p>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-war', this)">Know More</button>
+                </div>
+            </div>
+
+            <div class="card event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="newimage/mememachnie.jpeg" alt="Meme" loading="lazy" decoding="async"></div>
+                <div class="card-content">
+                    <h3>18. Meme the Machine</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 15 March | 2:00 PM–5:00 PM
+                        <div class="schedule-info"> Venue: EI Dept. <div>Fees : 100/- per team</div> </div>
+                    </div> 
+                     <div class="coordinator-box"><span><i class="fas fa-user-check"></i>Event Coordinator: Mr. Mukesh Kumar Sone (+91-9045092205) , Dr. Dushyant Kumar</span></div>
+                    <p>Create hilarious tech memes about engineering life.</p>
+                    <div class="rules-box" id="rules-meme">
+                      <strong>Rules & Regulations:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Theme:</strong> The theme for meme making will be given on the spot.</li>
+                            <li><strong>Software:</strong> Participants can use design software of their choice.</li>
+                            <li><strong>Format:</strong> Memes must be in Image (JPEG, PNG) or Video (MP4, GIF) format.</li>
+                            <li><strong>Language:</strong> Use of English and Hindi only.</li>
+                            <li><strong>Limits:</strong> File size should not exceed 5 MB; video display time 15–20 seconds.</li>
+                            <li><strong>Timing:</strong> 45 minutes for preparation.</li>
+                            <li><strong>Restrictions:</strong> Use of abusive language or controversial memes is strictly prohibited.</li>
+                        </ul>
+                        <strong>Requirements:</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            Teams (2–4 members) must bring their own laptops and verify internet connectivity and video quality prior to the event.
+                        </p>
+                        <strong>Event Description:</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            This event challenges participants to design witty, original, and relatable memes that entertain while showcasing humor and innovation. Turn your ideas into laughter and let your creativity go viral!
+                        </p>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding the event, please see the booklet.
+                        </p>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-meme', this)">Know More</button>
+                </div>
+            </div>
+
+             <div class="card event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="image/straw.jpg" alt="Straw Engineering" loading="lazy" decoding="async"></div>
+                <div class="card-content">
+                    <h3>19. Straw Engineering Challenge</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 15 March | 2:00 PM–5:00 PM
+                        <div class="schedule-info"> Venue: Mechanical Dept. <div>Fees : 200/- per team</div> </div>
+                    </div> 
+                     <div class="coordinator-box"><span><i class="fas fa-user-check"></i>Event Coordinator:Dr. Ankit Varshney (8299534878)</span></div>
+                    <p>Build the tallest and strongest structure using only straws and tape.</p>
+                    <div class="rules-box" id="rules-straw">
+                        <strong>Competition Timeline:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Planning Time:</strong> 15 Minutes</li>
+                            <li><strong>Construction Time:</strong> 60 Minutes</li>
+                            <li><strong>Testing & Evaluation:</strong> 30 Minutes</li>
+                        </ul>
+                        <strong>Rules & Regulations:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Team Size:</strong> 2 to 4 members per team; interdisciplinary teams are encouraged.</li>
+                            <li><strong>Materials:</strong> Only the provided materials may be used.</li>
+                            <li><strong>Build Requirements:</strong> Structures must be free-standing (no external support) and remain within the base board limits.</li>
+                            <li><strong>Post-Build:</strong> Once construction time is over, no modifications are allowed.</li>
+                            <li><strong>Disqualification:</strong> Any violation of rules may lead to disqualification.</li>
+                        </ul>
+                        <strong>Event Description:</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            The Straw Engineering Challenge is a team-based STEM competition where participants design and construct a structural model using only drinking straws and limited connectors. Participants must build the tallest, strongest, or most stable structure within the given constraints.
+                        </p>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding the event, please see the booklet.
+                        </p>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-straw', this)">Know More</button>
+                </div>
+            </div>
+
+            <div class="card event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="newimage/debugg.jpg"  alt="Debugging" loading="lazy" decoding="async"></div>
+                <div class="card-content">
+                    <h3>20. Debugging Contest</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 15 March | 2:00 PM–5:00 PM
+                        <div class="schedule-info"> Venue: PG Building CSIT <div>Fees : 100/- per team</div> </div>
+                    </div> 
+                      <div class="coordinator-box"><span><i class="fas fa-user-check"></i>Event Coordinator: Dr. Anil Kumar Bisht (9412928340)</span></div>
+                    <p>Find the bugs, fix the code.</p>
+                    <div class="rules-box" id="rules-bug">
+                        <strong>Event Structure (Knockout Format):</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            The competition is a three-stage knockout tournament. Only participants who successfully debug the code in a given level qualify for the next.
+                        </p>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Level 1: The Syntax Sprint (Knockout Round)</strong>
+                                <ul>
+                                    <li>Goal: Fix syntax errors (missing semicolons, incorrect brackets, typos).</li>
+                                    <li>Format: 30-minute timed round | Difficulty: Introductory.</li>
+                                </ul>
+                            </li>
+                            <li style="margin-top: 5px;"><strong>Level 2: The Multi-Bug Challenge</strong>
+                                <ul>
+                                    <li>Goal: Solve snippets with multiple stored errors, runtime errors, and complex syntax.</li>
+                                    <li>Format: 20-minute timed round | Difficulty: Intermediate.</li>
+                                </ul>
+                            </li>
+                            <li style="margin-top: 5px;"><strong>Level 3: The Logic Breach (Grand Finale)</strong>
+                                <ul>
+                                    <li>Goal: Identify logical errors where code compiles but produces incorrect results.</li>
+                                    <li>Format: 15-minute timed round | Difficulty: Advanced.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <strong>Event Description:</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            Whether you are a C++, Java, or Python enthusiast, this contest is a mission to "clear the logic breach." Step into the shoes of a software detective to evaluate and enhance your code-review capabilities in a high-energy environment.
+                        </p>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding the event, please see the booklet.
+                        </p> </div>
+                    <button class="btn-join" onclick="toggleRules('rules-bug', this)">Know More</button>
+                </div>
+            </div>
+
+            <div class="card event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="image/eletrcodoctor.jpg" alt="Electro" loading="lazy" decoding="async"></div>
+                <div class="card-content">
+                    <h3>21. Electro Doctor</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 15 March | 2:00 PM–5:00 PM
+                        <div class="schedule-info"> Venue: ECE Dept. <div>Fees : 100</div> </div>
+                    </div> 
+                     <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Coord:  Event Coordinator: Dr. Janak Kapoor (9456469793)</span></div>
+                    <p>Diagnose and repair faulty circuits.</p>
+                    <div class="rules-box" id="rules-doctor">
+                        <strong>Rules & Regulations:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Eligibility:</strong> Open to undergraduate, postgraduate students, and research scholars of the Faculty of Engineering & Technology.</li>
+                            <li><strong>Format:</strong> This is an individual event.</li>
+                            <li><strong>Interdisciplinary Participation:</strong> While primarily for electronics engineering, interdisciplinary teams may participate; each team must nominate a leader.</li>
+                            <li><strong>Judging:</strong> The decision of the judging panel shall be final and binding.</li>
+                        </ul>
+                        <strong>Event Description:</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            ELECTRODOCTOR is a specialized event designed to test the troubleshooting skills of engineering students. This is a question-and-answer based challenge where participants must identify the steps to troubleshoot and provide a solution to a defect intentionally generated in an electronic appliance. The winner is determined based on the accuracy of the troubleshooting steps and the final solution provided.
+                        </p>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding the event, please see the booklet.
+                        </p>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-doctor', this)">Know More</button>
+                </div>
+            </div>
+
+            <div class="card event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=500&q=60" alt="Drone" loading="lazy" decoding="async"></div>
+                <div class="card-content">
+                    <h3>22. AEROTHON (DRONE RACING)</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 16 March | 10:00 AM–1:00 PM
+                        <div class="schedule-info"> Venue: Sports Stadium <div>Fees : 500/- per team</div><div style="background: linear-gradient(45deg, #ff00cc, #3333ff); color: white; display: inline-block; padding: 4px 12px; font-weight: bold; border-radius: 20px; font-size: 0.8rem; margin-top: 8px; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 0 10px rgba(255, 0, 204, 0.5);">
+    Cash Prize
+</div> </div>
+                    </div> 
+                      <div class="coordinator-box"><span><i class="fas fa-user-check"></i>  Event Coordinator:  Prof. Yatendra Kumar (8218927851)</span></div>
+                    <p>Sky is the limit. Showcase your flying skills and aerodynamics.</p>
+                    <div class="rules-box" id="rules-drone">
+                       <strong>Event Format:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Round I:</strong> Drone Racing Challenge.</li>
+                            <li><strong>Round II:</strong> Precision Landing Accuracy Challenge.</li>
+                        </ul>
+                        <strong>Rules & Regulations:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Safety:</strong> Each team must comply with UAV safety and operational guidelines throughout the event.</li>
+                            <li><strong>Inspection:</strong> All drones must undergo mandatory technical and safety inspection before participation.</li>
+                            <li><strong>Arena:</strong> Teams must operate drones only within the designated netted or barricaded arena.</li>
+                            <li><strong>Scoring:</strong> Racing is judged on time and accuracy; landing is judged on stability and time taken.</li>
+                            <li><strong>Disqualification:</strong> Violation of safety rules or regulatory guidelines may result in disqualification.</li>
+                        </ul>
+                        <strong>Event Description:</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            AEROTHONE is a high-speed drone racing competition that tests precision landing, control, and real-time decision-making. Participants pilot their drones through a specially designed aerial track filled with obstacles. The objective is to complete the course in the shortest time while maintaining stability.
+                        </p>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding the event, please see the booklet.
+                        </p>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-drone', this)">Know More</button>
+                </div>
+            </div>
+
+            <div class="card event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=500&q=60" alt="Pictionary" loading="lazy" decoding="async"></div>
+                <div class="card-content">
+                    <h3>23. Tech Pictionary</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 16 March | 10:00 AM–1:00 PM
+                        <div class="schedule-info"> Venue: PG Block CSIT<div>Fees : 100</div> </div>
+                    </div> 
+                     <div class="coordinator-box"><span><i class="fas fa-user-check"></i>Event Coordinator: Dr. Anil Kumar Bisht(9412928340)</span></div>
+                    <p>Draw tech terms, let your team guess.</p>
+                    <div class="rules-box" id="rules-pic">
+                        <strong>Competition Levels:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Level 1 (Basic):</strong> Simple technical terms.</li>
+                            <li><strong>Level 2 (Intermediate):</strong> Moderately complex concepts.</li>
+                            <li><strong>Level 3 (Advanced):</strong> Conceptual and advanced technical terms.</li>
+                        </ul>
+                        <strong>Game Flow & Rules:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Team Size:</strong> Each team will consist of 3–4 participants.</li>
+                            <li><strong>Mechanism:</strong> Teams pick a chit with a technical term; one member draws while others guess within the time limit.</li>
+                            <li><strong>Restrictions:</strong> No letters, numbers, symbols, or gestures are allowed in the drawing. Mobile phones or external help are strictly prohibited.</li>
+                            <li><strong>Power Cards:</strong> Limited advanced power cards are provided to each team to add strategy and excitement.</li>
+                            <li><strong>Rotation:</strong> The drawing member rotates each round.</li>
+                        </ul>
+                        <strong>Event Description:</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            Tech Pictionary is an interactive technical drawing and guessing event designed exclusively for technical students. The contest evaluates technical knowledge, creativity, quick thinking, and teamwork through three levels of increasing difficulty.
+                        </p>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding the event, please see the booklet.
+                        </p>
+                     </div>
+                    <button class="btn-join" onclick="toggleRules('rules-pic', this)">Know More</button>
+                </div>
+            </div>
+
+            <div class="card event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="newimage/Crickitech.jpg" alt="Circuits" loading="lazy" decoding="async"></div>
+                <div class="card-content">
+                    <h3>24. Cirkitech</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 16 March | 10:00 AM–1:00 PM
+                        <div class="schedule-info"> Venue: EI Dept. <div>Fees : 100</div> </div>
+                    </div> 
+                     <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Event Coordinator: Dr. Ashish Jain , Dr. Janak Kapoor (+91-9456469793)</span></div>
+                    <p>Design complex circuits and logic gates.</p>
+                    <div class="rules-box" id="rules-cirk">
+                      <strong>Rules & Regulations:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Eligibility:</strong> Open to undergraduate, postgraduate students, and research scholars of the Faculty of Engineering & Technology.</li>
+                            <li><strong>Team Size:</strong> Participants must take part in teams of two to three members.</li>
+                            <li><strong>Interdisciplinary:</strong> Primarily an electronics engineering stream event, but interdisciplinary teams may participate; each team must nominate one leader.</li>
+                            <li><strong>Materials:</strong> Each team will be provided with a breadboard, basic electronics components, and connecting wires.</li>
+                            <li><strong>Judging:</strong> The decision of the judging panel shall be final and binding.</li>
+                        </ul>
+                        <strong>Event Description:</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            Cirkitect is an event designed to test the circuit-building skills of students. Teams must assemble provided components to create a specific circuit as requested within a given time frame. The team that completes the circuit on time with the desired output will be declared the winner.
+                        </p>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding the event, please see the booklet.
+                        </p>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-cirk', this)">Know More</button>
+                </div>
+            </div>
+
+            <div class="card event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=500&q=60" alt="Jugaad" loading="lazy" decoding="async"></div>
+                <div class="card-content">
+                    <h3>25. Kabaad Se Jugaad</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 16 March | 10:00 AM–1:00 PM
+                        <div class="schedule-info"> Venue: ECE Dept. <div>Fees : 100/- per team</div> </div>
+                    </div> 
+                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i>Event Coordinator:Dr. Janak Kapoor (9456469793)</span></div>
+                    <p>Create something from waste and e-waste.</p>
+                    <div class="rules-box" id="rules-jugaad">
+                        <strong>Rules & Regulations:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Team Size:</strong> Each team will comprise of a maximum of 3 members.</li>
+                            <li><strong>Eligibility:</strong> Interdisciplinary teams may participate.</li>
+                            <li><strong>Leadership:</strong> Each team will nominate one team leader.</li>
+                            <li><strong>Required Tools:</strong> Teams must bring their own soldering iron, tools, duct tape, superglue, etc..</li>
+                        </ul>
+                        <strong>Event Description:</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            KABAAD se JUGAAD is an event designed to test the imagination, building skills, and teamwork of technical students. Each team must select materials from a heap of e-waste—such as old PCB boards, desktops, and electronic components—to create a working or non-working utility or showpiece within the allotted time. The team with the best creation will be declared the winner.
+                        </p>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding the event, please see the booklet.
+                        </p>
+                     </div>
+                    <button class="btn-join" onclick="toggleRules('rules-jugaad', this)">Know More</button>
+                </div>
+            </div>
+
+            <div class="card event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="newimage/E-sports.jpeg" alt="E-Sports" loading="lazy" decoding="async"></div>
+                <div class="card-content">
+                    <h3>26. E-Sports </h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 16 March | 2:00 PM–4:00 PM
+                        <div class="schedule-info"> Venue:PG Block CSIT <div>Fees : 100/- per team</div> </div>
+                    </div> 
+                    <div class="coordinator-box"><span><i class="fas fa-user-check"></i>Event Coordinator:  Dr. Anil Kumar Bisht (9412928340)</span></div>
+                    <p>Battleground for the ultimate gamers.</p>
+                    <div class="rules-box" id="rules-bgmi">
+                      <strong>Rules & Regulations:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Team Size:</strong> 4 players (Squad format).</li>
+                            <li><strong>Format:</strong> Custom Room Matches (TPP).</li>
+                            <li><strong>Maps:</strong> Erangel / Miramar / Livik.</li>
+                            <li><strong>Device Restrictions:</strong> Mobile phones only. No tablets, iPads, or emulators allowed.</li>
+                            <li><strong>Integrity:</strong> Use of third-party apps, hacks, or cheats will result in immediate disqualification.</li>
+                            <li><strong>Fair Play:</strong> Toxic or unsporting behavior will lead to disqualification.</li>
+                            <li><strong>Proof:</strong> Teams must submit match result screenshots as proof.</li>
+                            <li><strong>Requirement:</strong> Each participant must have a mobile phone with active internet connectivity.</li>
+                        </ul>
+                        <strong>Event Description:</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            Join the ultimate BGMI squad tournament, designed to test your team's strategy, survival instincts, and high-level combat skills. Whether you excel in aggressive rushing tactics or long-range sniping, this event provides the perfect stage to showcase your tactical abilities.
+                        </p>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding the event, please see the booklet.
+                        </p>
+                      </div>
+                    <button class="btn-join" onclick="toggleRules('rules-bgmi', this)">Know More</button>
+                </div>
+            </div>
+
+            <div class="card event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="newimage/memory.jpeg" alt="Memory" loading="lazy" decoding="async"></div>
+                <div class="card-content">
+                    <h3>27. Memory Noise</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 16 March | 2:00 PM–4:00 PM
+                        <div class="schedule-info"> Venue: ECE Dept. <div>Fees : 100</div> </div>
+                    </div> 
+                     <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Event Coordinator: Dr. Janak Kapoor (9456469793)</span></div>
+                    <p>Test your memory amidst heavy distraction.</p>
+                    <div class="rules-box" id="rules-mem">
+                        <strong>Rules & Regulations:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Eligibility:</strong> Open to undergraduate, postgraduate students, and research scholars of the faculty of Engineering & Technology.</li>
+                            <li><strong>Participation:</strong> This is an individual event.</li>
+                            <li><strong>Interdisciplinary:</strong> While primarily an electronics engineering stream event, interdisciplinary teams may participate; each must nominate a leader.</li>
+                            <li><strong>Materials:</strong> Participants must bring their own blue or black pen for drawing the circuit. A blank A4 sheet will be provided.</li>
+                            <li><strong>Judging:</strong> The decision of the judging panel shall be final and binding.</li>
+                        </ul>
+                        <strong>Event Description:</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            MEMORY NOISE is designed to test the memorizing ability of participants. A circuit diagram will be projected for a limited time frame. Participants must then memorize and reproduce the diagram on an A4 sheet within a given time interval. The winner is determined by who draws the diagram with every detail closest to the original.
+                        </p>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding the event, please see the booklet.
+                        </p>
+                      </div>
+                    <button class="btn-join" onclick="toggleRules('rules-mem', this)">Know More</button>
+                </div>
+            </div>
+
+            <div class="card event-card-wide" data-tilt>
+                <div class="card-img-holder"><img src="newimage/reverse_engineering_quiz_4K.jpg" alt="Reverse Eng" loading="lazy" decoding="async"></div>
+                <div class="card-content">
+                    <h3>28. Reverse Engineering Quiz</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 16 March | 2:00 PM–4:00 PM
+                        <div class="schedule-info"> Venue: Mechanical Dept. <div>Fees : 100/- per team</div> </div>
+                    </div> 
+                     <div class="coordinator-box"><span><i class="fas fa-user-check"></i> Event Coordinator: Varun Pratap Singh (+91-9634218878)</span></div>
+                    <p>Deconstruct products to understand logic and engineering.</p>
+                    <div class="rules-box" id="rules-rev">
+                        <strong>Competition Structure:</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            The competition consists of three rounds, each containing three questions demonstrated via PowerPoint presentation.
+                        </p>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Round 1: Preliminary Analysis</strong> – Basic questions related to identification and functionality.</li>
+                            <li><strong>Round 2: Technical Interpretation</strong> – Detailed analysis of working principles, components, and architecture.</li>
+                            <li><strong>Round 3: Manufacturing Evaluation</strong> – Identification of fabrication methods and development processes.</li>
+                        </ul>
+                        <strong>Rules & Regulations:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Team Size:</strong> Participants will take part in teams of three members.</li>
+                            <li><strong>Leadership:</strong> Interdisciplinary teams are encouraged; each team must nominate one leader.</li>
+                            <li><strong>Materials:</strong> A half drawing sheet, pencil, and eraser will be provided to each team.</li>
+                            <li><strong>Requirements:</strong> Participants must draw relevant block diagrams or circuit layouts and write technical analyses.</li>
+                            <li><strong>Submission:</strong> Teams must submit their written and drawn analysis at the end of each round.</li>
+                            <li><strong>Evaluation:</strong> Based on accuracy, clarity of drawings, depth of analysis, and logical reasoning.</li>
+                        </ul>
+                        <strong>Event Description:</strong>
+                        <p style="margin-top: 8px; font-size: 0.95em;">
+                            This academic competition is designed to enhance analytical thinking and technical understanding among undergraduate engineering students. Participants are provided with a prototype (circuit, program, or instrument) to analyze its structure, working principles, and manufacturing techniques.
+                        </p>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding the event, please see the booklet.
+                        </p>
+                     </div>
+                    <button class="btn-join" onclick="toggleRules('rules-rev', this)">Know More</button>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <footer class="footer-strip">
-        Made by IT CLINIC | MJPRU Tech Fest 2026
-    </footer>
+   
 
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js" defer></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>

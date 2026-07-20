@@ -2,11 +2,10 @@
    1. UNIVERSAL CSS (MERGED & OPTIMIZED)
    ========================================= */
 
-/* --- RESET & VARIABLES --- */
 :root {
     --text-dark: #2d3436;
     --text-light: #ffffff;
-    --accent: #ffeb3b; /* Yellow Pop */
+    --accent: #ffeb3b; 
     --modal-width-wide: 800px;
 }
 
@@ -33,42 +32,37 @@ body { overflow-x: hidden; width: 100%; background-color: #000; }
     opacity: 0.2; mix-blend-mode: overlay;
 }
 
+#hero-canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
+.hero-content { position: relative; z-index: 2; }
+.year { text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); -webkit-text-stroke: 2px white; color: transparent; }
+
 /* --- NAVBAR --- */
 nav {
     display: flex; justify-content: space-between; align-items: center;
     padding: 20px 8%; position: fixed; width: 100%; z-index: 100;
-    backdrop-filter: blur(10px); background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); background: rgba(255, 255, 255, 0.5);
 }
 .logo { font-size: 1.5rem; font-weight: 700; color: white; letter-spacing: 1px; }
 .highlight { color: var(--accent); }
 .nav-links { display: flex; list-style: none; gap: 30px; align-items: center; }
 .nav-links a { text-decoration: none; color: white; font-weight: 500; transition: 0.3s; font-size: 1rem; }
 
-/* Updated Navbar Join Button */
 .btn-nav { 
-    padding: 8px 25px; 
-    background: linear-gradient(45deg, #FFD700, #FDB931); 
-    color: #333 !important; 
-    border-radius: 20px; font-weight: 800 !important; 
-    transition: 0.3s; border: 2px solid #FDB931;
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    padding: 8px 25px; background: linear-gradient(45deg, #FFD700, #FDB931); 
+    color: #333 !important; border-radius: 20px; font-weight: 800 !important; 
+    transition: 0.3s; border: 2px solid #FDB931; box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
     cursor: pointer; display: inline-block;
 }
-.btn-nav:hover { 
-    transform: scale(1.1); background: white; 
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
-}
-
+.btn-nav:hover { transform: scale(1.1); background: white; box-shadow: 0 0 20px rgba(255, 215, 0, 0.8); }
 .hamburger { display: none; background: transparent; border: none; cursor: pointer; color: white; font-size: 1.8rem; padding: 5px; }
 
-/* --- HERO & SECTIONS --- */
+/* --- HERO --- */
 header { min-height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 100px 20px 20px; }
 h1 { font-family: 'Playfair Display', serif; font-size: 4.5rem; line-height: 1; text-shadow: 0 5px 15px rgba(0,0,0,0.2); margin: 20px 0; }
-.year { -webkit-text-stroke: 2px white; color: transparent; }
 .tagline { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-style: italic; }
 
-/* --- EVENT CARDS (Wide) --- */
-.events-section { padding: 80px 8%; text-align: center; content-visibility: auto; }
+/* --- EVENT CARDS --- */
+.events-section { padding: 80px 8%; text-align: center; content-visibility: auto; contain-intrinsic-size: 600px; }
 .cards-container { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
 
 .event-card-wide { 
@@ -87,79 +81,17 @@ h1 { font-family: 'Playfair Display', serif; font-size: 4.5rem; line-height: 1; 
 .card-content h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: #2d3436; margin-bottom: 5px; }
 .card-content p { color: #666; font-size: 0.95rem; margin-bottom: 15px; }
 
-/* --- BUTTONS --- */
-.btn-join { 
-    width: 100%; padding: 12px; background: linear-gradient(45deg, #7000ff, #e73c7e); 
-    color: white; border: none; font-weight: bold; font-size: 1rem; border-radius: 8px; 
-    cursor: pointer; transition: 0.3s; text-transform: uppercase; letter-spacing: 1px; 
-}
-.btn-join:hover { 
-    background: linear-gradient(45deg, #e73c7e, #ffeb3b); color: #000; 
-    box-shadow: 0 5px 15px rgba(231, 60, 126, 0.4); 
-}
-
-/* --- FOOTER --- */
-.copyright-strip { padding: 15px 0; border-top: 1px solid rgba(0,0,0,0.05); font-size: 0.9rem; color: #000000 !important; font-weight: 400; text-align: center; background: transparent !important; letter-spacing: 1px; width: 100%; }
-
-/* --- MOBILE STICKY BUTTON --- */
-.mobile-join-fab {
-    display: none; 
-    position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
-    z-index: 999; width: 90%; max-width: 400px;
-    background: linear-gradient(45deg, #7000ff, #e73c7e);
-    color: white; text-align: center; padding: 15px;
-    border-radius: 30px; font-size: 1.2rem; font-weight: bold;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.4); text-decoration: none;
-    border: 2px solid white; animation: pulseFab 2s infinite;
-}
-@keyframes pulseFab {
-    0% { transform: translateX(-50%) scale(1); }
-    50% { transform: translateX(-50%) scale(1.05); }
-    100% { transform: translateX(-50%) scale(1); }
-}
-
-/* --- MOBILE FIXES --- */
-@media (max-width: 768px) {
-    h1 { font-size: 3rem !important; }
-    .hamburger { display: block; }
-    .nav-links { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: linear-gradient(180deg, rgba(112, 0, 255, 0.95), rgba(231, 60, 126, 0.95)) !important; flex-direction: column; padding: 20px 0; backdrop-filter: blur(10px); }
-    .nav-links.active { display: flex; }
-    .nav-links .btn-nav { display: none; } /* Hide Navbar button on mobile, show Sticky instead */
-    .desktop-only-divider { display: none !important; }
-    .mobile-join-fab { display: block; }
-}
-
-/* =========================================
-   2. PAGE SPECIFIC STYLES
-   ========================================= */
-
-/* Schedule Info Styling */
+/* Schedule & Details */
 .schedule-info {
-    background: #fff0f5;
-    color: #d63384;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    display: inline-block;
-    margin-bottom: 10px;
-    border: 1px solid #f8d7da;
+    background: #fff0f5; color: #d63384; padding: 5px 10px;
+    border-radius: 5px; font-size: 0.85rem; font-weight: 600;
+    display: inline-block; margin-bottom: 10px; border: 1px solid #f8d7da;
 }
 .schedule-info i { margin-right: 5px; }
 
-/* Coordinator Box */
-.coordinator-box {
-    display: flex; align-items: center; justify-content: space-between;
-    background: #f0f4ff; padding: 10px 15px; border-radius: 50px;
-    margin-bottom: 20px; font-size: 0.9rem; color: #000428;
-    font-weight: 600; border: 1px solid #dce4ff;
-}
-.coordinator-box i { color: #7000ff; margin-right: 5px; }
-
-/* Rules Box - UPDATED TO BE HIDDEN INITIALLY */
+/* Rules Box */
 .rules-box {
-    display: none; /* Hidden by default */
-    background: #f8f9fa; padding: 15px; border-radius: 8px;
+    display: none; background: #f8f9fa; padding: 15px; border-radius: 8px;
     margin-bottom: 15px; font-size: 0.85rem; color: #555;
     text-align: left; border-left: 4px solid #7000ff;
     animation: fadeIn 0.5s ease;
@@ -167,3 +99,66 @@ h1 { font-family: 'Playfair Display', serif; font-size: 4.5rem; line-height: 1; 
 @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
 .rules-box ul { padding-left: 20px; margin: 0; }
 .rules-box li { margin-bottom: 3px; }
+
+/* Button */
+.btn-join { 
+    width: 100%; padding: 12px; background: linear-gradient(45deg, #7000ff, #e73c7e); 
+    color: white; border: none; font-weight: bold; font-size: 1rem; border-radius: 8px; 
+    cursor: pointer; transition: 0.3s; text-transform: uppercase; letter-spacing: 1px; 
+}
+.btn-join:hover { background: linear-gradient(45deg, #e73c7e, #ffeb3b); color: #000; box-shadow: 0 5px 15px rgba(231, 60, 126, 0.4); }
+
+/* --- MOBILE FAB --- */
+.mobile-join-fab {
+    display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+    z-index: 999; width: 90%; max-width: 400px; background: linear-gradient(45deg, #7000ff, #e73c7e);
+    color: white; text-align: center; padding: 15px; border-radius: 30px; font-size: 1.2rem; font-weight: bold;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4); text-decoration: none; border: 2px solid white; animation: pulseFab 2s infinite;
+}
+@keyframes pulseFab { 0% { transform: translateX(-50%) scale(1); } 50% { transform: translateX(-50%) scale(1.05); } 100% { transform: translateX(-50%) scale(1); } }
+
+ /* --- RESPONSIVE FIXES --- */
+@media (max-width: 768px) {
+    h1 { font-size: 3rem !important; }
+    
+    .hamburger { 
+        display: block; 
+        z-index: 101; /* Menu ke upar dikhne ke liye */
+    }
+
+    .nav-links { 
+        display: flex; /* Display flex hi rahega */
+        position: fixed; /* Screen par fix rahega */
+        top: -100%; /* Default mein screen ke upar chupa rahega */
+        left: 0; 
+        width: 100%; 
+        height: auto;
+        background: linear-gradient(180deg, rgba(112, 0, 255, 0.98), rgba(231, 60, 126, 0.98)) !important; 
+        flex-direction: column; 
+        padding: 80px 0 30px 0; /* Top padding navbar space ke liye */
+        backdrop-filter: blur(10px); 
+        transition: 0.5s ease-in-out; /* Slide animation */
+        z-index: 100;
+        opacity: 0;
+    }
+
+    /* Jab active class JS se add hogi */
+    .nav-links.active { 
+        top: 0; 
+        opacity: 1;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .nav-links .btn-nav { 
+        display: inline-block; /* Mobile menu ke andar dikhane ke liye */
+        margin-top: 10px;
+    }
+
+    .mobile-join-fab { display: block; }
+    .event-card-wide { width: 100%; }
+}

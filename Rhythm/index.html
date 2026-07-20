@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Events at MJPRU Tech Fest 2026.">
+    <title>RHYTHM & RADIANCE | Tech Fest AURA 2K26</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://images.unsplash.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"></noscript>
+    
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" type="image/png" href="./1/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./1/favicon.svg" />
+    <link rel="shortcut icon" href="./1/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./1/apple-touch-icon.png" />
+    <link rel="manifest" href="./1/site.webmanifest" />
+</head>
+<body>
+
+    <div class="gradient-bg">
+        <div class="uni-overlay"></div>
+    </div>
+
+    <a href="https://forms.eduqfix.com/festregof/add" target="_blank" class="mobile-join-fab">Join Now 🚀</a>
+
+    <nav>
+        <div class="logo">MJPRU <span class="highlight">RHYTHM</span></div>
+        
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <ul class="nav-links" id="mobileMenu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../technical/index.html">Technical Events</a></li>
+            <li><a href="../cultural/index.html">Cultural Events</a></li>
+            <li><a href="../literacy/index.html">Literature Events</a></li>
+            <li><a href="../Sports/index.html">Sports Events</a></li>
+            <li><a href="../Workshop/index.html">Workshop Events</a></li>
+            <li><a href="https://forms.eduqfix.com/festregof/add" target="_blank" class="btn-nav">Join Now</a></li>
+        </ul>
+    </nav>
+
+    <header style="min-height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; flex-direction: column;">
+       <canvas id="hero-canvas"></canvas> 
+        <div class="hero-content">
+            <div class="presents-text" data-aos="fade-down">AURA 2K26 MJPRU Tech Fest Presents</div>
+            <h1 data-aos="zoom-in" style="font-size: 4rem; margin-bottom: 10px;">RHYTHM & <span class="year">RADIANCE</span></h1>
+            <p class="tagline" style="font-size: 1.2rem; color: #fff; margin-top: 10px; margin-bottom: 40px;" data-aos="fade-up">
+                "Light up the Night and Feel the Beat at MJPRU"
+            </p>
+        </div>
+    </header>
+
+
+    <section class="events-section" style="padding-top: 0;">
+        <h2 class="section-head-white" data-aos="fade-right" style="text-align: left; border-left: 5px solid #ffeb3b; padding-left: 20px;">FESTIVAL SPECTACULARS</h2>
+        
+        <div class="cards-container" style="justify-content: flex-start;">
+            
+            <div class="card event-card-wide" data-tilt>
+                <div class="card-img-holder">
+                    <img src="image/open mic.jfif" alt="Diya Decoration" loading="lazy" decoding="async">
+                </div>
+                <div class="card-content">
+                    <h3>1. Diya Decoration & Open Mic</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Special Event | Evening Slot</div>
+
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 14 MARCH | 6:00 PM-8:00 PM
+                    <div><strong><i class="fas fa-user-tie"></i> Event Coordinator:    Dr. Anita Tyagi ( 9411699751) </strong> <br></div>  
+                    <div class="schedule-info">    Venue: Chemical Engineering Department </div>            
+                </div>
+
+                    <p>A beautiful blend of creativity and expression. Decorate diyas and showcase your talent on the mic.</p>
+                    <div class="rules-box" id="rules-diya">
+                        <strong>Event Details:</strong>
+                        <ul>
+                            <li>Creative Diya Designing Competition.</li>
+                            <li>Open Mic: Poetry, Singing, and Stand-up.</li>
+                            <li><strong>Coordinator:</strong> Dr. Anita Tyagi</li>
+                            <li><strong>Contact:</strong> 9411699751</li>
+                        </ul>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-diya', this)">Know More</button>
+                </div>
+            </div>
+
+            <div class="card event-card-wide" data-tilt>
+                <div class="card-img-holder">
+                    <img src="image/Musical night.jpg" alt="Musical Nights" loading="lazy" decoding="async">
+                </div>
+                <div class="card-content">
+                    <h3>2. Musical Nights</h3>
+                    <div class="schedule-info"><i class="far fa-moon"></i> Grand Finale | Night Event</div>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i>  16 MARCH  |6:00 PM-8:00 PM
+                    <div><strong><i class="fas fa-user-tie"></i> Event Coordinator:   Dr. Preeti Yadav (7017932082) </strong> <br></div>
+                    <div class="schedule-info">    Venue: Atal Auditorium </div>
+                  </div>
+                    <p>Lose yourself in the rhythm. An unforgettable night of live music and soulful performances.</p>
+                    <div class="rules-box" id="rules-music">
+                        <strong>Event Details:</strong>
+                        <ul>
+                            <li>Live Musical Performances.</li>
+                            <li>Professional Sound & Lighting.</li>
+                            <li><strong>Coordinator:</strong> Dr. Preeti Yadav</li>
+                            <li><strong>Contact:</strong> 7017932082</li>
+                        </ul>
+                    </div>
+                    <button class="btn-join" onclick="toggleRules('rules-music', this)">Know More</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div id="formModal" class="modal-overlay">
+        <div class="modal-box">
+            <button class="close-btn" onclick="closeForm()" aria-label="Close modal">&times;</button>
+            <div class="modal-header">Sports Registration</div>
+            <iframe id="googleFormFrame" src="" frameborder="0" style="width: 100%; height: 100%;">Loading...</iframe>
+        </div>
+    </div>
+
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" defer></script>
+    
+    <script src="script.js" defer></script>
+</body>
+</html>

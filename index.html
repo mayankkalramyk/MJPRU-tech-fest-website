@@ -11,7 +11,8 @@
     <meta name="author" content="IT CLINIC | MJPRU Tech Fest 2026">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#7000ff">
-    <link rel="canonical" href="https://yourwebsite.com/"> <meta property="og:type" content="website">
+    <link rel="canonical" href="https://yourwebsite.com/"> 
+    <meta property="og:type" content="website">
     <meta property="og:url" content="https://yourwebsite.com/">
     <meta property="og:title" content="MJPRU TECH FEST 2026 | AURA 2K26">
     <meta property="og:description" content="AURA 2K26 - The Grandest Gathering of Minds. Join us for Technical, Cultural, and Literary events at M.J.P. Rohilkhand University.">
@@ -28,13 +29,188 @@
     <link rel="preload" href="image/logo.jfif" as="image">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
     
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"></noscript>
     
     <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" type="image/png" href="./1/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./1/favicon.svg" />
+    <link rel="shortcut icon" href="./1/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./1/apple-touch-icon.png" />
+    <link rel="manifest" href="./1/site.webmanifest" />
+
+<style>
+        /* 1. Main Outer Wrapper */
+        .team-portal {
+            background: #ffffff;
+            width: 100%;
+            max-width: 1050px; /* Perfect desktop width */
+            padding: 50px 30px;
+            border-radius: 40px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        /* 2. Header Section */
+        .portal-header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .header-badge {
+            background: #7d2ae8;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            box-shadow: 0 8px 15px rgba(125, 42, 232, 0.3);
+        }
+
+        .portal-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #2d3436;
+        }
+
+        /* 3. Responsive Grid Layout */
+        .portal-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* Mobile default */
+            gap: 10px;
+        }
+
+        /* Desktop Mode: Side by Side */
+        @media (min-width: 900px) {
+            .portal-grid {
+                grid-template-columns: 1fr 1.1fr; 
+                align-items: stretch;
+            }
+        }
+
+        /* 4. Team Cards */
+        .coord-card {
+            background: #fdfdff;
+            border-radius: 25px;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.02);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Colored Left Accents */
+        .coord-card::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 10%;
+            height: 80%;
+            width: 6px;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .faculty-theme::before { background: #7d2ae8; }
+        .student-theme::before { background: #ef447c; }
+
+        .card-label {
+            display: block;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 13px;
+            font-weight: 700;
+            color: #7f8c8d;
+            letter-spacing: 1.5px;
+            margin-bottom: 30px;
+        }
+
+        /* 5. Profile Rows */
+        .profile-item {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            width: 100%;
+        }
+
+        .profile-item:last-child { margin-bottom: 0; }
+
+        .avatar-wrap {
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .avatar-img {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid transparent;
+            padding: 3px;
+        }
+
+        .faculty-theme .avatar-img { border-color: #7d2ae8; width: 65px; height: 65px; }
+        .student-theme .avatar-img { border-color: #ef447c; }
+
+        .member-name {
+            flex-grow: 1;
+            font-size: 18px;
+            font-weight: 600;
+            color: #2d3436;
+        }
+
+        .faculty-color { color: #7d2ae8; font-size: 22px; }
+
+        /* 6. LinkedIn Socials */
+        .social-trigger {
+            color: #2d3436;
+            font-size: 22px;
+            transition: transform 0.2s, color 0.2s;
+            text-decoration: none;
+        }
+
+        .social-trigger:hover {
+            color: #0077b5;
+            transform: scale(1.1);
+        }
+
+        /* 7. Floating Action Button */
+        .scroll-fab {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #ef447c;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            box-shadow: 0 10px 20px rgba(239, 68, 124, 0.4);
+            cursor: pointer;
+            z-index: 99;
+        }
+
+        /* Mobile specific adjustments */
+        @media (max-width: 600px) {
+            .team-portal { padding: 30px 15px; border-radius: 25px; }
+            .portal-title { font-size: 24px; }
+            .member-name { font-size: 16px; }
+        }
+</style>
 </head>
 <body>
 
@@ -50,7 +226,7 @@
 
     <nav>
         <div class="logo">
-            <img src="image/logo.jfif" alt="MJPRU Logo" width="45" height="45" style="height: 45px; width: 45px; margin-right: 12px; vertical-align: middle; border-radius: 50%; object-fit: cover;">
+            <img src="image/logo.jfif" alt="MJPRU Logo" width="45" height="45" decoding="async" style="height: 45px; width: 45px; margin-right: 12px; vertical-align: middle; border-radius: 50%; object-fit: cover;">
             MJPRU <span class="highlight">FEST</span>
         </div>
         
@@ -64,18 +240,28 @@
             <li><a href="#events">Events</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#" onclick="openAccommodation()">Accommodation</a></li>
+            <li><a href="#" onclick="openRegInfo()">Registration</a></li>
             <li><a href="#" class="btn-nav" onclick="openContact()">Contact Us</a></li>
         </ul>
     </nav>
 
     <header id="home">
+       
+        <canvas id="hero-canvas"></canvas>
+
         <div class="hero-content">
             <p class="tagline" data-aos="fade-down">The Grandest Gathering of Minds</p>
             
             <div class="title-wrapper">
                 <div class="tech-bracket left" data-aos="fade-right"></div>
-                <h1 data-aos="zoom-in" data-aos-duration="1200">AURA <span class="year">2K26</span></h1>
+                <h1 data-aos="zoom-in" data-aos-duration="1200">TechFest AURA <span class="year">2K26</span></h1>
+                
                 <div class="tech-bracket right" data-aos="fade-left"></div>
+                
+            </div>
+
+             <div>
+                  <p class="tagline" data-aos="fade-down">The Creative Pulse: Innovate | Create | Compete</p>
             </div>
 
             <div class="countdown-container" data-aos="zoom-in" data-aos-delay="200">
@@ -98,25 +284,35 @@
             </div>
             
             <p class="sub-text" data-aos="fade-up">"Aura-2k26" Tech Fest Organized by M.J.P. Rohilkhand University, Bareilly</p>
-            
-            <div>
-                <a href="#events" class="btn-main" data-aos="fade-up" data-aos-delay="300">Explore the Arena</a>
+        
+        <div class="hero-btns-container" data-aos="fade-up" data-aos-delay="300">
+            <div class="top-btn-row">
+                <a href="#events" class="btn-outline">Explore the Arena</a>
             </div>
-            
-            <p class="welcome-msg" data-aos="fade-up" data-aos-delay="400">
-                Welcome to the Fest! Get ready to witness innovation, culture, and glory.
-            </p>
+            <div class="bottom-btn-row">
+                <a href="#" class="btn-gradient-reg" onclick="openRegInfo()">
+                    <i class="fas fa-user-plus"></i> Register Now
+                </a>
+                <a href="#" class="btn-outline-stay" onclick="openAccommodation()">
+                    <i class="fas fa-bed"></i> Accommodation
+                </a>
+            </div>
         </div>
-    </header>
+        <p class="welcome-msg" data-aos="fade-up" data-aos-delay="400">
+            Welcome to the Fest! Get ready to witness innovation, culture, and glory.
+        </p>
+    </div>
+</header>
 
     <div class="wave-divider">
         <svg viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
     </div>
 
+    
     <section id="vc-corner" class="vc-section">
         <div class="container">
             <div class="vc-card" data-aos="fade-right">
-                <div class="vc-img-box"><img src="image/vc.jfif" alt="Vice Chancellor MJPRU" width="400" height="500" loading="lazy"></div>
+                <div class="vc-img-box"><img src="image/vcc.jpg" alt="Vice Chancellor MJPRU" width="400" height="500" loading="lazy" decoding="async"></div>
             </div>
             <div class="vc-text" data-aos="fade-left">
                 <span class="section-subtitle">From the Desk of</span>
@@ -124,40 +320,47 @@
                 <p>It gives me immense pleasure to extend my best wishes for the vibrant fest AURA- 2K26 that celebrates creativity, culture, and intellect. Such platforms go beyond competition—they inspire confidence, nurture talent, and encourage students to express ideas, emotions, and innovations with courage and responsibility.<br><br>
                 I believe that participation in technical, cultural, and literary activities plays a vital role in shaping balanced personalities and future leaders. May this fest ignite curiosity, foster collaboration, and create memories that motivate them to strive for excellence in every walk of life.<br><br>
                 I congratulate the organizing team and wish all participants a joyful, enriching, and successful fest.</p>
-                <div class="signature"><strong>Prof. K.P. Singh</strong><span>Vice Chancellor, MJPRU</span></div>
-            </div>
-        </div>
-    </section>
-    <section id="vc-corner" class="vc-section">
-        <div class="container">
-            <div class="vc-card" data-aos="fade-right">
-                <div class="vc-img-box"><img src="image/vc.jfi" alt="Vice Chancellor MJPRU" width="400" height="500" loading="lazy"></div>
-            </div>
-            <div class="vc-text" data-aos="fade-left">
-                <span class="section-subtitle">From the Desk of</span>
-                <h2 class="section-title">Dean Academics</h2>
-                <p>It gives me immense pleasure to extend my best wishes for the vibrant fest AURA- 2K26 that celebrates creativity, culture, and intellect. Such platforms go beyond competition—they inspire confidence, nurture talent, and encourage students to express ideas, emotions, and innovations with courage and responsibility.<br><br>
-                I believe that participation in technical, cultural, and literary activities plays a vital role in shaping balanced personalities and future leaders. May this fest ignite curiosity, foster collaboration, and create memories that motivate them to strive for excellence in every walk of life.<br><br>
-                I congratulate the organizing team and wish all participants a joyful, enriching, and successful fest.</p>
-                <div class="signature"><strong>Prof. S. K. Panday</strong><span>Dean Academics , MJPRU</span></div>
+                <div class="signature"><strong>Prof. K.P. Singh</strong><span>Chief Patron, Aura 2K26</span></div>
             </div>
         </div>
     </section>
     
-
-    <section class="vc-section dean-section" style="background: #fff9fb;">
-        <div class="container">
-            <div class="vc-text" data-aos="fade-right">
-                <span class="section-subtitle" style="color: #7000ff;">From the Desk of</span>
-                <h2 class="section-title">Dean (FET)</h2>
-                <p>"Student life is not just about academics, but about holistic growth. Our Technical and Cultural Fest is designed to unleash your hidden potential. I encourage every student to participate."</p>
-                <div class="signature"><strong>Dr. Archana Gupta</strong><span>Dean (FET), MJPRU</span></div>
-            </div>
-            <div class="vc-card" data-aos="fade-left">
-                <div class="vc-img-box"><img src="image/dean.jpeg" alt="Dean FET MJPRU" width="400" height="500" loading="lazy"></div>
+    <section id="dean-acad-corner" class="vc-section">
+    <div class="container" style="display: flex; flex-direction: row-reverse; align-items: center; gap: 40px; flex-wrap: wrap;">
+        <div class="vc-card" data-aos="fade-left" style="flex: 1; min-width: 300px;">
+            <div class="vc-img-box">
+                <img src="image/deanad.jpg" alt="Dean Academics MJPRU" width="400" height="500" loading="lazy" decoding="async">
             </div>
         </div>
-    </section>
+
+        <div class="vc-text" data-aos="fade-right" style="flex: 1; min-width: 300px;">
+            <span class="section-subtitle">From the Desk of</span>
+            <h2 class="section-title">Dean Academics</h2>
+            <p>I am pleased to learn that the Faculty of Engineering & Technology, Mahatma Jyotiba Phule Rohilkhand University, Bareilly is organizing a grand fest ensuring maximum participation from all stake holders. The fest is aimed to provide the students various opportunities of versatile nature to show their talent in different areas outside the class room teaching and to explore the possibility of applying their expertise in the area of their choice.<br><br>
+            The fest is likely to provide students an innovative tool to exhibit their creativity, skills coupled with lot of fun. It will also provide an opportunity to upgrade themselves and to apply it for overall growth and development. It will provide all the students an umbrella to teach themselves and learn from others for overall personality development.<br><br>
+            I wish a grand success to this forthcoming fest 26.</p>
+            <div class="signature"><strong>Prof. S. K. Panday</strong><span>Dean Academics, MJPRU</span></div>
+        </div>
+    </div>
+</section>
+    
+
+    <section id="dean-fet-corner" class="vc-section">
+        <div class="container">
+            <div class="vc-card" data-aos="fade-right">
+                <div class="vc-img-box"><img src="image/deanfet.jpg" alt="Dean FET MJPRU" width="400" height="500" loading="lazy" decoding="async"></div>
+            </div>
+            <div class="vc-text" data-aos="fade-left">
+            <span class="section-subtitle" style="color: #7000ff;">From the Desk of</span>
+            <h2 class="section-title">Dean (FET)</h2>
+            <p>It gives me immense pleasure to present Aura 2K26—a vibrant celebration of talent, creativity, and innovation at the Faculty of Engineering & Technology, Mahatma Jyotiba Phule Rohilkhand University. Our Tech—Cultural—Literary Fest is not merely an event; it is a reflection of the dynamic spirit of FET—where ideas are engineered, creativity is celebrated, and leadership is nurtured.<br><br>
+            It brings together the brilliance of technology, the rhythm of culture, and the power of expression on one unified platform. Such occasions inspire students to think beyond classrooms, explore their hidden potential, and transform knowledge into meaningful action. They encourage collaboration, confidence, and the courage to innovate.<br><br>
+            I urge every participant to seize this opportunity, challenge boundaries, and create memories that will shape your journey ahead. Let this fest ignite your passion, strengthen your resolve, and remind you that the future belongs to those who dare to dream and strive.</p>
+            <div class="signature"><strong>Dr. Archana Gupta</strong><span>Dean (FET), MJPRU</span></div>
+        </div>
+
+    </div>
+</section>
 
     <div style="background: #fff9fb; padding-bottom: 50px; text-align: center; display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; position: relative; z-index: 2;">
         
@@ -175,23 +378,55 @@
             <i class="fas fa-tasks" style="margin-right: 10px;"></i> View Organizing Committee
         </button>
 
+        <button onclick="document.getElementById('studentModal').style.display='flex'" 
+                style="padding: 15px 40px; background: linear-gradient(45deg, #00c6ff, #0072ff); color: white; font-size: 1.3rem; font-weight: 600; border: none; border-radius: 50px; cursor: pointer; box-shadow: 0 10px 20px rgba(0, 198, 255, 0.3); font-family: 'Poppins', sans-serif; transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 15px 25px rgba(0, 198, 255, 0.5)';"
+                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 10px 20px rgba(0, 198, 255, 0.3)';">
+            <i class="fas fa-user-graduate" style="margin-right: 10px;"></i> View Student Committee
+        </button>
+
+       <a href="image/AURA 2k26 FET Festnew.pdf" download="Brochure_AURA_2K26" 
+       style="text-decoration: none; padding: 10px 30px 10px 10px; background: linear-gradient(45deg, #1a2a6c, #b21f1f, #fdbb2d); color: white; font-size: 1.2rem; font-weight: 600; border: none; border-radius: 50px; cursor: pointer; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); font-family: 'Poppins', sans-serif; transition: transform 0.3s ease, box-shadow 0.3s ease; display: inline-flex; align-items: center; gap: 15px;"
+       onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+       
+        <img src="image/brochure_cover.png" alt="Booklet Cover" loading="lazy" decoding="async"
+             style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid white; box-shadow: 0 0 10px rgba(255,255,255,0.5);">
+       
+        <span><i class="fas fa-file-download"></i> Download Booklet</span>
+    </a>
+
+    <button onclick="document.getElementById('timetableModal').style.display='flex'" 
+            style="padding: 15px 40px; background: linear-gradient(45deg, #00b09b, #96c93d); color: white; font-size: 1.3rem; font-weight: 600; border: none; border-radius: 50px; cursor: pointer; box-shadow: 0 10px 20px rgba(0, 176, 155, 0.3); font-family: 'Poppins', sans-serif; transition: transform 0.3s ease, box-shadow 0.3s ease;"
+            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 15px 25px rgba(0, 176, 155, 0.5)';"
+            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 10px 20px rgba(0, 176, 155, 0.3)';">
+        <i class="fas fa-calendar-alt" style="margin-right: 10px;"></i> View Event Schedule
+    </button>
     </div>
 
     <section id="events" class="events-section">
-        <h2 class="section-head-white" data-aos="fade-down">Experience The Magic</h2>
-        <div class="cards-container">
-            <div class="card" data-tilt><div class="card-content"><i class="fas fa-atom icon-style"></i><h3>Technical</h3><a href="technical/index.html">View Details →</a></div></div>
-            <div class="card" data-tilt><div class="card-content"><i class="fas fa-palette icon-style"></i><h3>Cultural</h3><a href="cultural/index.html">View Details →</a></div></div>
-            <div class="card" data-tilt><div class="card-content"><i class="fas fa-book-reader icon-style"></i><h3>Literature</h3><a href="literacy/index.html">View Details →</a></div></div>
-        </div>
-    </section>
+    <h2 class="section-head-white" data-aos="fade-down">Experience The Magic</h2>
+    <div class="cards-container">
+        <div class="card" data-tilt><div class="card-content"><i class="fas fa-atom icon-style"></i><h3>Technical</h3><a href="technical/index.html">View Details →</a></div></div>
+        <div class="card" data-tilt><div class="card-content"><i class="fas fa-palette icon-style"></i><h3>Cultural</h3><a href="cultural/index.html">View Details →</a></div></div>
+        <div class="card" data-tilt><div class="card-content"><i class="fas fa-book-reader icon-style"></i><h3>Literature</h3><a href="literacy/index.html">View Details →</a></div></div>
+        <div class="card" data-tilt><div class="card-content"><i class="fas fa-trophy icon-style"></i><h3>Sports</h3><a href="sports/index.html">View Details →</a></div></div>
+        <div class="card" data-tilt><div class="card-content"><i class="fas fa-tools icon-style"></i><h3>Workshops</h3><a href="workshop/index.html">View Details →</a></div></div>
+        <div class="card" data-tilt>
+    <div class="card-content">
+        <i class="fas fa-microphone-lines icon-style"></i>
+        <h3 style="font-size: 1.1rem; line-height: 1.3;">Rhythm Decoration & Open Mic</h3>
+        <a href="Rhythm/index.html">View Details →</a>
+    </div>
+</div>
+    </div>
+</section>
 
     <section id="faq" class="faq-section">
         <h2 class="section-head-white" style="text-align: center; margin-bottom: 30px;">Frequently Asked Questions</h2>
         <div class="faq-container">
             <div class="faq-item">
                 <div class="faq-question">How can I register for the fest? <i class="fas fa-chevron-down faq-icon"></i></div>
-                <div class="faq-answer">Registration can be done online through the respective event pages. Click on the event category above to find registration links.</div>
+                <div class="faq-answer">Registration can be done online through the respective event pages. Check the Registration section.</div>
             </div>
             <div class="faq-item">
                 <div class="faq-question">Is accommodation available for outsiders? <i class="fas fa-chevron-down faq-icon"></i></div>
@@ -199,7 +434,7 @@
             </div>
             <div class="faq-item">
                 <div class="faq-question">Who can participate in the Tech Fest? <i class="fas fa-chevron-down faq-icon"></i></div>
-                <div class="faq-answer">Students from any college or university can participate in open events. Some specific events might be restricted to MJPRU students only.</div>
+                <div class="faq-answer">Students from any college or university can participate in the events.</div>
             </div>
         </div>
     </section>
@@ -208,18 +443,206 @@
         <h2 class="section-head-white" data-aos="fade-down">Campus Highlights</h2>
         <p class="section-sub" data-aos="fade-up">Glimpses of Rohilkhand Best Campus</p>
         <div class="gallery-container">
-            <div class="gallery-card" data-tilt data-tilt-scale="1.05" data-aos="zoom-in" data-aos-delay="100"><img src="image/mjpru front.webp" alt="MJPRU Legacy Front View" width="300" height="250" loading="lazy"><div class="overlay-text">Mahatma Jyotiba Phule Legacy</div></div>
-            <div class="gallery-card" data-tilt data-tilt-scale="1.05" data-aos="zoom-in" data-aos-delay="200"><img src="image/atal auditorium.jpg" alt="Atal Auditorium MJPRU" width="300" height="250" loading="lazy"><div class="overlay-text">Atal Auditorium</div></div>
-            <div class="gallery-card" data-tilt data-tilt-scale="1.05" data-aos="zoom-in" data-aos-delay="200"><img src="image/RIF.jfif" alt="Rohilkhand Incubation Foundation" width="300" height="250" loading="lazy"><div class="overlay-text">Rohilkhand Incubation Foundation</div></div>
-            <div class="gallery-card" data-tilt data-tilt-scale="1.05" data-aos="zoom-in" data-aos-delay="200"><img src="image/DIR.jpg" alt="Directorate of International Relations MJPRU" width="300" height="250" loading="lazy"><div class="overlay-text">Directorate of International Relations</div></div>
-            <div class="gallery-card" data-tilt data-tilt-scale="1.05" data-aos="zoom-in" data-aos-delay="300"><img src="image/botanical garden.jfif" alt="Botanical Garden MJPRU" width="300" height="250" loading="lazy"><div class="overlay-text">Botanical Garden</div></div>
-            <div class="gallery-card" data-tilt data-tilt-scale="1.05" data-aos="zoom-in" data-aos-delay="400"><img src="image/stadium.jfif" alt="Campus Stadium MJPRU" width="300" height="250" loading="lazy"><div class="overlay-text">Campus Stadium</div></div>
-            <div class="gallery-card" data-tilt data-tilt-scale="1.05" data-aos="zoom-in" data-aos-delay="400"><img src="image/campus gate.png" alt="Campus Main Gate MJPRU" width="300" height="250" loading="lazy"><div class="overlay-text">Campus Main Gate</div></div>
-        </div>
+    <div class="gallery-card" data-tilt data-tilt-scale="1.05" data-aos="zoom-in" data-aos-delay="100">
+        <img src="image/mjpru front.webp" onclick="openImage(this.src)" style="cursor: pointer;" alt="MJPRU Legacy Front View" width="300" height="250" loading="lazy" decoding="async">
+        <div class="overlay-text">Mahatma Jyotiba Phule Legacy</div>
+    </div>
+    
+    <div class="gallery-card" data-tilt data-tilt-scale="1.05" data-aos="zoom-in" data-aos-delay="200">
+        <img src="image/atal auditorium.jpg" onclick="openImage(this.src)" style="cursor: pointer;" alt="Atal Auditorium MJPRU" width="300" height="250" loading="lazy" decoding="async">
+        <div class="overlay-text">Atal Auditorium</div>
+    </div>
+    
+    <div class="gallery-card" data-tilt data-tilt-scale="1.05" data-aos="zoom-in" data-aos-delay="200">
+        <img src="image/rif.jpg" onclick="openImage(this.src)" style="cursor: pointer;" alt="Rohilkhand Incubation Foundation" width="300" height="250" loading="lazy" decoding="async">
+        <div class="overlay-text">Rohilkhand Incubation Foundation</div>
+    </div>
+    
+    <div class="gallery-card" data-tilt data-tilt-scale="1.05" data-aos="zoom-in" data-aos-delay="200">
+        <img src="image/DIR (1).jpg" onclick="openImage(this.src)" style="cursor: pointer;" alt="Directorate of International Relations MJPRU" width="300" height="250" loading="lazy" decoding="async">
+        <div class="overlay-text">Directorate of International Relations</div>
+    </div>
+    
+    <div class="gallery-card" data-tilt data-tilt-scale="1.05" data-aos="zoom-in" data-aos-delay="300">
+        <img src="image/bo.jpg" onclick="openImage(this.src)" style="cursor: pointer;" alt="Botanical Garden MJPRU" width="300" height="250" loading="lazy" decoding="async">
+        <div class="overlay-text">Botanical Garden</div>
+    </div>
+    
+    <div class="gallery-card" data-tilt data-tilt-scale="1.05" data-aos="zoom-in" data-aos-delay="400">
+        <img src="image/stadiium.jpg" onclick="openImage(this.src)" style="cursor: pointer;" alt="Campus Stadium MJPRU" width="300" height="250" loading="lazy" decoding="async">
+        <div class="overlay-text">Campus Stadium</div>
+    </div>
+    
+    <div class="gallery-card" data-tilt data-tilt-scale="1.05" data-aos="zoom-in" data-aos-delay="400">
+        <img src="image/campus gate.jpg" onclick="openImage(this.src)" style="cursor: pointer;" alt="Campus Main Gate MJPRU" width="300" height="250" loading="lazy" decoding="async">
+        <div class="overlay-text">Campus Main Gate</div>
+    </div>
+    <div class="gallery-card" data-tilt data-tilt-scale="1.05" data-aos="zoom-in" data-aos-delay="400">
+        <img src="image/206.7 Acres Grand Campus.jpg" onclick="openImage(this.src)" style="cursor: pointer;" alt="206.7 Acres Grand Campus" width="300" height="250" loading="lazy" decoding="async">
+        <div class="overlay-text">206.7 Acres Grand Campus</div>
+    </div>
+    <div class="gallery-card" data-tilt data-tilt-scale="1.05" data-aos="zoom-in" data-aos-delay="400">
+        <img src="image/green.jpg" onclick="openImage(this.src)" style="cursor: pointer;" alt="Greenery of Campus" width="300" height="250" loading="lazy" decoding="async">
+        <div class="overlay-text">Greenary of Campus</div>
+    </div>
+    <div class="gallery-card" data-tilt data-tilt-scale="1.05" data-aos="zoom-in" data-aos-delay="400">
+        <img src="image/guest.jpg" onclick="openImage(this.src)" style="cursor: pointer;" alt="Guest House" width="300" height="250" loading="lazy" decoding="async">
+        <div class="overlay-text">Guest House</div>
+    </div>
+    <div class="gallery-card" data-tilt data-tilt-scale="1.05" data-aos="zoom-in" data-aos-delay="400">
+        <img src="image/centre.jpg" onclick="openImage(this.src)" style="cursor: pointer;" alt="Central library Mjprue" width="300" height="250" loading="lazy" decoding="async">
+        <div class="overlay-text">Central library Mjprue</div>
+    </div>
+    
+    
+    <div class="gallery-card" data-tilt data-tilt-scale="1.05" data-aos="zoom-in" data-aos-delay="400">
+        <img src="image/MJP_2666.JPG" onclick="openImage(this.src)" style="cursor: pointer;" alt="51st Foundation Day" width="300" height="250" loading="lazy" decoding="async">
+        <div class="overlay-text">51st Foundation Day Celebration</div>
+    </div>
+    
+    <div class="gallery-card" data-tilt data-tilt-scale="1.05" data-aos="zoom-in" data-aos-delay="400">
+        <img src="image/fresher.JPG" onclick="openImage(this.src)" style="cursor: pointer;" alt="Fresher Party Celebration" width="300" height="250" loading="lazy" decoding="async">
+        <div class="overlay-text">Fresher Party Celebration</div>
+    </div>
+    
+    <div class="gallery-card" data-tilt data-tilt-scale="1.05" data-aos="zoom-in" data-aos-delay="400">
+        <img src="image/3.jpg" onclick="openImage(this.src)" style="cursor: pointer;" alt="23rd Convocation" width="300" height="250" loading="lazy" decoding="async">
+        <div class="overlay-text">23rd Convocation</div>
+    </div>
+    
+    <div class="gallery-card" data-tilt data-tilt-scale="1.05" data-aos="zoom-in" data-aos-delay="400">
+        <img src="image/1.jpg" onclick="openImage(this.src)" style="cursor: pointer;" alt="Highlight" width="300" height="250" loading="lazy" decoding="async">
+        <div class="overlay-text">Highlight</div>
+    </div>
+    
+</div>
     </section>
 
+  <section id="sponsorship" class="vc-section" style="background: #ffffff; padding: 80px 0;">
+    <style>
+        /* Mobile-specific adjustments for perfect responsiveness */
+        .sponsor-card {
+            text-align: center;
+        }
+        .sponsor-list {
+            list-style-position: inside; 
+            text-align: left; 
+            display: inline-block; 
+            margin: 0 auto;
+        }
+        .stat-item {
+            border-left: 1px solid rgba(255,255,255,0.2);
+        }
+        @media (max-width: 768px) {
+            .stat-item {
+                border-left: none !important;
+                border-bottom: 1px solid rgba(255,255,255,0.2);
+                padding-bottom: 15px !important;
+                margin-bottom: 10px;
+            }
+            .stat-item:last-child {
+                border-bottom: none;
+                margin-bottom: 0;
+                padding-bottom: 0 !important;
+            }
+            .section-title {
+                font-size: 2.2rem !important;
+            }
+        }
+
+        /* 3D Hover Effect for Sponsors */
+        .sponsor-3d-card {
+            width: 250px;
+            max-width: 100%; /* Added for better responsiveness */
+            height: 160px;
+            background: #ffffff;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+        
+        .sponsor-3d-card:hover {
+            transform: translateY(-15px) scale(1.05) rotateX(5deg) rotateY(-5deg);
+            box-shadow: -15px 25px 40px rgba(0,0,0,0.15);
+            border-color: #7000ff;
+        }
+        
+        .sponsor-3d-card img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: transform 0.3s;
+        }
+        
+        .sponsor-3d-card:hover img {
+            transform: translateZ(20px);
+        }
+
+        /* Mobile Adjustments for Sponsors */
+        @media (max-width: 600px) {
+            .sponsor-3d-card {
+                width: 200px;
+                height: 130px;
+            }
+        }
+    </style>
+
+    <div class="container">
+        
+        <div style="max-width: 600px; margin: 0 auto 40px auto; padding: 0 15px;" data-aos="zoom-in">
+            <div class="vc-img-box" style="border-radius: 15px; overflow: hidden; box-shadow: 0 15px 35px rgba(112, 0, 255, 0.2); position: relative; border: 2px solid #eee; width: 100%; cursor: pointer;" onclick="openImage(this.querySelector('img').src)">
+                <img src="image/spo.jpg" alt="AURA 2K26 Sponsorship Flyer" style="width: 100%; height: auto; display: block; object-fit: cover; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" decoding="async">
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-bottom: 50px; padding: 0 15px;">
+            <span class="section-subtitle" style="color: #7000ff; letter-spacing: 2px; font-weight: 600;">PARTNER WITH US</span>
+            <h2 class="section-title" style="font-size: 2.8rem; margin-top: 10px;">Become a Sponsor</h2>
+            <p style="max-width: 800px; margin: 20px auto; color: #555; line-height: 1.7;">
+                Join <strong>AURA 2K26 - The Creative Pulse</strong> and showcase your brand to a vibrant community of innovators. 
+                We offer diverse partnership opportunities designed to provide maximum brand visibility.
+            </p>
+        </div>
+
+         <div style="margin-top: 40px; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; width: 100%; padding: 0 15px;" data-aos="fade-up" data-aos-delay="300">
+            <a href="mailto:mjprufest@mjpru.ac.in" class="btn-gradient-reg" style="text-decoration: none; padding: 12px 35px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius: 50px; min-width: 160px;">
+                <i class="fas fa-envelope"></i> Email Us
+            </a>
+            <a href="tel:+918808455401" class="btn-outline" style="text-decoration: none; padding: 12px 35px; border: 2px solid #7000ff; color: #7000ff; border-radius: 50px; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-width: 160px;">
+                <i class="fas fa-phone-alt"></i> Call Now
+            </a>
+        </div>
+
+        <div style="text-align: center; margin-top: 80px; margin-bottom: 40px; padding: 0 15px;" data-aos="fade-up">
+            <span class="section-subtitle" style="color: #7000ff; letter-spacing: 2px; font-weight: 600;">OUR PRIDE</span>
+            <h2 class="section-title" style="font-size: 2.8rem; margin-top: 10px;">Our Sponsors</h2>
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; padding: 0 15px; margin-bottom: 50px;" data-aos="fade-up" data-aos-delay="200">
+            <div class="sponsor-3d-card">
+                <img src="image/Natraj Logo High copy 2.png" alt="Natraj Studio & Color Labs">
+            </div>
+            <div class="sponsor-3d-card">
+                <img src="image/1995 batch.jpeg" alt="1997 Engineering Batch">
+            </div>
+            <div class="sponsor-3d-card">
+                <img src="image/1997 batch.jpeg" alt="1995 Engineering Batch">
+            </div>
+        </div>
+
+    </div>
+</section>
+
     <footer id="contact-footer" class="grand-footer">
-        <img src="image/logo.jfif" alt="MJPRU Logo" class="footer-logo-img" width="80" height="80" loading="lazy">
+        <img src="image/logo.jfif" alt="MJPRU Logo" class="footer-logo-img" width="80" height="80" loading="lazy" decoding="async">
         <div class="footer-content">
             <div class="footer-block">
                 <h2 class="cursive-heading">Visit Us</h2>
@@ -229,344 +652,597 @@
                     <p>243006, (U.P) INDIA</p>
                 </div>
             </div>
+            <div style="margin-top: 20px; display: flex; justify-content: center; width: 100%;">
+    <a href="https://maps.app.goo.gl/kycaMoEVhA729qcy7" target="_blank" 
+       style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 12px 30px; border-radius: 50px; background: linear-gradient(45deg, #7000ff, #e73c7e); color: white; font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(112, 0, 255, 0.3);"
+       onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 25px rgba(112, 0, 255, 0.5)';"
+       onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 15px rgba(112, 0, 255, 0.3)';">
+        <i class="fas fa-map-marker-alt"></i> 
+        View on Google Maps
+    </a>
+</div>
             <div class="footer-block">
                 <h2 class="cursive-heading">Get In Touch</h2>
                 <div class="footer-details">
                     <h4 class="sub-head">Email Us</h4>
-                    <a href="mailto:vcoffice@mjpru.ac.in" class="footer-link">vcoffice@mjpru.ac.in</a>
+                    <a href="mailto:vcoffice@mjpru.ac.in" class="footer-link">mjprufest@mjpru.ac.in</a>
                 </div>
+                
                 <div class="footer-details" style="margin-top: 20px;">
                     <h4 class="sub-head">Call Us</h4>
-                    <p><strong>Event Head (xyz):</strong> +91-1234567890</p>
-                    <p><strong>Student Coordinator (xyz):</strong> +91-1234567890</p>
+                    <p><strong>Student Coordinator :</strong> +91 8077753179 ,  +91 9027589564</p>
+                    
                 </div>
             </div>
             <div class="footer-block">
-                <h2 class="cursive-heading">Connect With Us</h2>
-                <p>Follow us on social media for more updates</p>
-                <div class="social-icons-footer">
-                    <a href="#" class="s-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="s-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="s-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="https://wa.me/919876543210" target="_blank" class="s-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <h2 class="cursive-heading">Connect With Us</h2>
+    <p>Follow us on social media for more updates</p>
+    <div class="social-icons-footer">
+        <a href="https://www.instagram.com/aura2k26mjpru?igsh=am53dHpla21xdnlj" target="_blank" class="s-icon" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        
+        <a href="https://www.facebook.com/share/1GsVGf7cEn/" target="_blank" class="s-icon" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        
+        <a href="https://youtube.com/@aura2k26mjpru?si=UFii_pn1kdG0BiEC" target="_blank" class="s-icon" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+        </a>
+        
+        <a href="https://x.com/aura2k26mjpru" target="_blank" class="s-icon" aria-label="Twitter">
+            <i class="fa-brands fa-x-twitter" style="color: white !important;"></i>
+        </a>
+    </div>
+</div>
+   <main class="team-portal" style="margin-top: 15px">
+        <div class="portal-header">
+            <div class="header-badge"><i class="fa-solid fa-code"></i></div>
+            <h1 class="portal-title">Web Developers Team</h1>
+        </div>
+
+        <div class="portal-grid">
+            
+            <section class="coord-card faculty-theme">
+                <span class="card-label">Faculty Coordinator</span>
+
+                <div class="profile-item">
+                    <div class="avatar-wrap"><img src="image/anil.jpg" class="avatar-img" alt="Dr. Anil Kumar Bisht" loading="lazy" decoding="async" width="55" height="55"></div>
+                    <div class="member-name">Dr. Anil Kumar Bisht</div>
+                    <a href="#" class="social-trigger" aria-label="LinkedIn Profile"><i class="fa-brands fa-square-linkedin"></i></a>
                 </div>
-            </div>
+            </section>
+
+            <section class="coord-card student-theme">
+                <span class="card-label">Student Coordinators</span>
+                
+                <div class="profile-item">
+                    <div class="avatar-wrap"><img src="image/mayank.jpg" class="avatar-img" alt="Mayank Kalra" loading="lazy" decoding="async" width="55" height="55"></div>
+                    <div class="member-name">Mayank Kalra</div>
+                                                                        <a href="https://www.linkedin.com/in/mayank-kalra-b70241324?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="ln-link" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+
+                </div>
+
+                <div class="profile-item">
+                    <div class="avatar-wrap"><img src="image/ishu.jpeg" class="avatar-img" alt="Ishu Singh" loading="lazy" decoding="async" width="55" height="55"></div>
+                    <div class="member-name">Ishu Singh</div>
+                                                                        <a href="https://www.linkedin.com/in/ishu-singh-796707325?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="ln-link" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+
+                </div>
+
+                <div class="profile-item">
+                    <div class="avatar-wrap"><img src="image/depak.jpg" class="avatar-img" alt="Deepak Gangwar" loading="lazy" decoding="async" width="55" height="55"></div>
+                    <div class="member-name">Deepak Gangwar</div>
+                                                                        <a href="https://www.linkedin.com/in/deepak-gangwar-66b4233b3/" target="_blank" class="ln-link" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+
+                </div>
+
+                <div class="profile-item">
+                    <div class="avatar-wrap"><img src="image/aatif.jpeg" class="avatar-img" alt="Aatif Ahmed Khan" loading="lazy" decoding="async" width="55" height="55"></div>
+                    <div class="member-name">Aatif Ahmed Khan</div>
+                        <a href="https://www.linkedin.com/in/aatif-khan-2b1805304?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="ln-link" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+
+                </div>
+            </section>
+            
+
         </div>
-        <div class="dev-credits" style="padding: 10px 0; text-align: center; margin-top: 10px; margin-bottom: 5px; background: transparent;">
-            <h3>Web Developers Team</h3>
-            <div style="display: flex; flex-direction: column; gap: 3px; color: #444; font-size: 0.85rem;">
-                <div><span style="font-weight: 700; color: #7000ff;">Faculty Coordinator:</span> <span>Dr. Anil Kumar Bisht</span></div>
-                <div><span style="font-weight: 700; color: #e73c7e;">Student Coordinators:</span> <span>Mayank Kalra & Ishu Singh</span></div>
-            </div>
-        </div>
-        <div class="copyright-strip" style="background: #e0e0e0; padding: 15px 0; color: #000; font-weight: 500;">
-            Made by IT CLINIC | MJPRU Tech Fest 2026
-        </div>
+    </main>
+    <div class="copyright-bar" style="margin-top: 30px">
+    <p>Made with by <strong>IT CLINIC, MJPRU</strong> |  TechFest AURA 2K26 </p>
+</div>
+
     </footer>
 
-    <div id="contactModal" class="modal-overlay">
-        <div class="modal-box">
-            <button class="close-btn" onclick="closeContact()">&times;</button>
-            <img src="image/logo.jfif" alt="MJPRU Logo" width="80" height="80" style="width: 80px; margin-bottom: 10px; align-self: center;" loading="lazy">
-            <h2 style="font-family: 'Playfair Display', serif; color: #7000ff; margin-bottom: 20px; text-align: center;">Get In Touch</h2>
-            <div class="contact-content" style="text-align: left; color: #444;">
-                <div style="margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px;">
-                    <h4 style="color: #e73c7e; margin-bottom: 5px; font-size: 1.1rem;"><i class="fas fa-envelope"></i> Email Us</h4>
-                    <a href="mailto:vcoffice@mjpru.ac.in" style="text-decoration: none; color: #333; font-weight: 500;">vcoffice@mjpru.ac.in</a>
-                </div>
-                <div style="margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px;">
-                    <h4 style="color: #e73c7e; margin-bottom: 10px; font-size: 1.1rem;"><i class="fas fa-phone-alt"></i> Call Us</h4>
-                    <p style="margin-bottom: 5px;"><strong>Event Head (xyz):</strong> <br>+91-1234567890</p>
-                    <p><strong>Student Coordinator (xyz):</strong> <br>+91-1234567890</p>
-                </div>
-                <div>
-                    <h4 style="color: #e73c7e; margin-bottom: 5px; font-size: 1.1rem;"><i class="fas fa-map-marker-alt"></i> Visit Us</h4>
-                    <p style="font-size: 0.9rem; line-height: 1.5;">M.J.P. ROHILKHAND UNIVERSITY<br>Pilibhit By Pass Road, Bareilly<br>243006, (U.P) INDIA</p>
+  <div id="contactModal" class="modal-overlay">
+    <div class="modal-box" style="display: flex; flex-direction: column; align-items: center;">
+        <button class="close-btn" onclick="closeContact()" aria-label="Close Contact Modal">×</button>
+        
+        <img src="image/logo.jfif" alt="MJPRU Logo" width="80" height="80" style="width: 80px; margin-bottom: 10px; border-radius: 50%;" loading="lazy" decoding="async">
+        
+        <h2 style="font-family: 'Playfair Display', serif; color: #7000ff; margin-bottom: 20px; text-align: center;">Get In Touch</h2>
+        
+        <div class="contact-content" style="text-align: center; color: #444; width: 100%;">
+            
+            <div style="margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px;">
+                <h4 style="color: #e73c7e; margin-bottom: 5px; font-size: 1.1rem;"><i class="fas fa-envelope"></i> Email Us</h4>
+                <a href="mailto:vcoffice@mjpru.ac.in" style="text-decoration: none; color: #333; font-weight: 500;">mjprufest@mjpru.ac.in</a>
+            </div>
+            
+            <div style="margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px;">
+                <h4 style="color: #e73c7e; margin-bottom: 10px; font-size: 1.1rem;"><i class="fas fa-phone-alt"></i> Call Us</h4>
+                <p style="margin-bottom: 5px;"><strong>Student Coordinator :</strong> <br> +91 8077753179 ,  +91 9027589564</p>                    
+            </div>
+            
+            <div class="footer-block">
+                <h4 style="color: #e73c7e; margin-bottom: 10px; font-size: 1.1rem;"><i class="fas fa-map-marker-alt"></i> Visit Us</h4>
+                <div class="footer-details">
+                    <h3 style="font-size: 1rem; margin-bottom: 5px;">M.J.P. ROHILKHAND UNIVERSITY</h3>
+                    <p style="margin: 0;">Pilibhit By Pass Road, Bareilly</p>
+                    <p style="margin: 0;">243006, (U.P) INDIA</p>
+                    
+                    <div style="margin-top: 20px; display: flex; justify-content: center;">
+                        <a href="https://maps.google.com/?q=MJP+Rohilkhand+University+Bareilly" target="_blank" 
+                           style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 25px; border-radius: 50px; background: linear-gradient(45deg, #7000ff, #e73c7e); color: white; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(112, 0, 255, 0.2);"
+                           onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 15px rgba(112, 0, 255, 0.4)';"
+                           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(112, 0, 255, 0.2)';">
+                            <i class="fas fa-map-marker-alt"></i> 
+                            View on Google Maps
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <div id="accModal" class="modal-overlay">
-        <div class="modal-box">
-            <button class="close-btn" onclick="closeAccommodation()">&times;</button>
-            <div class="modal-header" style="background: transparent; color: #000; padding: 0 0 20px 0;"><h2 style="font-family: 'Playfair Display', serif; color: #7000ff;">Accommodation & Food</h2></div>
-            <div class="acc-details">
-                <p><i class="fas fa-bed" style="color: #e73c7e; margin-right: 8px;"></i> Accommodation will be provided in the University Campus.</p>
-                <p><i class="fas fa-utensils" style="color: #e73c7e; margin-right: 8px;"></i> Mess facility will be given to students who register for accommodation.</p>
-                <p><i class="fas fa-wallet" style="color: #e73c7e; margin-right: 8px;"></i> <strong>Payment Mode:</strong> Offline (At Registration Desk)</p>
-            </div>
-            <button onclick="openForm('https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_LINK_HERE/viewform?embedded=true')" style="width: 100%; border-radius: 10px; background: linear-gradient(45deg, #7000ff, #e73c7e); color: white; padding: 12px 20px; border: none; font-size: 1rem; font-weight: bold; cursor: pointer; transition: 0.3s;">Register for Accommodation</button>
         </div>
     </div>
+</div>
 
-    <div id="formModal" class="modal-overlay">
-        <div class="modal-box">
-            <button class="close-btn" onclick="closeForm()">&times;</button>
-            <div class="modal-header">Registration</div>
-            <iframe id="googleFormFrame" src="" frameborder="0" title="Registration Form">Loading...</iframe>
+  <div id="accModal" class="modal-overlay">
+    <div class="modal-box">
+        <button class="close-btn" onclick="closeAccommodation()" aria-label="Close Accommodation Modal">×</button>
+        
+        <div class="modal-header" style="background: transparent; color: #000; padding: 0 0 20px 0;">
+            <h2 style="font-family: 'Playfair Display', serif; color: #7000ff;">Accommodation & Food</h2>
         </div>
-    </div>
+        
+       <div class="acc-details" style="text-align: left;">
+    <p><i class="fas fa-bed" style="color: #e73c7e; margin-right: 10px;"></i> <strong>Accommodation:</strong> Free on-campus hostel accommodation for outstation participants.</p>
+    <p><i class="fas fa-shield-halved" style="color: #e73c7e; margin-right: 10px;"></i> <strong>Security:</strong> Safe and secure hostels located conveniently near fest venues.</p>
     
-    <div id="advisoryModal" class="modal-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 2000; justify-content: center; align-items: center;">
-        <div class="modal-box" style="width: 95%; max-width: 1000px; height: 90vh; padding: 0; position: relative; background: white; border-radius: 15px; display: flex; flex-direction: column; overflow: hidden;">
-            <button class="close-btn" onclick="closeAdvisory()" style="position: absolute; top: 15px; right: 20px; font-size: 2.5rem; background: none; border: none; cursor: pointer; color: #000 !important; z-index: 1001; line-height: 1;">&times;</button>
-            <div style="background: linear-gradient(to right, #FF512F, #DD2476); padding: 20px; text-align: center; flex-shrink: 0;"><h2 style="color: white; font-family: 'Playfair Display', serif; margin: 0; font-size: 2rem;">Advisory Committee</h2></div>
-            <div style="padding: 30px; overflow-y: auto; text-align: left; flex-grow: 1;">
+    <p><i class="fas fa-utensils" style="color: #e73c7e; margin-right: 10px;"></i> <strong>Food:</strong> Mess facilities available in the hostel on a paid basis.</p>
+    <p><i class="fas fa-info-circle" style="color: #e73c7e; margin-right: 10px;"></i> <strong>Note:</strong> Inform organizers in advance to avail mess facilities.</p>
+    
+    <p><i class="fas fa-briefcase-medical" style="color: #e73c7e; margin-right: 10px;"></i> <strong>Medical:</strong> Basic medical assistance available on campus for emergencies.</p>
+
+    <div style="background: #fff0f5; padding: 12px; border-radius: 10px; border-left: 5px solid #e73c7e; margin-top: 15px;">
+        <p style="margin: 0; font-size: 0.95rem; color: #444;">
+            <i class="fas fa-book-open" style="color: #e73c7e; margin-right: 8px;"></i> 
+            <strong>More Details :</strong> please refer to the <strong>Hospitality Page of the Booklet</strong>.
+        </p>
+    </div>
+</div>
+
+        <a href="https://forms.eduqfix.com/festregof/add" 
+           target="_blank" 
+           style="text-decoration: none; display: block; width: 100%; border-radius: 10px; background: linear-gradient(45deg, #7000ff, #e73c7e); color: white; padding: 12px 20px; text-align: center; font-size: 1rem; font-weight: bold; cursor: pointer; transition: 0.3s; margin-top: 15px;">
+            Register for Accommodation
+        </a>
+    </div>
+</div> 
+
+<div id="formModal" class="modal-overlay">
+    <div class="modal-box" style="max-width: 500px; padding: 30px;">
+        <button class="close-btn" onclick="closeForm()" aria-label="Close Form">×</button>
+        
+        <div id="regDetails">
+            <div class="acc-details" style="text-align: left;">
+               <div class="acc-details" style="text-align: left;">
+    <p><i class="fas fa-id-card" style="color: #7000ff; margin-right: 10px;"></i> <strong>Open To:</strong> All University Students.</p>
+    <p><i class="fas fa-calendar-check" style="color: #7000ff; margin-right: 10px;"></i> <strong>Deadline:</strong> 24 hours before event start.</p>
+    
+    <p><i class="fas fa-indian-rupee-sign" style="color: #7000ff; margin-right: 10px;"></i> <strong>Registration Fee:</strong> INR 100.00 (Non-refundable).</p>
+    <p><i class="fas fa-gift" style="color: #7000ff; margin-right: 10px;"></i> <strong>Exclusive:</strong> Free entry in Fashion Show, Battle of Bands & Musical Night for registered participants.</p>
+    
+    <p><i class="fas fa-id-badge" style="color: #7000ff; margin-right: 10px;"></i> <strong>Mandatory:</strong> Carry your original College ID card.</p>
+    
+    <p style="background: #f3e8ff; padding: 10px; border-radius: 8px; border-left: 4px solid #7000ff; margin-top: 15px;">
+        <i class="fas fa-book-open" style="color: #7000ff; margin-right: 10px;"></i> 
+        <strong>More Details:</strong> Please refer to the Registration Page of the Official Booklet.
+    </p>
+</div>
+</div>
+            
+            <a href="https://forms.eduqfix.com/festregof/add" 
+               target="_blank" 
+               style="text-decoration: none; display: block; width: 100%; border-radius: 10px; background: linear-gradient(45deg, #ff007b, #7000ff); color: white; padding: 15px; text-align: center; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: 0.3s; margin-top: 20px; box-shadow: 0 4px 15px rgba(112, 0, 255, 0.3);">
+                Fill Registration Form
+            </a>
+        </div>
+    </div>
+</div> 
+    
+<div id="advisoryModal" class="modal-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 2000; justify-content: center; align-items: center;">
+    <div class="modal-box" style="width: 95%; max-width: 1100px; height: 90vh; padding: 0; position: relative; background: #fff; border-radius: 20px; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);">
+        
+        <button class="close-btn" onclick="closeAdvisory()" aria-label="Close Advisory Modal" style="position: absolute; top: 15px; right: 25px; font-size: 2.8rem; background: none; border: none; cursor: pointer; color: #fff !important; z-index: 1001; line-height: 1; transition: 0.3s;">×</button>
+        <div style="background: linear-gradient(135deg, #FF512F 0%, #DD2476 100%); padding: 30px; text-align: center; flex-shrink: 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            <h2 style="color: white; font-family: 'Playfair Display', serif; margin: 0; font-size: 2.5rem; letter-spacing: 2px; text-transform: uppercase;">Advisory Committee</h2>
+            <p style="color: rgba(255,255,255,0.8); font-size: 1rem; margin-top: 5px; font-weight: 300; letter-spacing: 1px;">AURA 2K26 | M.J.P. Rohilkhand University</p>
+        </div>
+        
+        <div style="padding: 30px 50px; overflow-y: auto; text-align: left; flex-grow: 1; background: #ffffff;">
+            <div style="display: flex; flex-direction: column; gap: 0;">
                 
-     <div class="committee-section" style="margin-bottom: 25px;">
-    <h3 style="color: #7000ff; border-bottom: 2px solid #eee; padding-bottom: 5px; margin-bottom: 10px;">Advisory Committee</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px; font-size: 0.9rem; color: #444;">
-        
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Prof. P. B. Singh</strong> <br><span style="font-size:0.85rem; color:#666;">Dean, Students Welfare</span></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Prof. Ravinder Singh</strong> <br><span style="font-size:0.85rem; color:#666;">Chief Proctor</span></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Prof. A. K. Singh</strong> <br><span style="font-size:0.85rem; color:#666;">Chief Warden</span></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Prof. Amit Singh</strong> <br><span style="font-size:0.85rem; color:#666;">Dean, Faculty of Legal Studies</span></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Prof. J. N. Maurya</strong> <br><span style="font-size:0.85rem; color:#666;">Dean, Faculty of Applied Sciences</span></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Prof. Santosh Arora</strong> <br><span style="font-size:0.85rem; color:#666;">Dean, Faculty of Education & Allied Sciences</span></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Prof. Sumitra Kukreti</strong> <br><span style="font-size:0.85rem; color:#666;">Dean, Faculty of Linguistics</span></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Prof. Tulika Saxena</strong> <br><span style="font-size:0.85rem; color:#666;">Dean, Faculty of Management</span></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Prof. Upendra Baliyan</strong> <br><span style="font-size:0.85rem; color:#666;">Dean, Faculty of Agriculture Science & Technology</span></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Prof. Vijay Bahadur Singh</strong> <br><span style="font-size:0.85rem; color:#666;">Dean, Faculty of Advanced Social Sciences</span></div>
-        
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Prof. Alok Srivastav</strong> <br><span style="font-size:0.85rem; color:#666;">Director, Directorate of Research</span></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Prof. S. K. Garg</strong> <br><span style="font-size:0.85rem; color:#666;">Director, Directorate of Corporate & Social Reforms</span></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Prof. S. S. Bedi</strong> <br><span style="font-size:0.85rem; color:#666;">Director DIR & Secretary Sports Council</span></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Prof. Yatendra Kumar</strong> <br><span style="font-size:0.85rem; color:#666;">Chief Operating Officer, RIF</span></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Prof. Shobhna Singh</strong> <br><span style="font-size:0.85rem; color:#666;">Ex Dean, FET</span></div>
-        
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Prof. Anil Kumar Singh</strong> <br><span style="font-size:0.85rem; color:#666;">HoD, Department of Electronics Engineering</span></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Prof. K. K. Maheshwari</strong> <br><span style="font-size:0.85rem; color:#666;">HoD, Department of Pharmacy</span></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Prof. Manish Rai</strong> <br><span style="font-size:0.85rem; color:#666;">HoD, Department of Electronics and Communication Engg.</span></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Dr. Manoj Kumar Singh</strong> <br><span style="font-size:0.85rem; color:#666;">HoD, Department of Mechanical Engineering</span></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Dr. M. S. Karuna</strong> <br><span style="font-size:0.85rem; color:#666;">HoD, Department of Chemical Engineering</span></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Prof. Madan Lal</strong> <br><span style="font-size:0.85rem; color:#666;">HoD, Department of Mathematics</span></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Prof. Nivedita Srivastava</strong> <br><span style="font-size:0.85rem; color:#666;">HoD, Department of Chemistry</span></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Dr. Sanjay Singh</strong> <br><span style="font-size:0.85rem; color:#666;">HoD, Department of Electrical Engineering</span></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Prof. Vinay Rishiwal</strong> <br><span style="font-size:0.85rem; color:#666;">HoD, Department of Computer Science & Information Technology</span></div>
-        
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Prof. Vinay Verma</strong> <br><span style="font-size:0.85rem; color:#666;">Incharge, Media Cell</span></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Dr. D. D. Sharma</strong> <br><span style="font-size:0.85rem; color:#666;">Coordinator, Grass Root Innovation Center</span></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Dr. Amit Kumar Verma</strong> <br><span style="font-size:0.85rem; color:#666;">Administrator, Health Centre</span></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Dr. Jyoti Pandey</strong> <br><span style="font-size:0.85rem; color:#666;">Coordinator, University Cultural Center</span></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Dr. Hema Verma</strong> <br><span style="font-size:0.85rem; color:#666;">Department of Hotel Management & Catering Technology</span></div>
-        
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Prof. Naveen Kumar</strong> <br><span style="font-size:0.85rem; color:#666;">Department of Mathematics</span></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Prof. Rakesh K. Maurya</strong> <br><span style="font-size:0.85rem; color:#666;">Department of Electronics Engineering</span></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Prof. Saleem Khan</strong> <br><span style="font-size:0.85rem; color:#666;">Department of Physics</span></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Prof. Sanjeev Tyagi</strong> <br><span style="font-size:0.85rem; color:#666;">Department of Electronics Engineering</span></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Prof. Yograj Daksh</strong> <br><span style="font-size:0.85rem; color:#666;">Department of Electronics Engineering</span></div>
-        
-    </div>
-    </div>
-    </div>
-    </div>
-</div>          
-    <div id="organizingModal" class="modal-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 2000; justify-content: center; align-items: center;">
-        <div class="modal-box" style="width: 95%; max-width: 1000px; height: 90vh; padding: 0; position: relative; background: white; border-radius: 15px; display: flex; flex-direction: column; overflow: hidden;">
-            <button class="close-btn" onclick="closeOrganizing()" style="position: absolute; top: 15px; right: 20px; font-size: 2.5rem; background: none; border: none; cursor: pointer; color: #000 !important; z-index: 1001; line-height: 1;">&times;</button>
-            <div style="background: linear-gradient(to right, #7000ff, #e73c7e); padding: 20px; text-align: center; flex-shrink: 0;"><h2 style="color: white; font-family: 'Playfair Display', serif; margin: 0; font-size: 2rem;">Organizing Committees</h2></div>
-            <div style="padding: 30px; overflow-y: auto; text-align: left; flex-grow: 1;">
-               
-                <div class="committee-section" style="margin-bottom: 25px;">
-    <h3 style="color: #7000ff; border-bottom: 2px solid #eee; padding-bottom: 5px; margin-bottom: 10px;">Content Creation</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; font-size: 0.9rem; color: #444;">
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Dr. Ashwani Gupta</strong></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Dr. Sourabh Pathak</strong></div>
-    </div>
-</div>
+                <style>
+                    .committee-row {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 15px 10px;
+                        border-bottom: 1px solid #f0f0f0;
+                        transition: all 0.3s ease;
+                    }
+                    .committee-row:hover {
+                        background: #fff9fb;
+                        padding-left: 20px;
+                    }
+                    .member-name {
+                        font-size: 1.2rem;
+                        color: #2d3436;
+                        font-weight: 700;
+                        font-family: 'Poppins', sans-serif;
+                    }
+                    .member-post {
+                        font-size: 1.05rem;
+                        color: #7000ff;
+                        font-weight: 500;
+                        text-align: right;
+                        letter-spacing: 0.5px;
+                    }
+                </style>
 
-<div class="committee-section" style="margin-bottom: 25px;">
-    <h3 style="color: #7000ff; border-bottom: 2px solid #eee; padding-bottom: 5px; margin-bottom: 10px;">Website Design</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; font-size: 0.9rem; color: #444;">
-        <div style="background:#fff5f8; padding:10px; border-radius:5px;"><strong>Dr. Anil Bisht.</strong></div>
-    </div>
-</div>
+                <div class="committee-row"> <span class="member-name">Prof. P. B. Singh</span> <span class="member-post">Dean, Students Welfare</span> </div>
+                <div class="committee-row"> <span class="member-name">Prof. Ravendra Singh</span> <span class="member-post">Chief Proctor</span> </div>
+                <div class="committee-row"> <span class="member-name">Prof. A. K. Singh</span> <span class="member-post">Chief Warden</span> </div>
+                <div class="committee-row"> <span class="member-name">Prof. Amit Singh</span> <span class="member-post">Dean, Faculty of Legal Studies</span> </div>
+                <div class="committee-row"> <span class="member-name">Prof. J. N. Maurya</span> <span class="member-post">Dean, Faculty of Applied Sciences</span> </div>
+                <div class="committee-row"> <span class="member-name">Prof. Santosh Arora</span> <span class="member-post">Dean, Faculty of Education & Allied Sciences</span> </div>
+                <div class="committee-row"> <span class="member-name">Prof. Sumitra Kukreti</span> <span class="member-post">Dean, Faculty of Linguistics</span> </div>
+                <div class="committee-row"> <span class="member-name">Prof. Tulika Saxena</span> <span class="member-post">Dean, Faculty of Management</span> </div>
+                <div class="committee-row"> <span class="member-name">Prof. Upendra Baliyan</span> <span class="member-post">Dean, Faculty of Agriculture Science & Technology</span> </div>
+                <div class="committee-row"> <span class="member-name">Prof. Vijay Bahadur Singh</span> <span class="member-post">Dean, Faculty of Advanced Social Sciences</span> </div>
+                <div class="committee-row"> <span class="member-name">Prof. Alok Srivastav</span> <span class="member-post">Director, Directorate of Research</span> </div>
+                <div class="committee-row"> <span class="member-name">Prof. S. K. Garg</span> <span class="member-post">Director, Directorate of Corporate & Social Reforms</span> </div>
+                <div class="committee-row"> <span class="member-name">Prof. S. S. Bedi</span> <span class="member-post">Director DIR & Secretary Sports Council</span> </div>
+                <div class="committee-row"> <span class="member-name">Prof. Shobhna Singh</span> <span class="member-post">Ex Dean, FET</span> </div>
+                <div class="committee-row"> <span class="member-name">Prof. Yatendra Kumar</span> <span class="member-post">Chief Operating Officer, RIF</span> </div>
+                <div class="committee-row"> <span class="member-name">Prof. Anil Kumar Singh</span> <span class="member-post">HoD, Department of EI</span> </div>
+                <div class="committee-row"> <span class="member-name">Dr. Anita Tyagi</span> <span class="member-post">HoD, Department of Humanities</span> </div>
+                <div class="committee-row"> <span class="member-name">Prof. K. K. Maheshwari</span> <span class="member-post">HoD, Department of Pharmacy</span> </div>
+                <div class="committee-row"> <span class="member-name">Prof. Madan Lal</span> <span class="member-post">HoD, Department of Mathematics</span> </div>
+                <div class="committee-row"> <span class="member-name">Prof. Manish Rai</span> <span class="member-post">HoD, Electronics & Comm. Engg.</span> </div>
+                <div class="committee-row"> <span class="member-name">Dr. Manoj Kumar Singh</span> <span class="member-post">HoD, Department of Mechanical Engineering</span> </div>
+                <div class="committee-row"> <span class="member-name">Dr. M. S. Karuna</span> <span class="member-post">HoD, Department of Chemical Engineering</span> </div>
+                <div class="committee-row"> <span class="member-name">Prof. Nivedita Srivastava</span> <span class="member-post">HoD, Department of Chemistry</span> </div>
+                <div class="committee-row"> <span class="member-name">Dr. Sanjay Singh</span> <span class="member-post">HoD, Department of Electrical Engineering</span> </div>
+                <div class="committee-row"> <span class="member-name">Prof. Vinay Rishiwal</span> <span class="member-post">HoD,HoD, Department of Computer Science & Information Technology</span> </div>
+                <div class="committee-row"> <span class="member-name">Prof. Vinay Verma</span> <span class="member-post">Incharge, Media Cell</span> </div>
+                <div class="committee-row"> <span class="member-name">Prof. Vikas Lamba</span> <span class="member-post">Professor of Practice</span> </div>
+                <div class="committee-row"> <span class="member-name">Prof. Deepak Rana</span> <span class="member-post">Professor of Practice</span> </div>
+                <div class="committee-row"> <span class="member-name">Dr. D. D. Sharma</span> <span class="member-post">Coordinator, Grass Root Innovation Center</span> </div>
+                <div class="committee-row"> <span class="member-name">Dr. Amit Kumar Verma</span> <span class="member-post">Administrator, Health Centre</span> </div>
+                <div class="committee-row"> <span class="member-name">Dr. Jyoti Pandey</span> <span class="member-post">Coordinator, University Cultural Center</span> </div>
+                <div class="committee-row"> <span class="member-name">Dr. Hema Verma</span> <span class="member-post">Department of Hotel Management & Catering Technology</span> </div>
+                <div class="committee-row"> <span class="member-name">Prof. Naveen Kumar</span> <span class="member-post">Department of Mathematics</span> </div>
+                <div class="committee-row"> <span class="member-name">Prof. Rakesh K. Maurya</span> <span class="member-post">Department of EI</span> </div>
+                <div class="committee-row"> <span class="member-name">Prof. Saleem Khan</span> <span class="member-post">Department of Physics</span> </div>
+                <div class="committee-row"> <span class="member-name">Prof. Sanjeev Tyagi</span> <span class="member-post">Department of EI</span> </div>
+                <div class="committee-row"> <span class="member-name">Prof. Yograj Daksh</span> <span class="member-post">Department of EI</span> </div>
 
-<div class="committee-section" style="margin-bottom: 25px;">
-    <h3 style="color: #7000ff; border-bottom: 2px solid #eee; padding-bottom: 5px; margin-bottom: 10px;">Event Scheduling</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; font-size: 0.9rem; color: #444;">
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Dr. Chhavi Sharma</strong></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Mr. Mukesh Sone</strong></div>
-    </div>
-</div>
-
-<div class="committee-section" style="margin-bottom: 25px;">
-    <h3 style="color: #7000ff; border-bottom: 2px solid #eee; padding-bottom: 5px; margin-bottom: 10px;">Finance Team</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; font-size: 0.9rem; color: #444;">
-        <div style="background:#fff5f8; padding:10px; border-radius:5px;"><strong>Dr. Sanjay Singh</strong></div>
-        <div style="background:#fff5f8; padding:10px; border-radius:5px;"><strong>Dr. Janak Kapoor</strong></div>
-    </div>
-</div>
-
-<div class="committee-section" style="margin-bottom: 25px;">
-    <h3 style="color: #7000ff; border-bottom: 2px solid #eee; padding-bottom: 5px; margin-bottom: 10px;">Sponsorship & Industrial Relation</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; font-size: 0.9rem; color: #444;">
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Prof. Yatendra Kumar</strong></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Dr. Iram Naim</strong></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Dr. Preeti Yadav</strong></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Dr. Ajay Yadav</strong></div>
-    </div>
-</div>
-
-<div class="committee-section" style="margin-bottom: 25px;">
-    <h3 style="color: #7000ff; border-bottom: 2px solid #eee; padding-bottom: 5px; margin-bottom: 10px;">Brand Visibility & Stalls allotment</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; font-size: 0.9rem; color: #444;">
-        <div style="background:#fff5f8; padding:10px; border-radius:5px;"><strong>Dr. Deepak Gangwar</strong></div>
-        <div style="background:#fff5f8; padding:10px; border-radius:5px;"><strong>Mr. Hemendra</strong></div>
-    </div>
-</div>
-
-<div class="committee-section" style="margin-bottom: 25px;">
-    <h3 style="color: #7000ff; border-bottom: 2px solid #eee; padding-bottom: 5px; margin-bottom: 10px;">Sound & Display</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; font-size: 0.9rem; color: #444;">
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Dr. Akhthar Hussain</strong></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Dr. Anil Bisht</strong></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Mr. Sunil Chandra</strong></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Mr. Brijendra Sharma</strong></div>
-    </div>
-</div>
-
-<div class="committee-section" style="margin-bottom: 25px;">
-    <h3 style="color: #7000ff; border-bottom: 2px solid #eee; padding-bottom: 5px; margin-bottom: 10px;">Designing & Printing</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; font-size: 0.9rem; color: #444;">
-        <div style="background:#fff5f8; padding:10px; border-radius:5px;"><strong>Dr. Ajay Yadav</strong></div>
-        <div style="background:#fff5f8; padding:10px; border-radius:5px;"><strong>Dr. Saurabh Mishra</strong></div>
-        <div style="background:#fff5f8; padding:10px; border-radius:5px;"><strong>Dr. Atul Katiyar</strong></div>
-    </div>
-</div>
-
-<div class="committee-section" style="margin-bottom: 25px;">
-    <h3 style="color: #7000ff; border-bottom: 2px solid #eee; padding-bottom: 5px; margin-bottom: 10px;">Registration Committee</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; font-size: 0.9rem; color: #444;">
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Dr. Sumit Srivastava</strong></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Dr. Anil Yadav</strong></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Dr. Shravan Kumar</strong></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Er. Mahesh Kumar</strong></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Er. Ankit Varshney</strong></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Mr. Ramesh Chandra</strong></div>
-    </div>
-</div>
-
-<div class="committee-section" style="margin-bottom: 25px;">
-    <h3 style="color: #7000ff; border-bottom: 2px solid #eee; padding-bottom: 5px; margin-bottom: 10px;">Helpdesk</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; font-size: 0.9rem; color: #444;">
-        <div style="background:#fff5f8; padding:10px; border-radius:5px;"><strong>Er. Varun Pratap Singh</strong></div>
-        <div style="background:#fff5f8; padding:10px; border-radius:5px;"><strong>Er. Mukesh Sone</strong></div>
-        <div style="background:#fff5f8; padding:10px; border-radius:5px;"><strong>Er. Manoj Kumar</strong></div>
-        <div style="background:#fff5f8; padding:10px; border-radius:5px;"><strong>Dr. Neetu Singh</strong></div>
-    </div>
-</div>
-
-<div class="committee-section" style="margin-bottom: 25px;">
-    <h3 style="color: #7000ff; border-bottom: 2px solid #eee; padding-bottom: 5px; margin-bottom: 10px;">Accommodation</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; font-size: 0.9rem; color: #444;">
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Dr. Sushmita Gupta</strong></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Dr. Atul Katiyar</strong></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Dr. Ajay Yadav</strong></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Er. Afreen Nishat</strong></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Er. Rohit Verma</strong></div>
-    </div>
-</div>
-
-<div class="committee-section" style="margin-bottom: 25px;">
-    <h3 style="color: #7000ff; border-bottom: 2px solid #eee; padding-bottom: 5px; margin-bottom: 10px;">Hospitality & Refreshment</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; font-size: 0.9rem; color: #444;">
-        <div style="background:#fff5f8; padding:10px; border-radius:5px;"><strong>Dr. Hema Verma</strong></div>
-        <div style="background:#fff5f8; padding:10px; border-radius:5px;"><strong>Dr. H. K. Singh</strong></div>
-        <div style="background:#fff5f8; padding:10px; border-radius:5px;"><strong>Dr. Ashish Sankhwar</strong></div>
-        <div style="background:#fff5f8; padding:10px; border-radius:5px;"><strong>Er. Varun Pratap Singh</strong></div>
-    </div>
-</div>
-
-<div class="committee-section" style="margin-bottom: 25px;">
-    <h3 style="color: #7000ff; border-bottom: 2px solid #eee; padding-bottom: 5px; margin-bottom: 10px;">Jury Coordination Committee</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; font-size: 0.9rem; color: #444;">
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Prof. Rakesh Kumar Maurya</strong></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Dr. Vishal Saxena</strong></div>
-    </div>
-</div>
-
-<div class="committee-section" style="margin-bottom: 25px;">
-    <h3 style="color: #7000ff; border-bottom: 2px solid #eee; padding-bottom: 5px; margin-bottom: 10px;">Tenting & Installation of Banners</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; font-size: 0.9rem; color: #444;">
-        <div style="background:#fff5f8; padding:10px; border-radius:5px;"><strong>Dr. Atul Katiyar</strong></div>
-        <div style="background:#fff5f8; padding:10px; border-radius:5px;"><strong>Dr. Pranjal Saxena</strong></div>
-    </div>
-</div>
-
-<div class="committee-section" style="margin-bottom: 25px;">
-    <h3 style="color: #7000ff; border-bottom: 2px solid #eee; padding-bottom: 5px; margin-bottom: 10px;">Decor & Ambience Committee</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; font-size: 0.9rem; color: #444;">
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Dr. Anita Tyagi</strong></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Dr. Preeti Yadav</strong></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Dr. Atul Katiyar</strong></div>
-    </div>
-</div>
-
-<div class="committee-section" style="margin-bottom: 25px;">
-    <h3 style="color: #7000ff; border-bottom: 2px solid #eee; padding-bottom: 5px; margin-bottom: 10px;">Social Media Promotion</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; font-size: 0.9rem; color: #444;">
-        <div style="background:#fff5f8; padding:10px; border-radius:5px;"><strong>Prof. Vinay Verma</strong></div>
-        <div style="background:#fff5f8; padding:10px; border-radius:5px;"><strong>Dr. Chhavi Sharma</strong></div>
-    </div>
-</div>
-
-<div class="committee-section" style="margin-bottom: 25px;">
-    <h3 style="color: #7000ff; border-bottom: 2px solid #eee; padding-bottom: 5px; margin-bottom: 10px;">Power Supply & Generator Management</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; font-size: 0.9rem; color: #444;">
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Dr. Ashish Jain</strong></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Dr. Atul Katiyar</strong></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Mr. Ravindra Srivastava</strong></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Mr. Mohar Singh</strong></div>
-    </div>
-</div>
-
-<div class="committee-section" style="margin-bottom: 25px;">
-    <h3 style="color: #7000ff; border-bottom: 2px solid #eee; padding-bottom: 5px; margin-bottom: 10px;">Volunteer Coordination</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; font-size: 0.9rem; color: #444;">
-        <div style="background:#fff5f8; padding:10px; border-radius:5px;"><strong>Dr. Pankaj Roy</strong></div>
-        <div style="background:#fff5f8; padding:10px; border-radius:5px;"><strong>Dr. B.R. Ambedkar</strong></div>
-        <div style="background:#fff5f8; padding:10px; border-radius:5px;"><strong>Mr. Hemendra</strong></div>
-    </div>
-</div>
-
-<div class="committee-section" style="margin-bottom: 25px;">
-    <h3 style="color: #7000ff; border-bottom: 2px solid #eee; padding-bottom: 5px; margin-bottom: 10px;">Crowd Control & Discipline Management</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; font-size: 0.9rem; color: #444;">
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Prof. Ravindra Singh (Chief Proctor) and his team</strong></div>
-    </div>
-</div>
-
-<div class="committee-section" style="margin-bottom: 25px;">
-    <h3 style="color: #7000ff; border-bottom: 2px solid #eee; padding-bottom: 5px; margin-bottom: 10px;">Photography & Videography</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; font-size: 0.9rem; color: #444;">
-        <div style="background:#fff5f8; padding:10px; border-radius:5px;"><strong>Dr. Preeti Yadav</strong></div>
-        <div style="background:#fff5f8; padding:10px; border-radius:5px;"><strong>Mr. Tapan Verma</strong></div>
-    </div>
-</div>
-
-<div class="committee-section" style="margin-bottom: 25px;">
-    <h3 style="color: #7000ff; border-bottom: 2px solid #eee; padding-bottom: 5px; margin-bottom: 10px;">Result Compilation, Certificate preparation & Prize distribution</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; font-size: 0.9rem; color: #444;">
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Dr. Atul Sarojwal</strong></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Dr. Ashwani Gupta</strong></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Er. Ashutosh Shankhdhar</strong></div>
-        <div style="background:#f8f9fa; padding:10px; border-radius:5px;"><strong>Er. Mukul Kumar Singh</strong></div>
-    </div>
-</div>
-
-<div class="committee-section" style="margin-bottom: 25px;">
-    <h3 style="color: #7000ff; border-bottom: 2px solid #eee; padding-bottom: 5px; margin-bottom: 10px;">Health & Safety Team</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; font-size: 0.9rem; color: #444;">
-        <div style="background:#fff5f8; padding:10px; border-radius:5px;"><strong>Dr. Amit Verma</strong></div>
-        <div style="background:#fff5f8; padding:10px; border-radius:5px;"><strong>Mr. Deepak</strong></div>
-        <div style="background:#fff5f8; padding:10px; border-radius:5px;"><strong>Mr. Anand Patel</strong></div>
-    </div>
-</div>
             </div>
         </div>
     </div>
+</div>       
+ 
+<div id="organizingModal" class="modal-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 2000; justify-content: center; align-items: center;">
+    <div class="modal-box" style="width: 95%; max-width: 1100px; height: 90vh; padding: 0; position: relative; background: #fff; border-radius: 20px; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);">
+        
+        <button class="close-btn" onclick="closeOrganizing()" aria-label="Close Organizing Modal" style="position: absolute; top: 15px; right: 25px; font-size: 2.8rem; background: none; border: none; cursor: pointer; color: #fff !important; z-index: 1001; line-height: 1;">×</button>
+        <div style="background: linear-gradient(135deg, #7000ff 0%, #e73c7e 100%); padding: 30px; text-align: center; flex-shrink: 0;">
+            <h2 style="color: white; font-family: 'Playfair Display', serif; margin: 0; font-size: 2.5rem; letter-spacing: 2px; text-transform: uppercase;">Organizing Committees</h2>
+            <p style="color: rgba(255,255,255,0.8); font-size: 1rem; margin-top: 5px; letter-spacing: 1px;">AURA 2K26 | Team Breakdown</p>
+        </div>
+        
+        <div style="padding: 30px 60px; overflow-y: auto; text-align: left; flex-grow: 1; background: #ffffff;">
+            <style>
+                .committee-group { margin-bottom: 35px; }
+                .work-heading {
+                    color: #7000ff;
+                    font-size: 1.5rem;
+                    font-weight: 800;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    border-bottom: 2px solid #e73c7e;
+                    display: inline-block;
+                    margin-bottom: 15px;
+                    font-family: 'Playfair Display', serif;
+                }
+                .name-item {
+                    font-size: 1.25rem;
+                    color: #2d3436;
+                    font-weight: 600;
+                    padding: 10px 20px;
+                    background: #f8f9fa;
+                    margin-bottom: 5px;
+                    border-left: 5px solid #e73c7e;
+                    transition: 0.3s;
+                }
+                .name-item:hover {
+                    background: #fff0f5;
+                    padding-left: 30px;
+                    border-left-color: #7000ff;
+                }
+            </style>
+
+            <div style="display: flex; flex-direction: column;">
+
+                <div class="committee-group">
+                    <h3 class="work-heading">Content Creation</h3>
+                    <div class="name-item">Dr. Sanjay Singh</div>
+                    <div class="name-item">Dr. Ashwani Gupta</div>
+                    <div class="name-item">Dr. Sourabh Pathak</div>
+                </div>
+
+                <div class="committee-group">
+                    <h3 class="work-heading">Website Design</h3>
+                    <div class="name-item">Dr. Anil Kumar Bisht</div>
+                </div>
+
+                <div class="committee-group">
+                    <h3 class="work-heading">Brochure Designing</h3>
+                    <div class="name-item">Dr. Inderpreet Kaur</div>
+                    <div class="name-item">Dr. Iram Naim</div>
+                </div>
+
+                <div class="committee-group">
+                    <h3 class="work-heading">Event Scheduling</h3>
+                    <div class="name-item">Dr. Chhavi Sharma</div>
+                    <div class="name-item">Mr. Mukesh Sone</div>
+                </div>
+
+                <div class="committee-group">
+                    <h3 class="work-heading">Event Coordination</h3>
+                    <div class="name-item">Dr. Inderpreet Kaur</div>
+                    <div class="name-item">Dr. Iram Naim</div>
+                    <div class="name-item">Dr. Sushmita Gupta</div>
+                    <div class="name-item">Dr. Lakshya Veer Singh</div>
+                </div>
+
+                <div class="committee-group">
+                    <h3 class="work-heading">Sponsorship & Industrial Relation</h3>
+                    <div class="name-item">Prof. Yatendra Kumar</div>
+                    <div class="name-item">Dr. Iram Naim</div>
+                    <div class="name-item">Dr. Preeti Yadav</div>
+                    <div class="name-item">Dr. Ajay Yadav</div>
+                </div>
+
+                <div class="committee-group">
+                    <h3 class="work-heading">Helpdesk</h3>
+                    <div class="name-item">Er. Lalita Gangwar</div>
+                    <div class="name-item">Er. Mukesh Sone</div>
+                    <div class="name-item">Er. Manoj Sagar</div>
+                    <div class="name-item">Dr. Neetu Singh</div>
+                </div>
+
+                <div class="committee-group">
+                    <h3 class="work-heading">Registration Committee</h3>
+                    <div class="name-item">Dr. Sumit Srivastava</div>
+                    <div class="name-item">Dr. Anil Yadav</div>
+                    <div class="name-item">Dr. Shravan Kumar</div>
+                    <div class="name-item">Er. Mahesh Kumar</div>
+                    <div class="name-item">Er. Ankit Varshney</div>
+                    <div class="name-item">Er. Uddeshya Gangwar</div>
+                    <div class="name-item">Mr. Ramesh Chandra</div>
+                    <div class="name-item">Mr. Akash Saxena</div>
+                </div>
+
+                <div class="committee-group">
+                    <h3 class="work-heading">Finance Team</h3>
+                    <div class="name-item">Dr. Sanjay Singh</div>
+                    <div class="name-item">Dr. Janak Kapoor</div>
+                </div>
+
+                <div class="committee-group">
+                    <h3 class="work-heading">Sound & Display</h3>
+                    <div class="name-item">Dr. Akhthar Hussain</div>
+                    <div class="name-item">Dr. Anil Kumar Bisht</div>
+                    <div class="name-item">Mr. Sunil Chandra</div>
+                    <div class="name-item">Mr. Brijendra Sharma</div>
+                </div>
+
+                <div class="committee-group">
+                    <h3 class="work-heading">Designing & Printing</h3>
+                    <div class="name-item">Dr. Ajay Yadav</div>
+                    <div class="name-item">Dr. Saurabh Mishra</div>
+                    <div class="name-item">Dr. Atul Katiyar</div>
+                </div>
+
+                <div class="committee-group">
+                    <h3 class="work-heading">Brand Visibility & Stalls Allotment</h3>
+                    <div class="name-item">Dr. Deepak Gangwar</div>
+                    <div class="name-item">Mr. Hemendra</div>
+                </div>
+
+                <div class="committee-group">
+                    <h3 class="work-heading">Accommodation</h3>
+                    <div class="name-item">Dr. Sushmita Gupta</div>
+                    <div class="name-item">Dr. Atul Katiyar</div>
+                    <div class="name-item">Dr. Ajay Yadav</div>
+                    <div class="name-item">Er. Afreen Nishat</div>
+                    <div class="name-item">Er. Rohit Verma</div>
+                </div>
+
+                <div class="committee-group">
+                    <h3 class="work-heading">Hospitality & Refreshment</h3>
+                    <div class="name-item">Dr. Hari Kumar Singh</div>
+                    <div class="name-item">Dr. Ashish Sankhwar</div>
+                    <div class="name-item">Er. Varun Pratap Singh</div>
+                </div>
+
+                <div class="committee-group">
+                    <h3 class="work-heading">Jury Coordination Committee</h3>
+                    <div class="name-item">Prof. Rakesh Kumar Maurya</div>
+                    <div class="name-item">Dr. Vishal Saxena</div>
+                </div>
+
+                <div class="committee-group">
+                    <h3 class="work-heading">Tenting & Installation of Banners</h3>
+                    <div class="name-item">Dr. Atul Katiyar</div>
+                    <div class="name-item">Dr. Pranjal Saxena</div>
+                </div>
+
+                <div class="committee-group">
+                    <h3 class="work-heading">Decor & Ambience Committee</h3>
+                    <div class="name-item">Dr. Anita Tyagi</div>
+                    <div class="name-item">Dr. Preeti Yadav</div>
+                    <div class="name-item">Dr. Atul Katiyar</div>
+                </div>
+
+                <div class="committee-group">
+                    <h3 class="work-heading">Social Media Promotion</h3>
+                    <div class="name-item">Prof. Vinay Verma</div>
+                    <div class="name-item">Dr. Chhavi Sharma</div>
+                    <div class="name-item">Dr. Iram Naim</div>
+                </div>
+
+                <div class="committee-group">
+                    <h3 class="work-heading">Volunteer Coordination</h3>
+                    <div class="name-item">Dr. Pankaj Roy</div>
+                    <div class="name-item">Dr. B.R. Ambedkar</div>
+                    <div class="name-item">Mr. Hemendra</div>
+                </div>
+
+                <div class="committee-group">
+                    <h3 class="work-heading">Photography & Videography</h3>
+                    <div class="name-item">Dr. Preeti Yadav</div>
+                    <div class="name-item">Dr. Iram Naim</div>
+                    <div class="name-item">Mr. Tapan Verma</div>
+                </div>
+
+                <div class="committee-group">
+                    <h3 class="work-heading">Crowd Control & Discipline Management</h3>
+                    <div class="name-item">Prof. Ravindra Singh (Chief Proctor) & his team</div>
+                </div>
+
+                <div class="committee-group">
+                    <h3 class="work-heading">Power Supply & Generator Management</h3>
+                    <div class="name-item">Dr. Ashish Jain</div>
+                    <div class="name-item">Dr. Atul Katiyar</div>
+                    <div class="name-item">Mr. Ravindra Srivastava</div>
+                    <div class="name-item">Mr. Mohar Singh</div>
+                </div>
+
+                <div class="committee-group">
+                    <h3 class="work-heading">Result Compilation,Certificate Preparation & Prize Distribution</h3>
+                    <div class="name-item">Dr. Atul Sarojwal</div>
+                    <div class="name-item">Dr. Ashwani Gupta</div>
+                    <div class="name-item">Er. Ashutosh Shankhdhar</div>
+                    <div class="name-item">Er. Mukul Kumar Singh</div>
+                </div>
+
+                <div class="committee-group">
+                    <h3 class="work-heading">Health & Safety Team</h3>
+                    <div class="name-item">Dr. Amit Verma</div>
+                    <div class="name-item">Mr. Deepak</div>
+                    <div class="name-item">Mr. Anand Patel</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="studentModal" class="modal-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 2000; justify-content: center; align-items: center;">
+    <div class="modal-box" style="width: 95%; max-width: 1100px; height: 90vh; padding: 0; position: relative; background: #fff; border-radius: 20px; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);">
+        
+        <button class="close-btn" onclick="document.getElementById('studentModal').style.display='none'" aria-label="Close Student Modal" style="position: absolute; top: 15px; right: 25px; font-size: 2.8rem; background: none; border: none; cursor: pointer; color: #fff !important; z-index: 1001; line-height: 1;">×</button>
+        <div style="background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%); padding: 30px; text-align: center; flex-shrink: 0;">
+            <h2 style="color: white; font-family: 'Playfair Display', serif; margin: 0; font-size: 2.5rem; letter-spacing: 2px; text-transform: uppercase;">Student Committee</h2>
+            <p style="color: rgba(255,255,255,0.8); font-size: 1rem; margin-top: 5px; letter-spacing: 1px;">AURA 2K26 | Department Representatives</p>
+        </div>
+        
+        <div style="padding: 30px 60px; overflow-y: auto; text-align: left; flex-grow: 1; background: #ffffff;">
+            
+            <div style="display: flex; flex-direction: column;">
+                <div class="committee-group">
+                    <h3 class="work-heading">Department of CSIT</h3>
+                    <div class="name-item">Harshit Kumar Singh</div>
+                    <div class="name-item">Akash Gupta</div>
+                    <div class="name-item">Yatendra Singh</div>
+                    <div class="name-item">Aatif Ahmed Khan</div>
+                    <div class="name-item">Siddharth Shashwat</div>
+                    <div class="name-item">Namra Mirza</div>
+                    <div class="name-item">Udyanshi</div>
+                </div>
+
+                <div class="committee-group">
+                    <h3 class="work-heading">Department of EI</h3>
+                    <div class="name-item">Peeyush Kumar Pal</div>
+                    <div class="name-item">Mahak Fatima</div>
+                </div>
+
+                <div class="committee-group">
+                    <h3 class="work-heading">Department of ECE</h3>
+                    <div class="name-item">Medhavi Verma</div>
+                </div>
+
+                <div class="committee-group">
+                    <h3 class="work-heading">Department of Mechanical Engineering</h3>
+                    <div class="name-item">Syed Kaif</div>
+                </div>
+
+                <div class="committee-group">
+                    <h3 class="work-heading">Department of Chemical Engineering</h3>
+                    <div class="name-item">Rohit Diwakar</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="timetableModal" class="modal-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 3000; justify-content: center; align-items: center;">
+    <div class="modal-box" style="width: 95%; max-width: 1000px; height: 90vh; background: #fff; border-radius: 20px; overflow: hidden; display: flex; flex-direction: column;">
+        <button onclick="closeTimetable()" aria-label="Close Timetable" style="position: absolute; top: 20px; right: 25px; font-size: 2.5rem; background: none; border: none; cursor: pointer; color: #fff; z-index: 3001;">×</button>
+        
+        <div style="background: linear-gradient(135deg, #00b09b 0%, #96c93d 100%); padding: 20px; text-align: center; color: white;">
+            <h2 style="margin: 0; font-family: 'Playfair Display', serif; text-transform: uppercase; letter-spacing: 1px;">Official Master Schedule</h2>
+        </div>
+
+        <div style="padding: 20px; overflow-y: auto; flex-grow: 1; background: #f4f4f4;">
+            <div style="display: flex; flex-direction: column; gap: 30px; align-items: center;">
+                <div style="width: 100%; text-align: center;">
+                    <h3 style="color: #333; margin-bottom: 10px;">Day 1</h3>
+                    <img src="image/ta1.jpeg" onclick="openImage(this.src)" style="cursor: pointer; width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);" alt="Day 1 Schedule" loading="lazy" decoding="async" width="1000" height="1400">
+                </div>
+                <div style="width: 100%; text-align: center;">
+                    <h3 style="color: #333; margin-bottom: 10px;">Day 2</h3>
+                    <img src="image/ta2.jpeg" onclick="openImage(this.src)" style="cursor: pointer; width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);" alt="Day 2 Schedule Part 1" loading="lazy" decoding="async" width="1000" height="1400">
+                </div>
+                <div style="width: 100%; text-align: center;">
+                    <h3 style="color: #333; margin-bottom: 10px;">Day 2</h3>
+                    <img src="image/ta3.jpeg" onclick="openImage(this.src)" style="cursor: pointer; width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);" alt="Day 2 Schedule Part 2" loading="lazy" decoding="async" width="1000" height="1400">
+                </div>
+                <div style="width: 100%; text-align: center;">
+                    <h3 style="color: #333; margin-bottom: 10px;">Day 3 </h3>
+                    <img src="image/ta4.jpeg" onclick="openImage(this.src)" style="cursor: pointer; width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);" alt="Day 3 Schedule" loading="lazy" decoding="async" width="1000" height="1400">
+                </div>
+                <div style="width: 100%; text-align: center;">
+                    <h3 style="color: #333; margin-bottom: 10px;">Workshop</h3>
+                    <img src="image/ta5.png" onclick="openImage(this.src)" style="cursor: pointer; width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);" alt="Workshop Schedule" loading="lazy" decoding="async" width="1000" height="1400">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js" defer></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
@@ -574,6 +1250,12 @@
     
     <script type="module" src="mascot.js"></script>
     <script src="script.js" defer></script>
+    
+
+    <div id="imageModal" class="modal-overlay" onclick="closeImage()">
+    <span style="position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; cursor: pointer;" aria-label="Close Image">×</span>
+    <img id="fullImage" style="max-width: 90%; max-height: 90%; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.5);" alt="Expanded View">
+</div>
 
 </body>
 </html>

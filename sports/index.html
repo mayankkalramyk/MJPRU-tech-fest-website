@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sports Events at MJPRU Tech Fest 2026. Join us for Cricket, Football, Chess, and more.">
-    <title>Sports Events | MJPRU Tech Fest 2026</title>
+    <meta name="description" content="Sports Events at MJPRU Tech Fest 2026. Join us for Chess, Slow Cycling, and more.">
+    <title>Sports Events | MJPRU Tech Fest AURA 2K26</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://unpkg.com">
-    <link rel="preconnect" href="https://images.unsplash.com">
-
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"></noscript>
     
     <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" type="image/png" href="./1/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./1/favicon.svg" />
+    <link rel="shortcut icon" href="./1/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./1/apple-touch-icon.png" />
+    <link rel="manifest" href="./1/site.webmanifest" />
 </head>
 <body>
 
@@ -27,263 +30,106 @@
         <div class="uni-overlay"></div>
     </div>
 
-    <a href="#" target="_blank" class="mobile-join-fab">Join Now 🚀</a>
+    <a href="https://forms.eduqfix.com/festregof/add" target="_blank" class="mobile-join-fab">Join Now 🚀</a>
 
     <nav>
         <div class="logo">MJPRU <span class="highlight">SPORTS</span></div>
-        
         <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
         </button>
-
         <ul class="nav-links" id="mobileMenu">
-            <li><a href="../index.html">Back to Home</a></li>
+            <li><a href="../index.html">Home</a></li>
             <li><a href="../technical/index.html">Technical Events</a></li>
             <li><a href="../cultural/index.html">Cultural Events</a></li>
             <li><a href="../literacy/index.html">Literature Events</a></li>
-            <li><a href="#" target="_blank" class="btn-nav">Join Now</a></li>
+            <li><a href="../Rhythm/index.html">Rhythm & Musical</a></li>
+            <li><a href="../workshop/index.html">Workshop Events</a></li>
+            <li><a href="https://forms.eduqfix.com/festregof/add" target="_blank" class="btn-nav">Join Now</a></li>
         </ul>
     </nav>
 
     <header style="min-height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; flex-direction: column;">
+       <canvas id="hero-canvas"></canvas>
         <div class="hero-content">
-            <h1 data-aos="zoom-in" style="font-size: 4rem; margin-bottom: 10px;">CHAMPIONS <span class="year">ARENA</span></h1>
-            
+            <div class="presents-text" data-aos="fade-down">AURA 2K26 MJPRU Tech Fest Presents</div>
+            <h1 data-aos="zoom-in" style="font-size: 4rem; margin-bottom: 10px;">SPORT <span class="year">ARENA</span></h1>
             <p class="tagline" style="font-size: 1.2rem; color: #fff; margin-top: 10px; margin-bottom: 40px;" data-aos="fade-up">
                 "Sweat, Determination, and Glory – The Spirit of MJPRU"
             </p>
-
-            <div class="stats-gap-filler" data-aos="fade-up" data-aos-delay="200" 
-                 style="display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; background: rgba(255,255,255,0.1); padding: 30px 50px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                
-                <div style="text-align: center;">
-                    <div style="font-size: 2.5rem; font-weight: 700; color: #ffeb3b; font-family: 'Playfair Display', serif;">
-                        <span class="counter" data-target="10">0</span>+
-                    </div>
-                    <div style="color: white; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-top: 5px;">Sports</div>
-                </div>
-
-                <div style="width: 1px; background: rgba(255,255,255,0.3); height: 60px;" class="desktop-only-divider"></div>
-
-                <div style="text-align: center;">
-                    <div style="font-size: 2.5rem; font-weight: 700; color: #ffeb3b; font-family: 'Playfair Display', serif;">
-                        ₹<span class="counter" data-target="50">0</span>k
-                    </div>
-                    <div style="color: white; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-top: 5px;">Prize Pool</div>
-                </div>
-
-                <div style="width: 1px; background: rgba(255,255,255,0.3); height: 60px;" class="desktop-only-divider"></div>
-
-                <div style="text-align: center;">
-                    <div style="font-size: 2.5rem; font-weight: 700; color: #ffeb3b; font-family: 'Playfair Display', serif;">
-                        <span class="counter" data-target="400">0</span>+
-                    </div>
-                    <div style="color: white; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-top: 5px;">Athletes</div>
-                </div>
-
-            </div>
         </div>
     </header>
 
     <section class="events-section" style="padding-top: 0;">
-        <h2 class="section-head-white" data-aos="fade-right" style="text-align: left; border-left: 5px solid yellow; padding-left: 20px;">OUTDOOR GAMES</h2>
-        
-        <div class="cards-container" style="justify-content: flex-start;">
+        <div class="cards-container">
             
-            <div class="card event-card-wide" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
+            <div class="card event-card-wide" data-tilt>
                 <div class="card-img-holder">
-                    <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=500&auto=format&fit=crop&q=60" alt="Cricket" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1529699211952-734e80c4d42b?w=500&q=60" alt="Chess" loading="lazy" decoding="async">
                 </div>
                 <div class="card-content">
-                    <h3>Cricket (Gully & Pro)</h3>
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 09:00 AM</div>
-
-                    <p>The gentlemean's game with a twist.</p>
-                    <div class="rules-box" id="rules-cricket">
-                        <strong>Guidelines:</strong>
-                        <ul>
-                            <li>Format: T-10 Knockout.</li>
-                            <li>Team: 11 Players + 2 Subs.</li>
-                            <li>Proper Kit Mandatory.</li>
-                        </ul>
-                    </div>
-                    <button class="btn-join" onclick="toggleRules('rules-cricket')">Know More</button>
+                    <h3>1. Chess</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 15 MARCH | 10:00 AM-1:00 PM
+                    <div><strong><i class="fas fa-user-tie"></i> Event Coordinator:   Dr. Deepak Gangwar (9718508870) </strong> <br></div>
+                 <div class="schedule-info">     Fees: Rs. 100/-</div>
+                 <div class="schedule-info">    Venue: Sports Complex</div>
                 </div>
-            </div>
-
-            <div class="card event-card-wide" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
-                <div class="card-img-holder">
-                    <img src="image/kabbadi.jfif" alt="Kabaddi" loading="lazy">
-                </div>
-                <div class="card-content">
-                    <h3>Kabaddi (Dangal)</h3>
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 2 | 26th Oct | 10:00 AM</div>
-
-                    <p>Strength, Strategy, and Speed.</p>
-                    <div class="rules-box" id="rules-kabaddi">
-                        <strong>Guidelines:</strong>
-                        <ul>
-                            <li>Standard Mat Format.</li>
-                            <li>Weight Limit: Under 75kg.</li>
-                            <li>Time: 20 mins per half.</li>
-                        </ul>
-                    </div>
-                    <button class="btn-join" onclick="toggleRules('rules-kabaddi')">Know More</button>
-                </div>
-            </div>
-
-            <div class="card event-card-wide" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
-                <div class="card-img-holder">
-                    <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=500&auto=format&fit=crop&q=60" alt="Football" loading="lazy">
-                </div>
-                <div class="card-content">
-                    <h3>Slow Cycling Race</h3>
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 03:00 PM</div>
-
-                    <p>7-a-side intense football league.</p>
-                    <div class="rules-box" id="rules-football">
-                        <strong>Guidelines:</strong>
-                        <ul>
-                            <li>Last person to cross the finish line without touching the ground wins.</li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                    <button class="btn-join" onclick="toggleRules('rules-football')">Know More</button>
-                </div>
-            </div>
-
-            <div class="card event-card-wide" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
-                <div class="card-img-holder">
-                    <img src="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=500&auto=format&fit=crop&q=60" alt="Badminton Outdoor" loading="lazy">
-                </div>
-                <div class="card-content">
-                    <h3>Badminton (Outdoor)</h3>
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 08:00 AM</div>
-
-                    <p>Open air shuttle battle.</p>
-                    <div class="rules-box" id="rules-badminton-out">
-                        <strong>Guidelines:</strong>
-                        <ul>
-                            <li>Singles & Doubles.</li>
-                            <li>Bring your own rackets.</li>
-                            <li>Non-marking shoes not required.</li>
-                        </ul>
-                    </div>
-                    <button class="btn-join" onclick="toggleRules('rules-badminton-out')">Know More</button>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="events-section">
-        <h2 class="section-head-white" data-aos="fade-right" style="text-align: left; border-left: 5px solid #00f2ff; padding-left: 20px;">INDOOR GAMES</h2>
-        
-        <div class="cards-container" style="justify-content: flex-start;">
-            
-            <div class="card event-card-wide" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
-                <div class="card-img-holder">
-                    <img src="https://images.unsplash.com/photo-1529699211952-734e80c4d42b?w=500&auto=format&fit=crop&q=60" alt="Chess" loading="lazy">
-                </div>
-                <div class="card-content">
-                    <h3>Chess (Grandmaster)</h3>
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 & 2 | 10:00 AM</div>
-
-                    <p>Battle of the minds.</p>
+                    <p>Strategic battle of the minds. Outwit your opponent to be the Grandmaster.</p>
                     <div class="rules-box" id="rules-chess">
-                        <strong>Guidelines:</strong>
-                        <ul>
-                            <li>Rapid Format (10+5).</li>
-                            <li>Touch-move rule applies.</li>
-                            <li>FIDE Rules strictly followed.</li>
+                       <strong>Competition Format & Rules:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Preliminary Round:</strong> Conducted under Swiss league or knockout format depending on participant count.</li>
+                            <li><strong>Advancement:</strong> Qualified players from prelims advance to Quarterfinals and Semifinals based on points scored.</li>
+                            <li><strong>Final Round:</strong> Top performers compete to determine the overall winners.</li>
+                            <li><strong>Supervision:</strong> All rounds are conducted under the strict supervision of an arbiter.</li>
+                            <li><strong>Tie-Breaks:</strong> Official tie-break rules will be applied for recording results in case of draws.</li>
                         </ul>
+                        <strong>Event Schedule:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>10:00 – 11:00 AM:</strong> Preliminary Round</li>
+                            <li><strong>11:00 – 11:30 AM:</strong> Quarter Finals and Semifinal</li>
+                            <li><strong>11:30 – 12:00 PM:</strong> Final Round</li>
+                        </ul>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                           * For more detail, please see the event page in  booklet.
+                        </p>
                     </div>
-                    <button class="btn-join" onclick="toggleRules('rules-chess')">Know More</button>
+                    <button class="btn-join" onclick="toggleRules('rules-chess', this)">Know More</button>
                 </div>
             </div>
 
-            <div class="card event-card-wide" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
+            <div class="card event-card-wide" data-tilt>
                 <div class="card-img-holder">
-                    <img src="image/carrom.jfif" alt="Carrom" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1474962558142-9ca83af74bb7?w=500&q=60" alt="Cycling" loading="lazy" decoding="async">
                 </div>
                 <div class="card-content">
-                    <h3>Carrom</h3>
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 11:00 AM</div>
-
-                    <p>Strike and pocket the queen.</p>
-                    <div class="rules-box" id="rules-carrom">
-                        <strong>Guidelines:</strong>
-                        <ul>
-                            <li>Singles and Doubles.</li>
-                            <li>Standard Board rules.</li>
-                            <li>Powder provided by organizers.</li>
+                    <h3>2. Slow Cycling Race</h3>
+                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> 14 MARCH | 10:00 AM-1:00 PM
+                    <div><strong><i class="fas fa-user-tie"></i> Event Coordinator:   Mr. Pankaj Roy (9412294024) </strong> <br></div>
+                 <div class="schedule-info">     Fees: Rs. 100/-</div>
+                 <div class="schedule-info">    Venue: Place of Inaugural Ceremony of Fest</div>
+                </div>
+                    <p>The ultimate test of balance. The last person to cross the finish line wins.</p>
+                    <div class="rules-box" id="rules-cycling">
+                        <strong>Guidelines & Rules:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Objective:</strong> Complete the course in the maximum possible time.</li>
+                            <li><strong>Disqualification:</strong> Placing either foot on the ground during the race results in immediate disqualification.</li>
+                            <li><strong>Boundaries:</strong> Deviation from or contact with the marked track boundaries (side lines) is strictly prohibited.</li>
+                            <li><strong>Equipment:</strong> Participants must bring their own standard, non-modified bicycles.</li>
+                            <li><strong>Prohibitions:</strong> Use of geared, electric, motor-assisted, or altered bicycles is prohibited.</li>
+                            <li><strong>Conduct:</strong> Complete stoppage of the bicycle or any external assistance is not allowed.</li>
                         </ul>
-                    </div>
-                    <button class="btn-join" onclick="toggleRules('rules-carrom')">Know More</button>
-                </div>
-            </div>
-
-            <div class="card event-card-wide" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
-                <div class="card-img-holder">
-                    <img src="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=500&auto=format&fit=crop&q=60" alt="Badminton Indoor" loading="lazy">
-                </div>
-                <div class="card-content">
-                    <h3>Badminton (Pro Court)</h3>
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 2 | 26th Oct | 09:00 AM</div>
-
-                    <p>Wooden court professional play.</p>
-                    <div class="rules-box" id="rules-badminton-in">
-                        <strong>Guidelines:</strong>
-                        <ul>
-                            <li>Non-marking shoes MANDATORY.</li>
-                            <li>Yonex Mavis 350 Shuttles.</li>
-                            <li>Standard Scoring (21 pts).</li>
+                        <strong>Venue Details:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li><strong>Location:</strong> Nehru Kendra, MJPRU.</li>
+                            <li><strong>Track:</strong> Straight track with chalk-marked boundaries.</li>
+                            <li><strong>Length:</strong> 200–400 meters.</li>
                         </ul>
+                        <p style="margin-top: 12px; font-style: italic; color: #555; font-weight: 500;">
+                            * For more detail regarding safety protocols and official discretion, please see the booklet.
+                        </p>
                     </div>
-                    <button class="btn-join" onclick="toggleRules('rules-badminton-in')">Know More</button>
-                </div>
-            </div>
-
-            <div class="card event-card-wide" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
-                <div class="card-img-holder">
-                    <img src="image/basketball.avif Events" alt="Basketball" loading="lazy">
-                </div>
-                <div class="card-content">
-                    <h3>Basketball</h3>
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 2 | 26th Oct | 04:00 PM</div>
-
-                    <p>Dribble, Shoot, Score.</p>
-                    <div class="rules-box" id="rules-basketball">
-                        <strong>Guidelines:</strong>
-                        <ul>
-                            <li>Full Court 5-on-5.</li>
-                            <li>4 Quarters of 10 Mins.</li>
-                            <li>Referees decision is final.</li>
-                        </ul>
-                    </div>
-                    <button class="btn-join" onclick="toggleRules('rules-basketball')">Know More</button>
-                </div>
-            </div>
-
-            <div class="card event-card-wide" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
-                <div class="card-img-holder">
-                    <img src="https://images.unsplash.com/photo-1534158914592-062992fbe900?w=500&auto=format&fit=crop&q=60" alt="Table Tennis" loading="lazy">
-                </div>
-                <div class="card-content">
-                    <h3>Table Tennis</h3>
-                    <div class="schedule-info"><i class="far fa-calendar-alt"></i> Day 1 | 25th Oct | 02:00 PM</div>
-
-                    <p>High speed ping-pong action.</p>
-                    <div class="rules-box" id="rules-tt">
-                        <strong>Guidelines:</strong>
-                        <ul>
-                            <li>Best of 3 Sets.</li>
-                            <li>Deuce rules apply.</li>
-                            <li>Bring your own rackets (optional).</li>
-                        </ul>
-                    </div>
-                    <button class="btn-join" onclick="toggleRules('rules-tt')">Know More</button>
+                    <button class="btn-join" onclick="toggleRules('rules-cycling', this)">Know More</button>
                 </div>
             </div>
 
@@ -298,16 +144,15 @@
         </div>
     </div>
 
-    <footer>
-         <div class="copyright-strip" style="background: #e0e0e0; padding: 15px 0; color: #000; font-weight: 500;">
-            Made by IT CLINIC | MJPRU Tech Fest 2026
+    <footer class="glass-footer"> 
+        <div>
+            Made with ❤️ by IT CLINIC, MJPRU | TECHFEST AURA 2K26
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js" defer></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" defer></script>
-    
     <script src="script.js" defer></script>
 </body>
 </html>
