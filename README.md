@@ -14,7 +14,7 @@
 
 <br/>
 
-![AURA 2K26 Campus](image/mjpru%20front.webp)
+ ![AURA 2K26 Campus](image/mjpru%20front.webp)
 
 ## 📖 About The Project
 
